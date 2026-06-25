@@ -44,16 +44,17 @@ RUN composer install \
     --no-dev \
     --no-interaction \
     --prefer-dist \
-    --optimize-autoloader
+    --optimize-autoloader \
+    --no-scripts
 
 COPY . .
 
-# إزالة إعدادات Scribe من صورة الإنتاج
-RUN rm -f config/scribe.php
+RUN composer dump-autoload --optimize
 
-RUN composer dump-autoload --optimize --no-dev
+RUN php artisan package:discover --ansi
 
 RUN chown -R www-data:www-data storage bootstrap/cache
+
 
 COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
 
