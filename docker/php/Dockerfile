@@ -41,11 +41,10 @@ WORKDIR /var/www/html
 COPY composer.json composer.lock ./
 
 RUN composer install \
-    --no-dev \
-    --no-scripts \
     --no-interaction \
     --prefer-dist \
-    --optimize-autoloader
+    --optimize-autoloader \
+    --no-scripts
 
 COPY . .
 
