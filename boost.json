@@ -1,0 +1,15 @@
+{
+    "agents": [
+        "gemini"
+    ],
+    "cloud": true,
+    "skills": [
+        "laravel-best-practices",
+        "scout-development",
+        "socialite-development",
+        "pest-testing",
+        "echo-development",
+        "tailwindcss-development",
+        "deploying-laravel-cloud"
+    ]
+}

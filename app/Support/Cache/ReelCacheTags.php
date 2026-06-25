@@ -1,0 +1,90 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Support\Cache;
+
+use App\Models\Reel;
+
+/**
+ * وسوم كاش الريلز — مصدر الحقيقة الوحيد لاستراتيجية الإبطال الحبيبي (granular).
+ *
+ * بدلاً من تفريغ كل كاش الريلز عند أي تعديل (Cache::tags(['reels'])->flush())،
+ * نوسم كل إدخال بوسوم دقيقة فيُبطَل أضيق نطاق ممكن:
+ *
+ *   ALL                  → مظلّة عامة تبقى على كل إدخال (لتفريغ شامل يدوي/صيانة).
+ *   feed(locale)         → القوائم/المميَّز/الرائج للغة (تعتمد مجموعة المنشور فيها).
+ *   detail(locale, slug) → تفاصيل ريل واحد. يُوسَم بالـ slug لأن مفتاح الكاش بالـ
+ *                          slug؛ فلا يلزم استعلام إضافي على أكثر النقاط سخونة.
+ *
+ * قاعدة الإبطال عند كتابة ريل في لغة L:
+ *   flush(detail(L, slug)) + flush(feed(L))  — ولا نلمس اللغات الأخرى.
+ *   عند تغيّر الـ slug/اللغة: نُبطِل القديم والجديد معاً (يمنع تقديم محتوى قديم
+ *   على رابط الـ slug القديم).
+ *
+ * يتطلّب مخزن كاش يدعم الوسوم (redis/memcached) — إلزامي في الإنتاج.
+ */
+final class ReelCacheTags
+{
+    /** المظلّة العامة — تبقى على كل إدخال لتمكين تفريغ شامل عند الحاجة. */
+    public const ALL = 'reels';
+
+    /** وسم قوائم/خلاصات لغة (list + featured + trending). */
+    public static function feed(string $locale): string
+    {
+        return 'reels:feed:'.$locale;
+    }
+
+    /** وسم تفاصيل ريل واحد (بالـ locale+slug — مطابق لمفتاح الكاش). */
+    public static function detail(string $locale, string $slug): string
+    {
+        return 'reels:detail:'.$locale.':'.$slug;
+    }
+
+    /**
+     * وسوم إدخالات الخلاصات (قوائم/مميَّز/رائج) في لغة.
+     *
+     * @return array<int,string>
+     */
+    public static function feedTags(string $locale): array
+    {
+        return [self::ALL, self::feed($locale)];
+    }
+
+    /**
+     * وسوم إدخال تفاصيل ريل (مظلّة + تفاصيله فقط — بلا وسم الخلاصة عمداً).
+     *
+     * عدم وسم التفاصيل بـ feed(locale) هو ما يمنح العزل الحقيقي: كتابة ريل تُفرّغ
+     * feed(locale) [للقوائم] + detail(هذا الريل] فقط؛ فتبقى تفاصيل بقية ريلز
+     * اللغة سليمة. لو حملت التفاصيل وسم الخلاصة لأُبطِلت جميعها عند أي كتابة.
+     *
+     * @return array<int,string>
+     */
+    public static function detailTags(string $locale, string $slug): array
+    {
+        return [self::ALL, self::detail($locale, $slug)];
+    }
+
+    /**
+     * الوسوم الواجب إبطالها عند كتابة/تحوّل ريل. يشمل خلاصة لغته الحالية
+     * وتفاصيله؛ وعند تغيّر اللغة أو الـ slug يشمل القديم أيضاً (يمنع بقايا قديمة).
+     *
+     * @return array<int,string>
+     */
+    public static function invalidationTags(Reel $reel, ?string $oldLocale = null, ?string $oldSlug = null): array
+    {
+        $tags = [self::feed($reel->locale), self::detail($reel->locale, (string) $reel->slug)];
+
+        $oldLocale ??= $reel->locale;
+        $oldSlug ??= (string) $reel->slug;
+
+        if ($oldLocale !== $reel->locale) {
+            $tags[] = self::feed($oldLocale);
+        }
+        if ($oldLocale !== $reel->locale || $oldSlug !== (string) $reel->slug) {
+            $tags[] = self::detail($oldLocale, $oldSlug);
+        }
+
+        return array_values(array_unique($tags));
+    }
+}

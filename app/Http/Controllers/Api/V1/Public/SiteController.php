@@ -1,0 +1,85 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Http\Controllers\Api\V1\Public;
+
+use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Settings\GeneralSettings;
+use App\Settings\NewspaperSettings;
+use App\Support\Responses\ApiResponse;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
+class SiteController extends Controller
+{
+    public function settings(Request $request, GeneralSettings $settings, NewspaperSettings $newspaper): JsonResponse
+    {
+        $locale = (string) $request->query('locale', 'ar');
+        if (! in_array($locale, Category::LOCALES, true)) {
+            $locale = 'ar';
+        }
+
+        $social = array_filter([
+            'facebook' => $settings->social_facebook ?: null,
+            'x' => $settings->social_twitter_x ?: null,
+            'instagram' => $settings->social_instagram ?: null,
+            'youtube' => $settings->social_youtube ?: null,
+            'tiktok' => $settings->social_tiktok ?: null,
+            'whatsapp' => $settings->social_whatsapp ?: null,
+        ]);
+
+        $logoUrl = fn (?string $path): ?string => $path
+            ? Storage::disk('public')->url($path)
+            : null;
+
+        // Header navigation categories — admin-curated via the `show_in_header` flag,
+        // ordered by sort_order. الأقسام الرئيسية فقط (parent_id=null)؛ كل قسم يحمل أبناءه
+        // المفعّلين لقائمة منسدلة في الهيدر. لا نشترط show_in_header على الأبناء (ظهور الأب
+        // يكفي لكشف أبنائه ضمن الـdropdown). مصدر الحقيقة الوحيد لتنقّل الكروم.
+        $navCategories = Category::query()
+            ->active()
+            ->forLocale($locale)
+            ->where('show_in_header', true)
+            ->whereNull('parent_id')
+            ->with(['children' => fn ($q) => $q
+                ->where('status', 'active')
+                ->orderBy('sort_order')
+                ->orderBy('id')
+                ->select(['id', 'parent_id', 'name', 'slug'])])
+            ->orderBy('sort_order')
+            ->orderBy('id')
+            ->get(['id', 'name', 'slug'])
+            ->map(fn (Category $c): array => [
+                'name' => $c->name,
+                'slug' => $c->slug,
+                'children' => $c->children
+                    ->map(fn (Category $child): array => ['name' => $child->name, 'slug' => $child->slug])
+                    ->all(),
+            ])
+            ->all();
+
+        return ApiResponse::success(data: [
+            'site_name' => $settings->site_name,
+            // وصف الموقع الحقيقيّ (حقل مخصّص) — تستهلكه الواجهة في meta/og description.
+            'description' => $settings->site_description ?: '',
+            'copyright' => $settings->copyright_text,
+            // نصّ سياسة الكوكيز — يعرضه الفوتر في مودال (نصّ خام، لا HTML).
+            'cookie_policy' => $settings->cookie_policy_text ?: '',
+            'phone' => $settings->site_phone ?: '',
+            'email' => $settings->site_email ?: '',
+            // إحداثيّات المقرّ (خريطة صفحات التواصل) — null حين غير مضبوطة.
+            'latitude' => $settings->latitude ?: null,
+            'longitude' => $settings->longitude ?: null,
+            'logo_light' => $logoUrl($settings->logo_light),
+            'logo_dark' => $logoUrl($settings->logo_dark),
+            'favicon' => $logoUrl($settings->favicon),
+            'social' => $social,
+            'nav_categories' => $navCategories,
+            // بوّابة المنتج: تظهر «الجريدة الرقمية» في الواجهة فقط عند تفعيلها.
+            'newspaper_enabled' => $newspaper->enabled,
+        ]);
+    }
+}

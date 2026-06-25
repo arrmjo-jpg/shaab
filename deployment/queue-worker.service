@@ -1,0 +1,23 @@
+; systemd unit — عامل طابور AlphaCMS (Redis)
+; انسخ إلى /etc/systemd/system/alphacms-queue.service ثم:
+;   systemctl daemon-reload && systemctl enable --now alphacms-queue
+; ⚠ إلزامي للإنتاج: البريد المُصفَّف (إعادة التعيين/التحقق) ومهام CDN
+;    لن تُنفَّذ بدون هذا العامل.
+
+[Unit]
+Description=AlphaCMS Queue Worker
+After=network.target redis.service mysql.service
+
+[Service]
+User=www-data
+Group=www-data
+Restart=always
+RestartSec=3
+; default + cdn-purge ؛ --max-time يعيد تدوير العامل (حارس تسرّب ذاكرة)
+ExecStart=/usr/bin/php /var/www/alphacms/artisan queue:work redis \
+  --queue=default,cdn-purge \
+  --tries=3 --backoff=10 --max-time=3600 --sleep=3 --timeout=60
+; إعادة تشغيل نظيفة عند النشر: php artisan queue:restart
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,72 @@
+
+# ── AlphaCMS — Coolify Production ─────────────────────────
+
+x-backend-common: &backend-common
+  image: alphacms-backend:latest
+ 
+  restart: unless-stopped
+  volumes:
+    - media:/var/www/html/storage/app/public
+
+services:
+
+  backend:
+    <<: *backend-common
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    expose:
+      - "9000"
+
+  worker:
+    <<: *backend-common
+    command: php artisan queue:work redis --queue=default,notifications,mail,search,sitemap,ai,analytics --tries=3 --backoff=10 --sleep=1 --max-time=3600
+    healthcheck:
+      test: ["CMD", "pgrep", "-f", "queue:work"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  worker-media:
+    <<: *backend-common
+    command: php artisan queue:work redis-media --queue=media --tries=2 --timeout=2520 --sleep=2 --max-time=3600
+
+  scheduler:
+    <<: *backend-common
+    command: php artisan schedule:work
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        CLIENT: ${CLIENT:-shaabjo}
+    image: alphacms-frontend:${CLIENT:-shaabjo}
+    restart: unless-stopped
+    environment:
+      API_BASE_URL: ${API_BASE_URL}
+      SITE_URL: ${SITE_URL}
+      REVALIDATE_SECRET: ${REVALIDATE_SECRET}
+    volumes:
+      - frontend-cache:/app/.next/cache
+    expose:
+      - "3000"
+    depends_on:
+      - backend
+
+ 
+  meilisearch:
+    image: getmeili/meilisearch:v1.16
+    profiles:
+      - search
+    restart: unless-stopped
+    environment:
+      MEILI_MASTER_KEY: ${MEILISEARCH_KEY}
+      MEILI_ENV: production
+    volumes:
+      - meili-data:/meili_data
+
+volumes:
+  media:
+  frontend-cache:
+  meili-data:

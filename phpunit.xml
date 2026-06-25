@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory>tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>app</directory>
+        </include>
+    </source>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="APP_MAINTENANCE_DRIVER" value="file"/>
+        <env name="BCRYPT_ROUNDS" value="4"/>
+        <env name="BROADCAST_CONNECTION" value="null"/>
+        <env name="CACHE_STORE" value="array"/>
+        <env name="DB_CONNECTION" value="sqlite"/>
+        <env name="DB_DATABASE" value=":memory:"/>
+        <env name="DB_URL" value=""/>
+        <env name="MAIL_MAILER" value="array"/>
+        <!-- عزل الاختبارات عن تخزين الإنتاج (R2/S3): قرص محلّي قابل للتزييف دائماً + مرآة بعيدة معطّلة. -->
+        <env name="MEDIA_DISK" value="uploads"/>
+        <env name="MEDIA_REMOTE_ENABLED" value="false"/>
+        <!-- بحث Scout بمحرّك collection في الاختبارات (بلا Meilisearch خارجي). -->
+        <env name="SCOUT_DRIVER" value="collection"/>
+        <!-- اعتماديات المرآة فارغة في الاختبارات كي لا يبني configureDisk قرصاً حقيقياً يُبطِل Storage::fake. -->
+        <env name="AWS_ACCESS_KEY_ID" value=""/>
+        <env name="AWS_SECRET_ACCESS_KEY" value=""/>
+        <env name="AWS_BUCKET" value=""/>
+        <env name="AWS_ENDPOINT" value=""/>
+        <env name="QUEUE_CONNECTION" value="sync"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <!-- سقف مرتفع كي لا تُخنَق آلاف طلبات الـ suite من 127.0.0.1 (اختبار الخنق يخفضه وقتياً). -->
+        <env name="PERFORMANCE_PUBLIC_READ_RATE_LIMIT" value="100000"/>
+        <!-- احتساب مشاهدات فوري حتمي في الاختبارات (يُفعَّل التجميع صراحةً في اختباره). -->
+        <env name="ENGAGEMENT_BUFFER_VIEWS" value="false"/>
+        <env name="PULSE_ENABLED" value="false"/>
+        <env name="TELESCOPE_ENABLED" value="false"/>
+        <env name="NIGHTWATCH_ENABLED" value="false"/>
+    </php>
+</phpunit>

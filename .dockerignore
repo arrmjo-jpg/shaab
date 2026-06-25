@@ -1,0 +1,15 @@
+.git
+.gitignore
+node_modules
+public-frontend
+admin-frontend
+vendor
+.env
+.env.*
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+tests
+*.md
+.ai

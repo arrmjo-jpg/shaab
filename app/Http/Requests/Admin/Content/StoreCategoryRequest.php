@@ -1,0 +1,46 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Http\Requests\Admin\Content;
+
+use App\Enums\CategoryScope;
+use App\Enums\CategoryStatus;
+use App\Http\Requests\BaseFormRequest;
+use App\Models\Category;
+use Illuminate\Validation\Rule;
+
+class StoreCategoryRequest extends BaseFormRequest
+{
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    public function rules(): array
+    {
+        return [
+            'name' => ['required', 'string', 'min:2', 'max:150'],
+            'locale' => ['required', 'string', Rule::in(Category::LOCALES)],
+            'parent_id' => ['nullable', 'integer', 'exists:categories,id'],
+            // slug يدوي اختياري — سياسة الأحرف: حروف/أرقام يونيكود (يشمل
+            // العربية) مفصولة بشرطة واحدة، بلا بداية/نهاية/تكرار شرطة.
+            // الفرادة لكل لغة (تشمل المحذوف منطقياً عبر فحص الجدول).
+            'slug' => [
+                'sometimes', 'nullable', 'string', 'max:160',
+                'regex:/^[\p{L}\p{N}]+(?:-[\p{L}\p{N}]+)*$/u',
+                Rule::unique('categories', 'slug')->where(
+                    fn ($q) => $q->where('locale', $this->input('locale'))
+                ),
+            ],
+            'description' => ['nullable', 'string', 'max:2000'],
+            'icon' => ['nullable', 'string', 'max:100'],
+            'scope' => ['sometimes', Rule::in(CategoryScope::values())],
+            'status' => ['sometimes', Rule::in(CategoryStatus::values())],
+            'show_in_header' => ['sometimes', 'boolean'],
+            'show_in_body' => ['sometimes', 'boolean'],
+            'show_in_footer' => ['sometimes', 'boolean'],
+            'sort_order' => ['sometimes', 'integer', 'min:0', 'max:65535'],
+        ];
+    }
+}

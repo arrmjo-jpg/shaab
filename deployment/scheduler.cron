@@ -1,0 +1,5 @@
+# جدولة Laravel — سطر واحد فقط (يوزّع كل المهام + health:check)
+# ثبّته عبر: crontab -u www-data -e
+# ⚠ بدون هذا السطر: لا نسخ احتياطي، لا تنظيف، لا فحوصات صحّة.
+
+* * * * * cd /var/www/alphacms && /usr/bin/php artisan schedule:run >> /dev/null 2>&1

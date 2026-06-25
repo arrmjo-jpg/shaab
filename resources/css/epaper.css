@@ -1,0 +1,791 @@
+/* Epaper PDF reader — self-contained widget styles (no Tailwind dependency, so
+   JS-injected nodes render deterministically). Square corners by design. RTL is
+   inherited from <html dir> (flex rows reverse → spreads/drawers are RTL-correct). */
+
+.ep-reader {
+  display: flex;
+  flex-direction: column;
+  background: #16181c; /* مسرح أهدأ (صقل P1) */
+}
+
+/* ── شريط التقدّم (صقل P1) — رفيع تحت الشريط، يعكس الصفحة/الإجماليّ ── */
+.ep-progress {
+  height: 3px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  flex: none;
+}
+.ep-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #c8102e;
+  transition: width 0.25s ease;
+}
+
+/* ── Toolbar ───────────────────────────────────────────────────────────── */
+.ep-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.4rem 0.5rem;
+  background: #18181b;
+  color: #e4e4e7;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+}
+
+.ep-toolbar .ep-spacer {
+  flex: 1 1 auto;
+  min-width: 0.25rem;
+}
+
+.ep-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.25rem;
+  min-width: 2.25rem;
+  padding: 0 0.4rem;
+  background: transparent;
+  color: inherit;
+  border: 1px solid transparent;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: background-color 0.12s ease;
+}
+
+.ep-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.ep-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.ep-btn[aria-pressed='true'] {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.ep-btn svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.ep-pageform {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0 0.3rem;
+  font-size: 0.85rem;
+  color: #d4d4d8;
+  flex: 0 0 auto;
+}
+
+.ep-pageinput {
+  width: 2.8rem;
+  height: 2rem;
+  text-align: center;
+  background: #0b0b0f;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+}
+
+/* ── Body / stage ──────────────────────────────────────────────────────── */
+.ep-body {
+  position: relative;
+  display: flex;
+  min-height: 0;
+}
+
+.ep-stage {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: min(82vh, 1100px);
+  height: min(82dvh, 1100px); /* dvh يستثني شريط عنوان iOS المنكمش (تجاوز عند الدعم) */
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; /* زخم تمرير سلس على iOS القديم */
+}
+
+.ep-stage--paged {
+  display: flex;
+  align-items: safe center;
+  justify-content: safe center;
+  padding: 1.25rem;
+}
+
+.ep-stage--continuous {
+  padding: 1.25rem 0;
+}
+
+.ep-pagewrap {
+  display: flex;
+  gap: 1rem;
+  transform-origin: center center;
+}
+
+.ep-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ep-slot {
+  position: relative; /* مرساة لطبقة تظليل البحث فوق اللوحة في التمرير المتواصل */
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  flex: 0 0 auto;
+}
+
+.ep-canvas {
+  display: block;
+  background: #fff;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.5);
+}
+
+.ep-slot .ep-canvas {
+  box-shadow: none;
+}
+
+/* ── Thumbnails (inline panel on desktop) ──────────────────────────────── */
+.ep-thumbs {
+  width: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #18181b;
+  flex-shrink: 0;
+  transition: width 0.15s ease;
+}
+
+.ep-thumbs.is-open {
+  width: 9.5rem;
+}
+
+.ep-thumb {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.ep-thumb:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ep-thumb.is-active {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.ep-thumb canvas,
+.ep-thumb .ep-thumb-ph {
+  display: block;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+.ep-thumb-num {
+  display: block;
+  margin-top: 0.25rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #a1a1aa;
+}
+
+.ep-backdrop {
+  display: none;
+}
+
+/* ── In-issue search drawer (Phase 4c) ─────────────────────────────────── */
+.ep-search {
+  width: 0;
+  overflow: hidden;
+  background: #18181b;
+  flex-shrink: 0;
+  transition: width 0.15s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ep-search.is-open {
+  width: 20rem;
+}
+
+.ep-search-form {
+  padding: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex: 0 0 auto;
+}
+
+.ep-search-input {
+  width: 100%;
+  height: 2.25rem;
+  padding: 0 0.6rem;
+  background: #0b0b0f;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+}
+
+.ep-search-input:disabled {
+  opacity: 0.5;
+}
+
+.ep-search-status {
+  padding: 0.5rem 0.7rem;
+  font-size: 0.72rem;
+  color: #a1a1aa;
+  flex: 0 0 auto;
+}
+
+.ep-search-results {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.ep-search-result {
+  display: block;
+  width: 100%;
+  text-align: start;
+  padding: 0.6rem 0.7rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #d4d4d8;
+  cursor: pointer;
+}
+
+.ep-search-result:hover,
+.ep-search-result:focus-visible {
+  background: rgba(255, 255, 255, 0.09);
+  outline: none;
+}
+
+.ep-search-page {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.ep-search-snippet {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: #a1a1aa;
+}
+
+.ep-search-snippet mark {
+  background: #facc15;
+  color: #18181b;
+  padding: 0 0.1em;
+}
+
+/* ── Bookmarks drawer (Phase 5) ────────────────────────────────────────── */
+.ep-bookmarks {
+  width: 0;
+  overflow: hidden;
+  background: #18181b;
+  flex-shrink: 0;
+  transition: width 0.15s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ep-bookmarks.is-open {
+  width: 16rem;
+}
+
+.ep-bookmarks-title {
+  padding: 0.6rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fafafa;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex: 0 0 auto;
+}
+
+.ep-bookmarks-empty {
+  padding: 0.7rem;
+  font-size: 0.78rem;
+  color: #a1a1aa;
+}
+
+.ep-bookmarks-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.ep-bookmark-row {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ep-bookmark-jump {
+  flex: 1 1 auto;
+  text-align: start;
+  padding: 0.6rem 0.7rem;
+  background: transparent;
+  border: 0;
+  color: #d4d4d8;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.ep-bookmark-jump:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.ep-bookmark-remove {
+  flex: 0 0 auto;
+  width: 2.25rem;
+  background: transparent;
+  border: 0;
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ep-bookmark-remove:hover {
+  color: #fafafa;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* الإشارة الحاليّة (نجمة) مفعّلة → معبّأة بلون مميّز */
+.ep-btn.is-active {
+  color: #facc15;
+}
+
+.ep-btn.is-active svg {
+  fill: currentColor;
+}
+
+/* منطقة إعلان للقارئات الشاشية — مخفيّة بصرياً */
+.ep-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Cross-issue archive search (Phase 6) — light theme on the index page ─
+   Square corners by design; RTL-agnostic (flex + logical props, no L/R). */
+.ep-arc-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.ep-arc-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 2.75rem;
+  padding: 0 0.9rem;
+  background: #fff;
+  color: #18181b;
+  border: 1px solid #d4d4d8;
+  font-size: 0.95rem;
+}
+
+.ep-arc-input:focus {
+  outline: none;
+  border-color: #18181b;
+}
+
+.ep-arc-filtertoggle,
+.ep-arc-clear {
+  flex: 0 0 auto;
+  height: 2.75rem;
+  padding: 0 1rem;
+  background: #fff;
+  color: #3f3f46;
+  border: 1px solid #d4d4d8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+
+.ep-arc-filtertoggle:hover,
+.ep-arc-clear:hover,
+.ep-arc-filtertoggle[aria-expanded='true'] {
+  border-color: #18181b;
+  color: #18181b;
+}
+
+.ep-arc-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-end;
+  margin-top: 0.75rem;
+  padding: 0.9rem;
+  background: #fafafa;
+  border: 1px solid #e4e4e7;
+}
+
+.ep-arc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ep-arc-fieldlabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #71717a;
+}
+
+.ep-arc-fieldinput {
+  height: 2.25rem;
+  padding: 0 0.6rem;
+  background: #fff;
+  color: #18181b;
+  border: 1px solid #d4d4d8;
+  font-size: 0.875rem;
+}
+
+.ep-arc-fieldinput:focus {
+  outline: none;
+  border-color: #18181b;
+}
+
+.ep-arc-clear {
+  height: 2.25rem;
+  align-self: flex-end;
+}
+
+.ep-arc-status {
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+  color: #71717a;
+  min-height: 1rem;
+}
+
+.ep-arc-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.ep-arc-result {
+  display: block;
+  padding: 1rem 1.1rem;
+  background: #fff;
+  border: 1px solid #e4e4e7;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.12s ease;
+}
+
+.ep-arc-result:hover,
+.ep-arc-result:focus-visible {
+  border-color: #18181b;
+  outline: none;
+}
+
+.ep-arc-result-meta {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #a1a1aa;
+}
+
+.ep-arc-result-title {
+  margin: 0.3rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #18181b;
+}
+
+.ep-arc-result-snippet {
+  margin: 0.4rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #52525b;
+}
+
+.ep-arc-result-snippet mark {
+  background: #fde68a;
+  color: #18181b;
+  padding: 0 0.1em;
+}
+
+.ep-arc-result-sub {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #71717a;
+}
+
+.ep-arc-more {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.6rem 1.6rem;
+  background: #18181b;
+  color: #fff;
+  border: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ep-arc-more:hover {
+  background: #3f3f46;
+}
+
+@media (max-width: 480px) {
+  .ep-arc-field {
+    flex: 1 1 100%;
+  }
+}
+
+/* ── Reader search highlight (Phase 6) — pdf.js TextLayer overlay + pill ──
+   Positioning is owned by pdf.js's TextLayer; these rules mirror the minimal
+   contract from pdf_viewer.css (scaled via --total-scale-factor we set per page). */
+.ep-canvas-wrap {
+  position: relative;
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.ep-textlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: clip;
+  opacity: 1;
+  line-height: 1;
+  text-size-adjust: none;
+  forced-color-adjust: none;
+  transform-origin: 0 0;
+  pointer-events: none; /* تظليل بصريّ فقط — لا يتداخل مع إيماءات اللوحة */
+  z-index: 2;
+  --min-font-size: 1;
+  --text-scale-factor: calc(var(--total-scale-factor) * var(--min-font-size));
+  --min-font-size-inv: calc(1 / var(--min-font-size));
+}
+
+.ep-textlayer :is(span, br) {
+  color: transparent;
+  position: absolute;
+  white-space: pre;
+  transform-origin: 0% 0%;
+}
+
+.ep-textlayer > :not(.markedContent),
+.ep-textlayer .markedContent span:not(.markedContent) {
+  z-index: 1;
+  --font-height: 0;
+  font-size: calc(var(--text-scale-factor) * var(--font-height));
+  --scale-x: 1;
+  --rotate: 0deg;
+  transform: rotate(var(--rotate)) scaleX(var(--scale-x)) scale(var(--min-font-size-inv));
+}
+
+.ep-textlayer .markedContent {
+  display: contents;
+}
+
+.ep-textlayer .ep-hl {
+  background: rgba(250, 204, 21, 0.45);
+  outline: 1px solid rgba(250, 204, 21, 0.85);
+}
+
+.ep-searchpill {
+  position: absolute;
+  top: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: calc(100% - 2rem);
+  padding: 0.35rem 0.5rem;
+  background: #facc15;
+  color: #18181b;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.ep-searchpill-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-inline: 0.35rem;
+}
+
+.ep-searchpill-close {
+  flex: 0 0 auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.12);
+  color: inherit;
+  border: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ep-searchpill-close:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* ── Defensive failure states (denied / delivery) ──────────────────────── */
+.ep-statemsg {
+  max-width: 28rem;
+  color: #3f3f46;
+  font-size: 0.95rem;
+}
+
+.ep-statebtn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 0.55rem 1.25rem;
+  background: #18181b;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ep-statebtn:hover {
+  background: #3f3f46;
+}
+
+/* ── Fullscreen (native + webkit + iPhone pseudo-fallback) ─────────────── */
+.ep-reader:fullscreen,
+.ep-reader:-webkit-full-screen {
+  background: #27272a;
+}
+
+.ep-reader:fullscreen .ep-stage,
+.ep-reader:-webkit-full-screen .ep-stage {
+  height: calc(100vh - 3.3rem);
+  height: calc(100dvh - 3.3rem);
+}
+
+/* ملء شاشة زائف على iPhone (لا واجهة fullscreen أصليّة لغير الفيديو). */
+body.ep-pseudo-fs-lock {
+  overflow: hidden;
+}
+
+.ep-reader.ep-pseudo-fs {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #27272a;
+}
+
+.ep-reader.ep-pseudo-fs .ep-stage {
+  height: calc(100dvh - 3.3rem);
+}
+
+/* ── Mobile (≤ 640px): overlay drawer + compact toolbar + no spread ────── */
+@media (max-width: 640px) {
+  .ep-desktop-only {
+    display: none;
+  }
+
+  .ep-stage {
+    height: min(78vh, 900px);
+    height: min(78dvh, 900px);
+  }
+
+  .ep-thumbs {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: 72%;
+    max-width: 18rem;
+    z-index: 30;
+    transform: translateX(-100%);
+    transition: transform 0.18s ease;
+  }
+
+  [dir='rtl'] .ep-thumbs {
+    transform: translateX(100%);
+  }
+
+  .ep-thumbs.is-open {
+    width: 72%;
+    transform: translateX(0);
+  }
+
+  .ep-backdrop.is-open {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .ep-search {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: 85%;
+    max-width: 22rem;
+    z-index: 30;
+    transform: translateX(-100%);
+    transition: transform 0.18s ease;
+  }
+
+  [dir='rtl'] .ep-search {
+    transform: translateX(100%);
+  }
+
+  .ep-search.is-open {
+    width: 85%;
+    transform: translateX(0);
+  }
+
+  .ep-bookmarks {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: 80%;
+    max-width: 20rem;
+    z-index: 30;
+    transform: translateX(-100%);
+    transition: transform 0.18s ease;
+  }
+
+  [dir='rtl'] .ep-bookmarks {
+    transform: translateX(100%);
+  }
+
+  .ep-bookmarks.is-open {
+    width: 80%;
+    transform: translateX(0);
+  }
+}
