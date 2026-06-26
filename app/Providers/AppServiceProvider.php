@@ -14,8 +14,6 @@ use App\Health\Checks\MediaProcessingHealthCheck;
 use App\Health\Checks\RedisProductionCheck;
 use App\Health\Checks\RemoteStorageHealthCheck;
 use App\Health\Checks\SchedulerHealthCheck;
-use App\Modules\Notifications\Events\NotificationEvent;
-use App\Modules\Notifications\Listeners\RouteNotificationEvent;
 use App\Settings\GeneralSettings;
 use App\Settings\ThirdPartySettings;
 use App\Support\Advertising\AdClientIp;
@@ -32,7 +30,6 @@ use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
@@ -83,16 +80,6 @@ class AppServiceProvider extends ServiceProvider
         // كي يلتقط الـ worker الطويل العمر أي تغيير من اللوحة بلا إعادة تشغيل.
         RemoteStorage::configureDisk();
         $this->configureHealthChecks();
-        $this->configureNotificationRouting();
-    }
-
-    /**
-     * يربط حدث الإشعارات الوحيد (NotificationEvent) بالعقل المركزيّ عبر مستمع واحد — كلّ
-     * المصادر تمرّ عبر NotificationManager، فلا مسار إرسال ثانٍ داخل النظام (Event-First).
-     */
-    private function configureNotificationRouting(): void
-    {
-        Event::listen(NotificationEvent::class, RouteNotificationEvent::class);
     }
 
     /**

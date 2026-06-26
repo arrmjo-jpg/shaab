@@ -11,9 +11,7 @@ use App\Enums\EmbedProvider;
  *
  * - allow-list صارمة للعقد/العلامات/السمات.
  * - عقدة/علامة/سمة غير معروفة أو خطرة ⇒ رفض (validate=false).
- * - clean() يطبّع: يحذف السمات غير المسموحة، **ويصلح الروابط الملوّثة** (اقتباسات/مسافات
- *   مُحيطة من محتوى قديم مثل src="\"https://...\"")، **ويُسقِط** الصور/التضمينات/الروابط
- *   غير القابلة للإصلاح — فيضمن أنّ ناتج clean() يجتاز validate() دائماً (clean ⊆ validate).
+ * - clean() يطبّع: يحذف السمات غير المسموحة (دفاعي) — لا HTML خام يُخزَّن.
  * - التضمينات عقد منمّطة فقط (provider مسموح + رابط آمن) — لا iframe/html.
  */
 final class TipTapSanitizer
@@ -37,10 +35,10 @@ final class TipTapSanitizer
             && self::validNode($doc);
     }
 
-    /** يُعيد مستنداً مطبّعاً بسمات/روابط مسموحة فقط — ناتجه يجتاز validate() دائماً. */
+    /** يفترض اجتياز validate() — يُعيد مستنداً مطبّعاً بسمات مسموحة فقط. */
     public static function clean(array $doc): array
     {
-        return self::cleanNode($doc) ?? ['type' => 'doc'];
+        return self::cleanNode($doc);
     }
 
     // ─── Validation ─────────────────────────────────────────────────
@@ -119,34 +117,16 @@ final class TipTapSanitizer
         return $align === null || (is_string($align) && in_array($align, self::ALIGNMENTS, true));
     }
 
-    /**
-     * يطبّع الرابط قبل فحصه: يقصّ المسافات وعلامات الاقتباس المُحيطة (تلوّث بيانات قديم
-     * شائع: قيمة src/href تأتي محاطة بعلامة اقتباس حرفيّة "\"https://...\""). ثمّ يتحقّق
-     * أنّ المخطّط http/https (و mailto عند السماح) عبر بادئة صريحة — أمتن من parse_url
-     * الذي يفشل على روابط تحوي محارف خاصّة فيرفض روابط https سليمة.
-     */
     private static function safeUrl(mixed $url, bool $allowMailto = false): bool
     {
-        if (! is_string($url)) {
-            return false;
-        }
-        $url = self::normalizeUrl($url);
-        if ($url === '') {
+        if (! is_string($url) || $url === '') {
             return false;
         }
 
-        return preg_match('#^https?://#i', $url) === 1
-            || ($allowMailto && preg_match('#^mailto:#i', $url) === 1);
-    }
+        $scheme = strtolower((string) parse_url($url, PHP_URL_SCHEME));
+        $allowed = $allowMailto ? ['http', 'https', 'mailto'] : ['http', 'https'];
 
-    /** قصّ المسافات وعلامات الاقتباس (مزدوجة/مفردة) المُحيطة بالرابط. */
-    private static function normalizeUrl(mixed $url): string
-    {
-        if (! is_string($url)) {
-            return '';
-        }
-
-        return trim($url, " \t\n\r\0\x0B\"'");
+        return in_array($scheme, $allowed, true);
     }
 
     /** uuid صالح بنيوياً (لا يتحقّق من الوجود — التدهور الرشيق يكون وقت العرض). */
@@ -156,45 +136,21 @@ final class TipTapSanitizer
             && preg_match('/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i', $uuid) === 1;
     }
 
-    // ─── Normalization (strip non-whitelisted attrs + repair/drop) ──────
+    // ─── Normalization (strip non-whitelisted attrs) ────────────────
 
-    /** @return array<string,mixed>|null  null ⇒ تُسقَط العقدة (غير قابلة للإصلاح). */
-    private static function cleanNode(array $node): ?array
+    private static function cleanNode(array $node): array
     {
-        $type = $node['type'] ?? null;
-        if (! is_string($type)) {
-            return null;
-        }
-
-        // أسقِط عقدة نصّ بلا نصّ صالح (مخرجات محرّر شاذّة: {"type":"text","text":null}) —
-        // لا تحمل محتوى، ويرفضها validate. إسقاطها يجعل المستند صالحاً بلا فقدان.
-        if ($type === 'text' && ! is_string($node['text'] ?? null)) {
-            return null;
-        }
-
-        // أسقِط الصور/التضمينات غير القابلة للإصلاح (src/embed_url غير آمن) ⇒ clean ⊆ validate.
-        if ($type === 'image' && ! self::safeUrl($node['attrs']['src'] ?? null)) {
-            return null;
-        }
-        if ($type === 'embed' && ! self::validAttrs('embed', $node['attrs'] ?? [])) {
-            return null;
-        }
-
+        $type = $node['type'];
         $out = ['type' => $type];
 
         if ($type === 'text') {
-            $out['text'] = $node['text'] ?? '';
+            $out['text'] = $node['text'];
             $marks = [];
             foreach (($node['marks'] ?? []) as $m) {
-                $mt = $m['type'] ?? null;
-                // أسقِط رابطاً غير آمن (يبقى النصّ بلا علامة).
-                if ($mt === 'link' && ! self::safeUrl($m['attrs']['href'] ?? null, true)) {
-                    continue;
-                }
-                $cm = ['type' => $mt];
-                if ($mt === 'link') {
+                $cm = ['type' => $m['type']];
+                if ($m['type'] === 'link') {
                     $cm['attrs'] = [
-                        'href' => self::normalizeUrl($m['attrs']['href'] ?? ''),
+                        'href' => $m['attrs']['href'],
                         'target' => '_blank',
                         'rel' => 'noopener noreferrer nofollow',
                     ];
@@ -213,10 +169,7 @@ final class TipTapSanitizer
 
         $content = [];
         foreach (($node['content'] ?? []) as $child) {
-            $clean = is_array($child) ? self::cleanNode($child) : null;
-            if ($clean !== null) {
-                $content[] = $clean;
-            }
+            $content[] = self::cleanNode($child);
         }
         if ($content !== []) {
             $out['content'] = $content;
@@ -236,7 +189,7 @@ final class TipTapSanitizer
                 'textAlign' => self::cleanAlign($attrs),
             ], fn ($v) => $v !== null),
             'image' => array_filter([
-                'src' => self::normalizeUrl($attrs['src'] ?? ''),
+                'src' => $attrs['src'],
                 'alt' => isset($attrs['alt']) ? (string) $attrs['alt'] : null,
                 'title' => isset($attrs['title']) ? (string) $attrs['title'] : null,
             ], fn ($v) => $v !== null),
@@ -244,7 +197,7 @@ final class TipTapSanitizer
                 ? ['language' => (string) $attrs['language']] : [],
             'embed' => array_filter([
                 'provider' => $attrs['provider'],
-                'embed_url' => self::normalizeUrl($attrs['embed_url'] ?? ''),
+                'embed_url' => $attrs['embed_url'],
                 'id' => isset($attrs['id']) ? (string) $attrs['id'] : null,
             ], fn ($v) => $v !== null),
             'poll' => ['uuid' => (string) $attrs['uuid']],

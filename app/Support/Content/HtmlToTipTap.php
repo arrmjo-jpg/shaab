@@ -321,7 +321,7 @@ final class HtmlToTipTap
 
     private static function iframe(DOMElement $el, array &$blocks, array &$w): void
     {
-        $src = self::attrUrl($el, 'src');
+        $src = trim($el->getAttribute('src'));
         if (! self::safeHref($src)) {
             $w[] = 'embed_dropped';
 
@@ -387,7 +387,7 @@ final class HtmlToTipTap
             return;
         }
         if ($tag === 'a') {
-            $href = self::attrUrl($node, 'href');
+            $href = trim($node->getAttribute('href'));
             $next = self::safeHref($href)
                 ? array_merge($marks, [['type' => 'link', 'attrs' => ['href' => $href]]])
                 : $marks;
@@ -415,15 +415,9 @@ final class HtmlToTipTap
 
     // ─── Node builders + helpers ──────────────────────────────────────────────
 
-    /** قيمة سمة رابط: قصّ المسافات وعلامات الاقتباس المُحيطة (تلوّث قديم: src="\"https://...\""). */
-    private static function attrUrl(DOMElement $el, string $name): string
-    {
-        return trim($el->getAttribute($name), " \t\n\r\0\x0B\"'");
-    }
-
     private static function imageNode(DOMElement $img): ?array
     {
-        $src = self::attrUrl($img, 'src');
+        $src = trim($img->getAttribute('src'));
         if ($src === '') {
             return null;
         }
