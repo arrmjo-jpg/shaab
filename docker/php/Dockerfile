@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/zz-alphacms.ini
-
+COPY docker/php/zz-fpm.conf /usr/local/etc/php-fpm.d/zz-fpm.conf
 WORKDIR /var/www/html
 
 # Vendor layer (cached on composer.lock). --no-scripts: artisan isn't bootable until app is copied.
