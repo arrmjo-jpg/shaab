@@ -1,0 +1,31 @@
+{
+  "title": "ترحيل Vertix",
+  "subtitle": "نظام مستقلّ — استيراد الأقسام ثمّ الأخبار من قاعدة Vertix (تزايديّ، Idempotent)",
+  "connected": "متّصل بقاعدة Vertix",
+  "disconnected": "تعذّر الاتصال بقاعدة Vertix",
+  "phase1": "المرحلة 1 — استيراد الأقسام",
+  "phase2": "المرحلة 2 — استيراد الأخبار",
+  "phase2Locked": "أكمل استيراد الأقسام أولاً لتفعيل هذه المرحلة",
+  "importCategories": "استيراد الأقسام",
+  "importNews": "استيراد الأخبار الجديدة",
+  "reimport": "إعادة الاستيراد",
+  "stop": "إيقاف",
+  "running": "جارٍ التنفيذ…",
+  "sourceTotal": "إجمالي السجلات",
+  "imported": "المُستورَد",
+  "remaining": "المتبقّي",
+  "failed": "الفاشل",
+  "status": "الحالة",
+  "statusLabel": {
+    "idle": "جاهز",
+    "running": "قيد التشغيل",
+    "completed": "مكتمل",
+    "failed": "فشل"
+  },
+  "errorsTitle": "سجل الأخطاء",
+  "errorsEmpty": "لا أخطاء.",
+  "errorSource": "المصدر",
+  "errorReason": "السبب",
+  "newsHint": "يستورد الأخبار الأحدث فقط (حسب معرّف Vertix الأصليّ) — بلا تكرار، وقابل لإعادة التشغيل بأمان.",
+  "workerHint": "يعمل عبر طابور vertix. إن لم يتقدّم العدّاد شغّل العامل: php artisan queue:work --queue=vertix — أو نفّذ مباشرةً: php artisan vertix:import-news"
+}

@@ -1,0 +1,258 @@
+{
+  "common": {
+    "create": "إضافة",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "restore": "استرجاع",
+    "save": "حفظ",
+    "saving": "جارٍ الحفظ…",
+    "cancel": "إلغاء",
+    "actions": "إجراءات",
+    "systemBadge": "نظامي",
+    "yes": "نعم",
+    "no": "لا",
+    "none": "—",
+    "noEditPermission": "لا تملك صلاحية التعديل."
+  },
+  "pagination": {
+    "summary": "صفحة {{current}} من {{total}} — {{count}} عنصر",
+    "prev": "السابق",
+    "next": "التالي"
+  },
+  "users": {
+    "title": "المستخدمون",
+    "subtitle": "إدارة حسابات المستخدمين وأدوارهم",
+    "new": "مستخدم جديد",
+    "searchPlaceholder": "بحث بالاسم أو البريد…",
+    "col": {
+      "user": "المستخدم",
+      "email": "البريد الإلكتروني",
+      "type": "النوع",
+      "roles": "الأدوار",
+      "status": "الحالة",
+      "lastLogin": "آخر دخول",
+      "created": "تاريخ الإنشاء",
+      "actions": "إجراءات"
+    },
+    "type": { "admin": "مدير", "writer": "كاتب", "regular": "مستخدم" },
+    "badge": { "deleted": "محذوف", "unverified": "بريد غير مؤكَّد" },
+    "filter": {
+      "accountType": "نوع الحساب",
+      "all": "الكل",
+      "admins": "المدراء",
+      "regular": "المستخدمون",
+      "status": "الحالة",
+      "statusAll": "كل الحالات",
+      "role": "الدور",
+      "roleAll": "كل الأدوار",
+      "trashed": "المحذوفون",
+      "trashedNone": "بدون المحذوفين",
+      "trashedWith": "تضمين المحذوفين",
+      "trashedOnly": "المحذوفون فقط"
+    },
+    "status": { "active": "نشط", "suspended": "موقوف", "banned": "محظور" },
+    "action": {
+      "edit": "تعديل",
+      "resetPassword": "إرسال إعادة تعيين كلمة المرور",
+      "verifyEmail": "تأكيد البريد الآن",
+      "delete": "حذف",
+      "restore": "استرجاع"
+    },
+    "form": {
+      "createTitle": "إضافة مستخدم",
+      "editTitle": "تعديل المستخدم",
+      "name": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "passwordKeep": "كلمة المرور (اتركها فارغة للإبقاء عليها)",
+      "passwordConfirm": "تأكيد كلمة المرور",
+      "status": "الحالة",
+      "emailVerified": "البريد الإلكتروني مؤكّد",
+      "emailVerifiedHint": "عند التفعيل يُسمح للمستخدم بدخول الإدارة (يضمن بريداً فعّالاً)",
+      "isWriter": "كاتب",
+      "isWriterHint": "تفعيل صفة كاتب لهذا المستخدم (مستقل عن الأدوار)",
+      "avatar": "رابط الصورة الرمزية",
+      "avatarChoose": "انقر لاختيار صورة",
+      "avatarHint": "JPG · PNG · WEBP — بحد أقصى 2MB",
+      "backToList": "رجوع للقائمة",
+      "invalid": "تحقّق من الحقول — هناك بيانات غير صحيحة.",
+      "bio": "نبذة تعريفية",
+      "roles": "الأدوار",
+      "noRoles": "لا توجد أدوار",
+      "secBasic": "البيانات الأساسية",
+      "secBasicHint": "المعلومات الأساسية للمستخدم",
+      "secSecurity": "الأمان",
+      "secSecurityHintCreate": "كلمة المرور: 12 حرفاً على الأقل مع حرف كبير وصغير ورقم ورمز",
+      "secSecurityHintEdit": "اترك الحقول فارغة إن لم ترد تغيير كلمة المرور",
+      "secProfile": "الملف والنبذة",
+      "secProfileHint": "صورة المستخدم ونبذته التعريفية",
+      "secSocial": "روابط التواصل الاجتماعي",
+      "secSocialHint": "حسابات المستخدم على المنصات",
+      "secRoles": "الأدوار والترقية",
+      "secRolesHint": "تعيين الأدوار — الترقية لكاتب أو مدير عبر إسناد الدور المناسب",
+      "soc": {
+        "facebook": "Facebook",
+        "twitter_x": "X (Twitter)",
+        "instagram": "Instagram",
+        "tiktok": "TikTok",
+        "linkedin": "LinkedIn",
+        "youtube": "YouTube"
+      }
+    },
+    "confirm": {
+      "deleteTitle": "حذف المستخدم؟",
+      "deleteText": "سيتم حذف المستخدم (يمكن استرجاعه لاحقاً).",
+      "restoreTitle": "استرجاع المستخدم؟",
+      "restoreText": "سيُعاد تفعيل حساب المستخدم.",
+      "resetTitle": "إرسال رابط إعادة التعيين؟",
+      "resetText": "سيُرسَل رابط إعادة تعيين كلمة المرور إلى بريد المستخدم.",
+      "verifyTitle": "تأكيد بريد المستخدم؟",
+      "verifyText": "سيُعتبر بريد المستخدم مؤكَّداً ويُسمح له بدخول لوحة الإدارة.",
+      "yes": "تأكيد"
+    }
+  },
+  "roles": {
+    "title": "الأدوار",
+    "subtitle": "إدارة الأدوار وصلاحياتها",
+    "new": "دور جديد",
+    "searchPlaceholder": "بحث باسم الدور…",
+    "col": {
+      "role": "الدور",
+      "users": "المستخدمون",
+      "permissions": "الصلاحيات",
+      "system": "نظامي",
+      "actions": "إجراءات"
+    },
+    "form": {
+      "createTitle": "إضافة دور",
+      "editTitle": "تعديل الدور",
+      "name": "المعرّف (إنجليزي)",
+      "nameHint": "أحرف صغيرة وأرقام وشرطة سفلية فقط",
+      "display_name": "الاسم المعروض",
+      "description": "الوصف",
+      "permissions": "الصلاحيات",
+      "systemLocked": "دور نظامي محمي — لا يمكن تعديل المعرّف أو الصلاحيات."
+    },
+    "perm": {
+      "search": "بحث في الصلاحيات…",
+      "selectAll": "تحديد الكل",
+      "clearAll": "إلغاء الكل",
+      "groupSelectAll": "تحديد المجموعة",
+      "selected": "{{count}} صلاحية محدّدة"
+    },
+    "confirm": {
+      "deleteTitle": "حذف الدور؟",
+      "deleteText": "لا يمكن التراجع عن هذا الإجراء."
+    }
+  },
+  "permissions": {
+    "title": "الصلاحيات",
+    "subtitle": "مستكشف الصلاحيات (للقراءة فقط)",
+    "searchPlaceholder": "بحث في الصلاحيات…",
+    "col": {
+      "permission": "الصلاحية",
+      "name": "المعرّف",
+      "guard": "الحارس",
+      "system": "نظامي"
+    },
+    "count": "{{count}} صلاحية"
+  },
+  "groups": {
+    "title": "مجموعات الصلاحيات",
+    "subtitle": "إدارة مجموعات الصلاحيات",
+    "new": "مجموعة جديدة",
+    "searchPlaceholder": "بحث في المجموعات…",
+    "col": {
+      "group": "المجموعة",
+      "slug": "المعرّف",
+      "description": "الوصف",
+      "permissions": "الصلاحيات",
+      "order": "الترتيب",
+      "system": "نظامي",
+      "actions": "إجراءات"
+    },
+    "form": {
+      "createTitle": "إضافة مجموعة صلاحيات",
+      "editTitle": "تعديل مجموعة الصلاحيات",
+      "slug": "المعرّف (إنجليزي)",
+      "slugHint": "أحرف صغيرة وأرقام وشرطات فقط",
+      "slugLocked": "لا يمكن تغيير معرّف مجموعة نظامية.",
+      "display_name": "الاسم المعروض",
+      "description": "الوصف",
+      "icon": "الأيقونة (اسم Lucide)",
+      "sort_order": "الترتيب"
+    },
+    "confirm": {
+      "deleteTitle": "حذف المجموعة؟",
+      "deleteText": "لا يمكن حذف المجموعات النظامية."
+    }
+  },
+  "writerRequests": {
+    "title": "طلبات الترقية لكاتب",
+    "subtitle": "مراجعة طلبات ترقية الحسابات إلى كاتب",
+    "searchPlaceholder": "بحث باسم/بريد المستخدم…",
+    "approve": "قبول",
+    "reject": "رفض",
+    "col": {
+      "user": "المستخدم",
+      "note": "الملاحظة",
+      "status": "الحالة",
+      "created": "تاريخ الطلب",
+      "actions": "إجراءات"
+    },
+    "filter": { "all": "كل الحالات" },
+    "status": {
+      "pending": "قيد المراجعة",
+      "approved": "مقبول",
+      "rejected": "مرفوض"
+    },
+    "confirm": {
+      "approveTitle": "قبول الطلب؟",
+      "approveText": "سيُرقّى {{name}} إلى كاتب.",
+      "rejectTitle": "رفض الطلب؟",
+      "rejectText": "سيُرفض طلب {{name}}."
+    }
+  },
+  "activityLog": {
+    "title": "سجل النشاط",
+    "subtitle": "تدقيق شامل لكل تغييرات النظام",
+    "searchPlaceholder": "بحث في الوصف…",
+    "allModules": "كل الوحدات",
+    "allEvents": "كل الأحداث",
+    "from": "من",
+    "to": "إلى",
+    "system": "النظام",
+    "details": "تفاصيل",
+    "col": {
+      "when": "التاريخ",
+      "action": "الإجراء",
+      "module": "الوحدة",
+      "causer": "المنفِّذ"
+    },
+    "event": {
+      "created": "إنشاء",
+      "updated": "تعديل",
+      "deleted": "حذف",
+      "restored": "استرجاع"
+    },
+    "log": {
+      "user": "المستخدمون",
+      "role": "الأدوار",
+      "permission": "الصلاحيات",
+      "permission_group": "مجموعات الصلاحيات",
+      "writer_request": "طلبات الكتّاب",
+      "media": "الوسائط",
+      "settings": "الإعدادات",
+      "auth": "المصادقة"
+    }
+  },
+  "validation": {
+    "required": "هذا الحقل مطلوب.",
+    "email": "صيغة البريد غير صحيحة.",
+    "min2": "يجب ألا يقل عن حرفين.",
+    "password": "كلمة المرور يجب أن تكون 12 حرفاً على الأقل وتتضمّن حرفاً كبيراً وصغيراً ورقماً ورمزاً.",
+    "passwordMatch": "تأكيد كلمة المرور غير مطابق.",
+    "slug": "صيغة المعرّف غير صحيحة.",
+    "url": "صيغة الرابط غير صحيحة."
+  }
+}

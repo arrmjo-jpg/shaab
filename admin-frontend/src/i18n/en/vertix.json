@@ -1,0 +1,31 @@
+{
+  "title": "Vertix migration",
+  "subtitle": "Independent system — import categories then news from the Vertix database (incremental, idempotent)",
+  "connected": "Connected to the Vertix database",
+  "disconnected": "Could not connect to the Vertix database",
+  "phase1": "Phase 1 — Import categories",
+  "phase2": "Phase 2 — Import news",
+  "phase2Locked": "Finish importing categories first to enable this phase",
+  "importCategories": "Import categories",
+  "importNews": "Import new news",
+  "reimport": "Re-import",
+  "stop": "Stop",
+  "running": "Running…",
+  "sourceTotal": "Source records",
+  "imported": "Imported",
+  "remaining": "Remaining",
+  "failed": "Failed",
+  "status": "Status",
+  "statusLabel": {
+    "idle": "Ready",
+    "running": "Running",
+    "completed": "Completed",
+    "failed": "Failed"
+  },
+  "errorsTitle": "Error log",
+  "errorsEmpty": "No errors.",
+  "errorSource": "Source",
+  "errorReason": "Reason",
+  "newsHint": "Imports only the newest news (by original Vertix ID) — no duplicates, safe to re-run.",
+  "workerHint": "Runs on the vertix queue. If the counter does not advance, start the worker: php artisan queue:work --queue=vertix — or run directly: php artisan vertix:import-news"
+}

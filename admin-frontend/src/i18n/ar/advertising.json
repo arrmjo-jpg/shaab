@@ -1,0 +1,293 @@
+{
+  "active": "نشِطة",
+  "inactive": "متوقّفة",
+  "placementType": {
+    "banner": "بانر",
+    "inline": "داخل المقال",
+    "sidebar": "شريط جانبي",
+    "interstitial": "بيني",
+    "overlay": "متراكب",
+    "preroll": "قبليّ"
+  },
+  "selectorStrategy": {
+    "weighted": "موزون",
+    "round_robin": "تدوير دوريّ",
+    "even": "متساوٍ"
+  },
+  "campaignStatus": {
+    "draft": "مسودّة",
+    "scheduled": "مجدوَلة",
+    "active": "نشِطة",
+    "paused": "متوقّفة مؤقتاً",
+    "completed": "مكتملة",
+    "archived": "مؤرشَفة"
+  },
+  "pacingMode": {
+    "none": "بدون",
+    "even": "متساوٍ",
+    "asap": "أسرع ما يمكن"
+  },
+  "locale": {
+    "all": "كل اللغات",
+    "ar": "العربية",
+    "en": "الإنجليزية"
+  },
+  "zones": {
+    "title": "المساحات الإعلانية",
+    "subtitle": "مواضع عرض مستقرّة تستهلكها الواجهة عبر مفتاح برمجيّ ثابت.",
+    "new": "مساحة جديدة",
+    "error": "تعذّر تحميل المساحات الإعلانية.",
+    "retry": "إعادة المحاولة",
+    "col": {
+      "key": "المفتاح",
+      "name": "الاسم",
+      "type": "النوع",
+      "strategy": "الاستراتيجية",
+      "size": "المقاس",
+      "locale": "اللغة",
+      "status": "الحالة",
+      "placements": "الإعلانات"
+    },
+    "empty": {
+      "title": "لا توجد مساحات بعد",
+      "description": "أنشئ مساحة لبدء عرض الإعلانات."
+    },
+    "action": {
+      "edit": "تعديل",
+      "delete": "حذف"
+    },
+    "confirm": {
+      "deleteTitle": "حذف المساحة؟",
+      "deleteText": "حذف المساحة «{{name}}»؟ لا يمكن التراجع.",
+      "delete": "حذف"
+    },
+    "form": {
+      "createTitle": "مساحة إعلانية جديدة",
+      "editTitle": "تعديل المساحة الإعلانية",
+      "key": "المفتاح",
+      "keyHint": "يُولَّد تلقائيًّا من الاسم — أحرف إنجليزية صغيرة وأرقام وشَرطة سفلية فقط. يمكنك تعديله.",
+      "name": "الاسم",
+      "description": "الوصف",
+      "placementType": "نوع الموضع",
+      "selectorStrategy": "استراتيجية الاختيار",
+      "width": "العرض (بكسل)",
+      "height": "الارتفاع (بكسل)",
+      "locale": "اللغة",
+      "isActive": "نشِطة",
+      "isActiveHint": "المساحات المتوقّفة لا تعرض إعلانات.",
+      "sortOrder": "ترتيب العرض",
+      "save": "حفظ المساحة",
+      "saving": "جارٍ الحفظ…",
+      "back": "العودة إلى المساحات"
+    }
+  },
+  "campaigns": {
+    "title": "الحملات",
+    "subtitle": "حاويات الجدولة والأولوية ودورة الحياة التي تملك الإبداعات.",
+    "new": "حملة جديدة",
+    "error": "تعذّر تحميل الحملات.",
+    "retry": "إعادة المحاولة",
+    "noWindow": "بلا نافذة",
+    "filter": {
+      "search": "ابحث في الحملات…",
+      "statusAll": "كل الحالات",
+      "pacingAll": "كل الوتيرة",
+      "sortNewest": "الأحدث",
+      "sortName": "الاسم",
+      "sortPriority": "الأولوية",
+      "trashedNone": "النشطة",
+      "trashedOnly": "المحذوفات",
+      "reset": "تصفير"
+    },
+    "col": {
+      "name": "الحملة",
+      "status": "الحالة",
+      "window": "النافذة",
+      "priority": "الأولوية",
+      "creatives": "الإبداعات",
+      "date": "أُنشئت"
+    },
+    "empty": {
+      "title": "لا توجد حملات بعد",
+      "description": "أنشئ حملتك الأولى.",
+      "trashTitle": "سلّة المحذوفات فارغة",
+      "trashDescription": "لا توجد حملات محذوفة."
+    },
+    "action": {
+      "edit": "تعديل",
+      "delete": "حذف",
+      "restore": "استرجاع",
+      "forceDelete": "حذف نهائيّ"
+    },
+    "confirm": {
+      "deleteTitle": "حذف الحملة؟",
+      "deleteText": "حذف «{{name}}»؟ يمكن استرجاعها من المحذوفات.",
+      "delete": "حذف",
+      "forceTitle": "حذف نهائيّ؟",
+      "forceText": "حذف «{{name}}» نهائياً مع كل إبداعاتها وإسناداتها؟ لا يمكن التراجع.",
+      "forceYes": "حذف نهائيّ",
+      "transitionTitle": "تغيير الحالة؟",
+      "transitionText": "نقل «{{name}}» إلى «{{status}}»؟",
+      "transition": "تأكيد"
+    },
+    "form": {
+      "createTitle": "حملة جديدة",
+      "editTitle": "تعديل الحملة",
+      "name": "الاسم",
+      "advertiserName": "المُعلِن",
+      "priority": "الأولوية",
+      "priorityHint": "الأعلى يُعرَض أولاً (محجوز لاختيار مستقبليّ).",
+      "weight": "الوزن",
+      "weightHint": "وزن التدوير النسبيّ.",
+      "startsAt": "تبدأ في",
+      "endsAt": "تنتهي في",
+      "budgetTotal": "الميزانية الكلية",
+      "budgetHint": "محجوزة — لا محرّك إنفاق في هذه المرحلة.",
+      "pacingMode": "وضع الوتيرة",
+      "draftNote": "تُحفظ كمسودّة. «حفظ ونشر» يتطلّب إبداعًا واحدًا على الأقل مربوطًا بمساحة عرض؛ أضِفهما ثمّ انشر — وبعدها تُعرَض تلقائيًّا وفق التواريخ بلا خطوة أخرى.",
+      "saveDraft": "حفظ كمسودّة",
+      "publish": "حفظ ونشر",
+      "save": "حفظ الحملة",
+      "saving": "جارٍ الحفظ…",
+      "back": "العودة إلى الحملات"
+    },
+    "lifecycle": {
+      "title": "دورة الحياة",
+      "current": "الحالة الحالية",
+      "moveTo": "الانتقال إلى",
+      "noTransitions": "لا توجد انتقالات يدوية متاحة من هذه الحالة.",
+      "windowExpiredHint": "انتهت نافذة الحملة — التفعيل غير متاح."
+    }
+  },
+  "creativeType": { "image": "صورة", "html": "HTML", "video": "فيديو" },
+  "deviceClass": { "desktop": "سطح المكتب", "mobile": "الجوال", "tablet": "اللوحي" },
+  "creatives": {
+    "title": "الإبداعات",
+    "subtitle": "الوحدة المعروضة — صورة أو HTML مُنقّى — تتبع حملة.",
+    "new": "إبداع جديد",
+    "error": "تعذّر تحميل الإبداعات.",
+    "retry": "إعادة المحاولة",
+    "filter": {
+      "search": "ابحث في الإبداعات…",
+      "campaignAll": "كل الحملات",
+      "typeAll": "كل الأنواع",
+      "activeAll": "النشطة والمتوقّفة",
+      "activeOnly": "النشطة فقط",
+      "inactiveOnly": "المتوقّفة فقط",
+      "trashedNone": "النشطة",
+      "trashedOnly": "المحذوفات",
+      "reset": "تصفير"
+    },
+    "col": {
+      "title": "الإبداع",
+      "type": "النوع",
+      "campaign": "الحملة",
+      "weight": "الوزن",
+      "status": "الحالة",
+      "placements": "الإسنادات",
+      "date": "أُنشئ"
+    },
+    "empty": {
+      "title": "لا توجد إبداعات بعد",
+      "description": "أنشئ إبداعك الأول.",
+      "trashTitle": "سلّة المحذوفات فارغة",
+      "trashDescription": "لا توجد إبداعات محذوفة."
+    },
+    "action": { "edit": "تعديل", "delete": "حذف", "restore": "استرجاع", "forceDelete": "حذف نهائيّ" },
+    "confirm": {
+      "deleteTitle": "حذف الإبداع؟",
+      "deleteText": "حذف «{{title}}»؟ يمكن استرجاعه من المحذوفات.",
+      "delete": "حذف",
+      "forceTitle": "حذف نهائيّ؟",
+      "forceText": "حذف «{{title}}» نهائياً مع إسناداته؟ لا يمكن التراجع.",
+      "forceYes": "حذف نهائيّ"
+    },
+    "form": {
+      "createTitle": "إبداع جديد",
+      "editTitle": "تعديل الإبداع",
+      "campaign": "الحملة",
+      "campaignPlaceholder": "اختر حملة",
+      "type": "النوع",
+      "videoNote": "إعلانات الفيديو غير مُفعّلة في هذه المرحلة.",
+      "title": "العنوان",
+      "altText": "النص البديل",
+      "landingUrl": "رابط الوجهة",
+      "landingHint": "تُوجَّه النقرات إليه عبر رابط موقّع (http/https فقط).",
+      "weight": "الوزن",
+      "isActive": "نشِط",
+      "isActiveHint": "الإبداعات المتوقّفة لا تُعرَض.",
+      "image": "الصورة",
+      "imageHint": "اختر من مكتبة الوسائط أو ارفع أصلاً جديداً.",
+      "chooseImage": "اختيار صورة",
+      "removeImage": "إزالة",
+      "upload": "رفع جديد",
+      "uploading": "جارٍ الرفع…",
+      "uploadFailed": "فشل الرفع.",
+      "html": "كود HTML",
+      "htmlHint": "HTML طرف-أول — يُنقّى عند الحفظ (تُزال السكربتات والإطارات ومعالِجات الأحداث).",
+      "preview": "معاينة حيّة",
+      "previewHint": "تُعرَض في إطار معزول — لا تُنفَّذ السكربتات هنا.",
+      "save": "حفظ الإبداع",
+      "saving": "جارٍ الحفظ…",
+      "back": "العودة إلى الإبداعات"
+    }
+  },
+  "placements": {
+    "title": "الإسنادات",
+    "subtitle": "إسناد إبداع ↔ مساحة — المرشّحون القابلون للعرض.",
+    "new": "إسناد إبداع",
+    "error": "تعذّر تحميل الإسنادات.",
+    "retry": "إعادة المحاولة",
+    "allDevices": "كل الأجهزة",
+    "filter": {
+      "zoneAll": "كل المساحات",
+      "creativeAll": "كل الإبداعات",
+      "activeAll": "النشطة والمتوقّفة",
+      "activeOnly": "النشطة فقط",
+      "inactiveOnly": "المتوقّفة فقط",
+      "reset": "تصفير"
+    },
+    "col": { "creative": "الإبداع", "zone": "المساحة", "weight": "الوزن", "devices": "الأجهزة", "status": "الحالة" },
+    "empty": { "title": "لا توجد إسنادات بعد", "description": "أسنِد إبداعاً إلى مساحة." },
+    "action": { "edit": "تعديل", "detach": "فصل" },
+    "confirm": {
+      "detachTitle": "فصل الإسناد؟",
+      "detachText": "فصل «{{creative}}» عن «{{zone}}»؟",
+      "detach": "فصل"
+    },
+    "attach": {
+      "title": "إسناد إبداع إلى مساحة",
+      "creative": "الإبداع",
+      "creativePlaceholder": "اختر إبداعاً",
+      "zone": "المساحة",
+      "zonePlaceholder": "اختر مساحة",
+      "compatible": "متوافق — يمكن عرض هذا الإبداع في هذه المساحة.",
+      "incompatible": "غير متوافق — «{{zone}}» تقبل: {{allowed}}.",
+      "allowedTypes": "هذه المساحة تقبل: {{allowed}}.",
+      "submit": "إسناد"
+    },
+    "edit": { "title": "تعديل الإسناد" },
+    "weight": "الوزن",
+    "weightHint": "يتجاوز وزن الإبداع عند ضبطه؛ اتركه فارغاً للوراثة.",
+    "isActive": "نشِط",
+    "devices": "استهداف الأجهزة",
+    "devicesHint": "عدم اختيار أيّ جهاز = كل الأجهزة."
+  },
+  "analytics": {
+    "title": "تحليلات الإعلانات",
+    "subtitle": "الانطباعات والنقرات وCTR عبر الحملات والإبداعات والمساحات.",
+    "error": "تعذّر تحميل التحليلات.",
+    "retry": "إعادة المحاولة",
+    "empty": "لا بيانات في هذه الفترة.",
+    "range": { "24h": "٢٤ ساعة", "7d": "٧ أيام", "30d": "٣٠ يوماً", "custom": "مخصّص" },
+    "metric": { "impressions": "الانطباعات", "clicks": "النقرات" },
+    "kpi": { "impressions": "الانطباعات", "clicks": "النقرات", "ctr": "معدّل النقر (CTR)" },
+    "trend": { "title": "الاتجاه اليوميّ", "subtitle": "الانطباعات المؤكَّدة والنقرات لكل يوم." },
+    "topCampaigns": "أعلى الحملات",
+    "topCreatives": "أعلى الإبداعات",
+    "topZones": "أعلى المساحات",
+    "channels": "قنوات الزيارات",
+    "channelsSubtitle": "الانطباعات حسب المصدر.",
+    "channel": { "direct": "مباشر", "internal": "داخليّ", "search": "بحث", "social": "اجتماعيّ", "referral": "إحالة" }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "title": "الملف الشخصي",
+  "subtitle": "مركز حسابك التشغيلي — هويتك ونشاطك وأمانك وإنتاجيتك",
+  "tabs": {
+    "overview": "نظرة عامة",
+    "analytics": "إنتاجيتي",
+    "activity": "السجل التشغيلي",
+    "security": "مركز الأمان",
+    "permissions": "الصلاحيات",
+    "edit": "تعديل الملف"
+  },
+  "meta": {
+    "email": "البريد الإلكتروني",
+    "status": "حالة الحساب",
+    "roles": "الأدوار",
+    "joined": "تاريخ الانضمام",
+    "lastLogin": "آخر دخول",
+    "lastActivity": "آخر نشاط",
+    "writer": "كاتب",
+    "verified": "بريد مؤكَّد",
+    "unverified": "بريد غير مؤكَّد",
+    "currentSession": "جلستك الحالية",
+    "none": "—"
+  },
+  "overview": {
+    "identity": "الهوية",
+    "details": "تفاصيل مهنية",
+    "quickStats": "لمحة سريعة",
+    "noBio": "لا توجد نبذة تعريفية بعد.",
+    "ip": "عنوان IP",
+    "permissionsSummary": "ملخّص الصلاحيات",
+    "fullAccess": "وصول كامل (مدير النظام)",
+    "capabilities": "{{permissions}} صلاحية ضمن {{groups}} مجموعة"
+  },
+  "analytics": {
+    "section": "إنتاجيتي التشغيلية",
+    "hint": "أرقام حقيقية لمساهماتك داخل المنصّة",
+    "estimateNote": "توكِنات/تكلفة الذكاء الاصطناعي تقديرية وليست فوترة دقيقة.",
+    "content": "المحتوى",
+    "ai": "الذكاء الاصطناعي",
+    "articlesCreated": "مقالات أنشأتها",
+    "articlesPublished": "مقالات منشورة",
+    "articlesDrafts": "مسودّات",
+    "viewsGenerated": "مشاهدات مقالاتك",
+    "reelsCreated": "ريلز أنشأتها",
+    "reelsPublished": "ريلز منشورة",
+    "reelsDrafts": "مسودّات ريلز",
+    "mediaUploads": "وسائط مرفوعة",
+    "aiRequests": "طلبات الذكاء الاصطناعي",
+    "aiTokens": "التوكِنات المقدّرة",
+    "aiCost": "التكلفة التقديرية"
+  },
+  "permissions": {
+    "section": "أدوارك وصلاحياتك",
+    "hint": "القدرات الفعلية المشتقّة من كل أدوارك",
+    "roles": "الأدوار",
+    "rolesCount": "الأدوار",
+    "permissionsCount": "الصلاحيات الفعلية",
+    "groupsCount": "المجموعات",
+    "fullAccess": "هذا الحساب يملك وصولاً كاملاً غير مقيّد (مدير النظام).",
+    "empty": "لا توجد صلاحيات مُسندة."
+  },
+  "security": {
+    "section": "مركز الأمان",
+    "hint": "حالة أمان حسابك وإجراءاته",
+    "summary": "ملخّص الأمان",
+    "passwordChanged": "آخر تغيير لكلمة المرور",
+    "emailVerified": "تأكيد البريد",
+    "lastLogin": "آخر دخول",
+    "lastLoginIp": "IP آخر دخول",
+    "resetRequests": "طلبات إعادة التعيين",
+    "lastReset": "آخر طلب إعادة تعيين",
+    "activeSessions": "الجلسات النشطة",
+    "accountCreated": "إنشاء الحساب",
+    "never": "لم يحدث",
+    "verified": "مؤكَّد",
+    "unverified": "غير مؤكَّد",
+    "revokeAll": "إنهاء كل الجلسات الأخرى",
+    "revokeAllConfirmTitle": "إنهاء كل الجلسات الأخرى؟",
+    "revokeAllConfirmText": "سيُسجَّل خروج كل الأجهزة عدا جهازك الحالي.",
+    "revokeAllYes": "نعم، أنهِها"
+  },
+  "info": {
+    "section": "البيانات الأساسية",
+    "sectionHint": "الاسم والنبذة وروابط التواصل",
+    "name": "الاسم الكامل",
+    "bio": "نبذة تعريفية",
+    "avatarChoose": "انقر لاختيار صورة",
+    "avatarHint": "JPG · PNG · WEBP — بحد أقصى 2MB",
+    "avatarRemove": "إزالة الصورة",
+    "social": "روابط التواصل",
+    "save": "حفظ التغييرات",
+    "saving": "جارٍ الحفظ…",
+    "emailRestricted": "تغيير البريد الإلكتروني مُقيَّد لأسباب أمنية — يتولّاه مشرف عبر إدارة المستخدمين.",
+    "soc": {
+      "facebook": "Facebook",
+      "twitter_x": "X (Twitter)",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    }
+  },
+  "password": {
+    "section": "تغيير كلمة المرور",
+    "sectionHint": "سيتم إنهاء جميع الجلسات الأخرى بعد التغيير",
+    "current": "كلمة المرور الحالية",
+    "new": "كلمة المرور الجديدة",
+    "confirm": "تأكيد كلمة المرور",
+    "save": "تغيير كلمة المرور",
+    "saving": "جارٍ التغيير…"
+  },
+  "activity": {
+    "section": "السجل التشغيلي",
+    "hint": "حياتك التشغيلية داخل المنصّة",
+    "empty": "لا يوجد نشاط بعد.",
+    "event": "الحدث",
+    "source": "المصدر",
+    "ip": "IP",
+    "when": "التاريخ",
+    "filterAll": "الكل",
+    "filter": {
+      "auth": "المصادقة",
+      "rbac": "الصلاحيات",
+      "settings": "الإعدادات",
+      "system": "النظام",
+      "user": "الحساب"
+    }
+  },
+  "sessions": {
+    "section": "الجلسات النشطة",
+    "hint": "أجهزة/توكنات الوصول لحسابك",
+    "current": "الجلسة الحالية",
+    "revoke": "إنهاء",
+    "lastUsed": "آخر استخدام",
+    "created": "أُنشئت",
+    "empty": "لا توجد جلسات.",
+    "confirmTitle": "إنهاء الجلسة؟",
+    "confirmText": "سيُسجَّل خروج هذا الجهاز فوراً.",
+    "yes": "تأكيد"
+  },
+  "validation": {
+    "required": "هذا الحقل مطلوب.",
+    "min2": "يجب ألا يقل عن حرفين.",
+    "password": "كلمة المرور يجب ألا تقل عن 12 حرفاً مع أحرف كبيرة وصغيرة وأرقام ورموز.",
+    "passwordMatch": "تأكيد كلمة المرور غير مطابق.",
+    "url": "صيغة الرابط غير صحيحة."
+  }
+}

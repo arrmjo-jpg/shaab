@@ -1,0 +1,169 @@
+{
+  "active": "نشِط",
+  "inactive": "متوقّف",
+  "pollState": {
+    "inactive": "متوقّف",
+    "scheduled": "مجدوَل",
+    "open": "مفتوح",
+    "closed": "مغلَق"
+  },
+  "audienceMode": {
+    "public": "الجميع",
+    "authenticated": "المسجّلون فقط"
+  },
+  "resultVisibility": {
+    "always": "ظاهرة دائماً",
+    "after_vote": "بعد التصويت",
+    "after_close": "بعد الإغلاق"
+  },
+  "polls": {
+    "title": "الاستطلاعات",
+    "subtitle": "أسئلة بخيارات يصوّت عليها القرّاء.",
+    "new": "استطلاع جديد",
+    "analytics": "التحليلات",
+    "trash": "المحذوفات",
+    "trashTitle": "الاستطلاعات المحذوفة",
+    "trashSubtitle": "استرجع استطلاعاً أو احذفه نهائياً.",
+    "error": "تعذّر تحميل الاستطلاعات.",
+    "retry": "إعادة المحاولة",
+    "noWindow": "بلا نافذة",
+    "multiple": "اختيار متعدّد",
+    "filter": {
+      "search": "ابحث في الاستطلاعات…",
+      "activeAll": "النشطة والمتوقّفة",
+      "activeOnly": "النشطة فقط",
+      "inactiveOnly": "المتوقّفة فقط",
+      "sortNewest": "الأحدث",
+      "sortQuestion": "السؤال",
+      "reset": "تصفير"
+    },
+    "col": {
+      "question": "السؤال",
+      "state": "الحالة",
+      "allowMultiple": "متعدّد",
+      "options": "الخيارات",
+      "window": "النافذة",
+      "date": "أُنشئ",
+      "deletedAt": "حُذف"
+    },
+    "empty": {
+      "title": "لا توجد استطلاعات بعد",
+      "description": "أنشئ استطلاعك الأول.",
+      "trashTitle": "سلّة المحذوفات فارغة",
+      "trashDescription": "لا توجد استطلاعات محذوفة."
+    },
+    "action": {
+      "edit": "تعديل",
+      "analytics": "التحليلات",
+      "activate": "تفعيل",
+      "deactivate": "إيقاف",
+      "delete": "حذف",
+      "restore": "استرجاع",
+      "forceDelete": "حذف نهائيّ"
+    },
+    "confirm": {
+      "activateTitle": "تفعيل الاستطلاع؟",
+      "activateText": "تفعيل «{{question}}»؟",
+      "deactivateTitle": "إيقاف الاستطلاع؟",
+      "deactivateText": "إيقاف «{{question}}»؟",
+      "toggle": "تأكيد",
+      "deleteTitle": "حذف الاستطلاع؟",
+      "deleteText": "حذف «{{question}}»؟ يمكن استرجاعه من المحذوفات.",
+      "delete": "حذف",
+      "forceTitle": "حذف نهائيّ؟",
+      "forceText": "حذف «{{question}}» نهائياً مع كل خياراته وأصواته؟ لا يمكن التراجع.",
+      "forceYes": "حذف نهائيّ"
+    },
+    "form": {
+      "createTitle": "استطلاع جديد",
+      "editTitle": "تعديل الاستطلاع",
+      "inactiveNote": "تبدأ الاستطلاعات الجديدة متوقّفة. استخدم أداة التفعيل للنشر.",
+      "activation": "التفعيل",
+      "activeNow": "هذا الاستطلاع نشِط.",
+      "inactiveNow": "هذا الاستطلاع متوقّف.",
+      "question": "السؤال",
+      "startsAt": "يبدأ في",
+      "endsAt": "ينتهي في",
+      "audienceMode": "الجمهور",
+      "resultVisibility": "ظهور النتائج",
+      "allowMultiple": "السماح بإجابات متعدّدة",
+      "allowMultipleHint": "اسمح للمصوّت باختيار أكثر من خيار.",
+      "options": "الخيارات",
+      "optionsHint": "أضِف خيارين على الأقل. رتّبها بالأسهم.",
+      "addOption": "إضافة خيار",
+      "optionPlaceholder": "الخيار {{n}}",
+      "moveUp": "تحريك لأعلى",
+      "moveDown": "تحريك لأسفل",
+      "votesCount": "{{count}} صوت",
+      "cannotRemoveVoted": "لا يمكن حذف خيار عليه أصوات.",
+      "minOptions": "مطلوب {{min}} خيارات على الأقل.",
+      "save": "حفظ الاستطلاع",
+      "saving": "جارٍ الحفظ…",
+      "back": "العودة إلى الاستطلاعات"
+    }
+  },
+  "pollAnalytics": {
+    "title": "تحليلات الاستطلاع",
+    "loadingTitle": "جارٍ التحميل…",
+    "error": "تعذّر تحميل التحليلات.",
+    "retry": "إعادة المحاولة",
+    "yes": "نعم",
+    "no": "لا",
+    "range": { "24h": "٢٤ ساعة", "7d": "٧ أيام", "30d": "٣٠ يوماً", "custom": "مخصّص" },
+    "overview": {
+      "title": "تحليلات الاستطلاعات",
+      "subtitle": "أداء أسطول الاستطلاعات — مشاركة حقيقية ومتصدّرون وتوزيع للحالات.",
+      "allTime": "كل الأرقام تراكمية لكامل المدة."
+    },
+    "kpi": {
+      "totalPolls": "إجمالي الاستطلاعات",
+      "activePolls": "النشطة",
+      "openPolls": "المفتوحة",
+      "totalVotes": "إجمالي الأصوات",
+      "totalSelections": "إجمالي الاختيارات"
+    },
+    "status": {
+      "title": "توزيع الحالات",
+      "subtitle": "حصّة كل حالة من إجمالي الاستطلاعات",
+      "empty": "لا استطلاعات بعد"
+    },
+    "leaderboard": {
+      "title": "المتصدّرون",
+      "subtitle": "الأعلى بعدد المصوّتين الفريدين",
+      "empty": "لا مشاركة بعد"
+    },
+    "recent": {
+      "title": "المشاركة الحديثة",
+      "subtitle": "الأصوات اليومية خلال آخر {{days}} يوماً",
+      "total": "الإجمالي في الفترة: {{value}}",
+      "empty": "لا مشاركة في هذه الفترة"
+    },
+    "metric": {
+      "uniqueVoters": "مصوّتون فريدون",
+      "totalSelections": "إجمالي الاختيارات",
+      "avgSelections": "متوسّط الاختيارات للمصوّت",
+      "optionsCount": "عدد الخيارات"
+    },
+    "distribution": {
+      "title": "توزيع الأصوات",
+      "subtitle": "حصّة كل خيار من إجمالي الاختيارات",
+      "empty": "لا أصوات بعد"
+    },
+    "trend": {
+      "title": "المشاركة عبر الزمن",
+      "subtitle": "الأصوات اليومية ضمن النطاق المحدّد",
+      "rangeTotal": "الإجمالي في الفترة: {{value}}",
+      "empty": "لا مشاركة في هذه الفترة"
+    },
+    "setup": {
+      "title": "الإعداد",
+      "state": "الحالة",
+      "allowMultiple": "اختيار متعدّد",
+      "audience": "الجمهور",
+      "resultVisibility": "ظهور النتائج",
+      "startsAt": "يبدأ في",
+      "endsAt": "ينتهي في",
+      "createdAt": "أُنشئ في"
+    }
+  }
+}

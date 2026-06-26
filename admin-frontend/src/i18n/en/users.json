@@ -1,0 +1,258 @@
+{
+  "common": {
+    "create": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "restore": "Restore",
+    "save": "Save",
+    "saving": "Saving…",
+    "cancel": "Cancel",
+    "actions": "Actions",
+    "systemBadge": "System",
+    "yes": "Yes",
+    "no": "No",
+    "none": "—",
+    "noEditPermission": "You don't have edit permission."
+  },
+  "pagination": {
+    "summary": "Page {{current}} of {{total}} — {{count}} items",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "users": {
+    "title": "Users",
+    "subtitle": "Manage user accounts and roles",
+    "new": "New user",
+    "searchPlaceholder": "Search by name or email…",
+    "col": {
+      "user": "User",
+      "email": "Email",
+      "type": "Type",
+      "roles": "Roles",
+      "status": "Status",
+      "lastLogin": "Last login",
+      "created": "Created",
+      "actions": "Actions"
+    },
+    "type": { "admin": "Admin", "writer": "Writer", "regular": "User" },
+    "badge": { "deleted": "Deleted", "unverified": "Email unverified" },
+    "filter": {
+      "accountType": "Account type",
+      "all": "All",
+      "admins": "Admins",
+      "regular": "Users",
+      "status": "Status",
+      "statusAll": "All statuses",
+      "role": "Role",
+      "roleAll": "All roles",
+      "trashed": "Deleted",
+      "trashedNone": "Exclude deleted",
+      "trashedWith": "Include deleted",
+      "trashedOnly": "Deleted only"
+    },
+    "status": { "active": "Active", "suspended": "Suspended", "banned": "Banned" },
+    "action": {
+      "edit": "Edit",
+      "resetPassword": "Send password reset",
+      "verifyEmail": "Verify email now",
+      "delete": "Delete",
+      "restore": "Restore"
+    },
+    "form": {
+      "createTitle": "Add user",
+      "editTitle": "Edit user",
+      "name": "Full name",
+      "email": "Email",
+      "password": "Password",
+      "passwordKeep": "Password (leave empty to keep current)",
+      "passwordConfirm": "Confirm password",
+      "status": "Status",
+      "emailVerified": "Email verified",
+      "emailVerifiedHint": "When on, the user may sign in to admin (ensures a valid email)",
+      "isWriter": "Writer",
+      "isWriterHint": "Grant writer capability to this user (independent of roles)",
+      "avatar": "Avatar URL",
+      "avatarChoose": "Click to choose an image",
+      "avatarHint": "JPG · PNG · WEBP — up to 2MB",
+      "backToList": "Back to list",
+      "invalid": "Check the fields — some data is invalid.",
+      "bio": "Bio",
+      "roles": "Roles",
+      "noRoles": "No roles",
+      "secBasic": "Basic information",
+      "secBasicHint": "Core user details",
+      "secSecurity": "Security",
+      "secSecurityHintCreate": "Password: at least 12 chars with uppercase, lowercase, number, and symbol",
+      "secSecurityHintEdit": "Leave empty to keep the current password",
+      "secProfile": "Profile & bio",
+      "secProfileHint": "User avatar and bio",
+      "secSocial": "Social links",
+      "secSocialHint": "User accounts on platforms",
+      "secRoles": "Roles & promotion",
+      "secRolesHint": "Assign roles — promote to writer or admin by assigning the matching role",
+      "soc": {
+        "facebook": "Facebook",
+        "twitter_x": "X (Twitter)",
+        "instagram": "Instagram",
+        "tiktok": "TikTok",
+        "linkedin": "LinkedIn",
+        "youtube": "YouTube"
+      }
+    },
+    "confirm": {
+      "deleteTitle": "Delete user?",
+      "deleteText": "The user will be soft-deleted (restorable later).",
+      "restoreTitle": "Restore user?",
+      "restoreText": "The user account will be reactivated.",
+      "resetTitle": "Send reset link?",
+      "resetText": "A password reset link will be sent to the user's email.",
+      "verifyTitle": "Verify user's email?",
+      "verifyText": "The user's email will be marked verified and they may sign in to admin.",
+      "yes": "Confirm"
+    }
+  },
+  "roles": {
+    "title": "Roles",
+    "subtitle": "Manage roles and their permissions",
+    "new": "New role",
+    "searchPlaceholder": "Search by role name…",
+    "col": {
+      "role": "Role",
+      "users": "Users",
+      "permissions": "Permissions",
+      "system": "System",
+      "actions": "Actions"
+    },
+    "form": {
+      "createTitle": "Add role",
+      "editTitle": "Edit role",
+      "name": "Slug (english)",
+      "nameHint": "Lowercase letters, digits and underscore only",
+      "display_name": "Display name",
+      "description": "Description",
+      "permissions": "Permissions",
+      "systemLocked": "Protected system role — slug and permissions cannot be changed."
+    },
+    "perm": {
+      "search": "Search permissions…",
+      "selectAll": "Select all",
+      "clearAll": "Clear all",
+      "groupSelectAll": "Select group",
+      "selected": "{{count}} permissions selected"
+    },
+    "confirm": {
+      "deleteTitle": "Delete role?",
+      "deleteText": "This action cannot be undone."
+    }
+  },
+  "permissions": {
+    "title": "Permissions",
+    "subtitle": "Permissions explorer (read-only)",
+    "searchPlaceholder": "Search permissions…",
+    "col": {
+      "permission": "Permission",
+      "name": "Slug",
+      "guard": "Guard",
+      "system": "System"
+    },
+    "count": "{{count}} permissions"
+  },
+  "groups": {
+    "title": "Permission groups",
+    "subtitle": "Manage permission groups",
+    "new": "New group",
+    "searchPlaceholder": "Search groups…",
+    "col": {
+      "group": "Group",
+      "slug": "Slug",
+      "description": "Description",
+      "permissions": "Permissions",
+      "order": "Order",
+      "system": "System",
+      "actions": "Actions"
+    },
+    "form": {
+      "createTitle": "Add permission group",
+      "editTitle": "Edit permission group",
+      "slug": "Slug (english)",
+      "slugHint": "Lowercase letters, digits and dashes only",
+      "slugLocked": "Cannot change the slug of a system group.",
+      "display_name": "Display name",
+      "description": "Description",
+      "icon": "Icon (Lucide name)",
+      "sort_order": "Order"
+    },
+    "confirm": {
+      "deleteTitle": "Delete group?",
+      "deleteText": "System groups cannot be deleted."
+    }
+  },
+  "writerRequests": {
+    "title": "Writer requests",
+    "subtitle": "Review account upgrade requests to writer",
+    "searchPlaceholder": "Search by user name/email…",
+    "approve": "Approve",
+    "reject": "Reject",
+    "col": {
+      "user": "User",
+      "note": "Note",
+      "status": "Status",
+      "created": "Requested",
+      "actions": "Actions"
+    },
+    "filter": { "all": "All statuses" },
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "confirm": {
+      "approveTitle": "Approve request?",
+      "approveText": "{{name}} will be promoted to writer.",
+      "rejectTitle": "Reject request?",
+      "rejectText": "{{name}}'s request will be rejected."
+    }
+  },
+  "activityLog": {
+    "title": "Activity log",
+    "subtitle": "System-wide audit of all changes",
+    "searchPlaceholder": "Search description…",
+    "allModules": "All modules",
+    "allEvents": "All events",
+    "from": "From",
+    "to": "To",
+    "system": "System",
+    "details": "Details",
+    "col": {
+      "when": "Date",
+      "action": "Action",
+      "module": "Module",
+      "causer": "By"
+    },
+    "event": {
+      "created": "Created",
+      "updated": "Updated",
+      "deleted": "Deleted",
+      "restored": "Restored"
+    },
+    "log": {
+      "user": "Users",
+      "role": "Roles",
+      "permission": "Permissions",
+      "permission_group": "Permission groups",
+      "writer_request": "Writer requests",
+      "media": "Media",
+      "settings": "Settings",
+      "auth": "Auth"
+    }
+  },
+  "validation": {
+    "required": "This field is required.",
+    "email": "Invalid email format.",
+    "min2": "Must be at least 2 characters.",
+    "password": "Password must be at least 12 characters and include an uppercase letter, a lowercase letter, a number, and a symbol.",
+    "passwordMatch": "Password confirmation does not match.",
+    "slug": "Invalid slug format.",
+    "url": "Invalid URL format."
+  }
+}

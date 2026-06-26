@@ -1,0 +1,413 @@
+{
+  "status": {
+    "draft": "Draft",
+    "scheduled": "Scheduled",
+    "live": "Live",
+    "offline": "Offline",
+    "ended": "Ended",
+    "failed": "Failed",
+    "archived": "Archived"
+  },
+  "kind": {
+    "live": "Live stream",
+    "tv": "TV channel",
+    "radio": "Radio"
+  },
+  "source": {
+    "hls": "HLS stream",
+    "iptv": "IPTV",
+    "youtube_live": "YouTube Live",
+    "external_provider": "External provider",
+    "icecast": "Icecast",
+    "shoutcast": "Shoutcast"
+  },
+  "health": {
+    "unknown": "Unknown",
+    "status": {
+      "healthy": "Healthy",
+      "online": "Online",
+      "up": "Up",
+      "degraded": "Degraded",
+      "unknown": "Unknown",
+      "down": "Down",
+      "failed": "Failed",
+      "offline": "Offline"
+    }
+  },
+  "dashboard": {
+    "title": "Broadcast Command Center",
+    "subtitle": "Real-time state of live broadcasts, channels, audience and health.",
+    "kpi": {
+      "live": "Live now",
+      "liveViewers": "Live viewers",
+      "scheduled": "Scheduled",
+      "failed": "Failed",
+      "globalSubs": "Global subscribers",
+      "closedAudiences": "Closed audiences"
+    },
+    "liveNow": {
+      "title": "Live Now",
+      "subtitle": "Broadcasts on air with quick controls.",
+      "empty": "No live broadcasts right now.",
+      "featured": "Breaking",
+      "audienceClosed": "Audience closed",
+      "since": "Since {{time}}"
+    },
+    "scheduledToday": {
+      "title": "Scheduled Today",
+      "subtitle": "Broadcasts scheduled within the next 24 hours.",
+      "empty": "Nothing scheduled today.",
+      "soon": "Soon",
+      "dispatched": "Reminder sent",
+      "pending": "Reminder pending"
+    },
+    "channels": {
+      "tv": "TV Channels",
+      "radio": "Radio Stations",
+      "total": "Total"
+    },
+    "statusMix": {
+      "title": "Status Distribution",
+      "subtitle": "Overview of broadcast states."
+    },
+    "healthAlerts": {
+      "title": "Health Alerts",
+      "subtitle": "Failed broadcasts and last known reason.",
+      "empty": "All broadcasts healthy.",
+      "checkedAt": "Last checked: {{time}}"
+    },
+    "audience": {
+      "title": "Audience State",
+      "subtitle": "Broadcasts with a closed audience.",
+      "empty": "No closed audiences.",
+      "closed": "Closed",
+      "emergencyNote": "Emergency shutdown halts audience interaction instantly without cutting the external stream."
+    },
+    "notifications": {
+      "title": "Notifications",
+      "globalSubs": "Global subscribers",
+      "upcomingReminders": "Upcoming with reminders"
+    }
+  },
+  "broadcasts": {
+    "title": "Broadcasts",
+    "subtitle": "Manage external live broadcasts, TV channels and radio stations.",
+    "new": "New broadcast",
+    "error": "Failed to load broadcasts.",
+    "retry": "Retry"
+  },
+  "col": {
+    "title": "Broadcast",
+    "kind": "Kind",
+    "status": "Status",
+    "source": "Source",
+    "health": "Health",
+    "viewers": "Viewers",
+    "scheduled": "Timing",
+    "featured": "Breaking",
+    "private": "Private",
+    "noCategory": "No category"
+  },
+  "filter": {
+    "search": "Search by title…",
+    "statusAll": "All statuses",
+    "kindAll": "All kinds",
+    "sourceAll": "All sources",
+    "visibilityAll": "All visibility",
+    "public": "Public",
+    "private": "Private",
+    "featuredAll": "All (breaking)",
+    "featuredOnly": "Breaking only",
+    "notFeatured": "Not breaking",
+    "categoryAll": "All categories",
+    "sortNewest": "Newest",
+    "sortScheduled": "Scheduled time",
+    "sortStarted": "Start time",
+    "sortTitle": "Title",
+    "sortOrder": "Manual order",
+    "trashedNone": "Active",
+    "trashedOnly": "Trashed only",
+    "reset": "Clear filters"
+  },
+  "action": {
+    "edit": "Edit",
+    "analytics": "Analytics",
+    "delete": "Delete",
+    "lifecycle": "Lifecycle",
+    "moderation": "Moderation",
+    "schedule": "Schedule",
+    "start": "Go live",
+    "offline": "Take offline",
+    "resume": "Resume",
+    "end": "End",
+    "fail": "Mark failed",
+    "archive": "Archive"
+  },
+  "confirm": {
+    "deleteTitle": "Delete broadcast?",
+    "deleteText": "\"{{title}}\" will be deleted. It can be restored from trash.",
+    "scheduleTitle": "Schedule broadcast?",
+    "scheduleText": "\"{{title}}\" will be scheduled.",
+    "startTitle": "Go live?",
+    "startText": "\"{{title}}\" will go live immediately.",
+    "offlineTitle": "Take broadcast offline?",
+    "offlineText": "\"{{title}}\" will be taken offline (resumable).",
+    "resumeTitle": "Resume broadcast?",
+    "resumeText": "\"{{title}}\" will resume streaming.",
+    "endTitle": "End broadcast?",
+    "endText": "\"{{title}}\" will be ended permanently.",
+    "failTitle": "Mark broadcast as failed?",
+    "failText": "\"{{title}}\" will be marked as failed.",
+    "archiveTitle": "Archive broadcast?",
+    "archiveText": "\"{{title}}\" will be archived.",
+    "closeTitle": "Close audience?",
+    "closeText": "Audience interaction for \"{{title}}\" will be closed.",
+    "reopenTitle": "Reopen audience?",
+    "reopenText": "Audience interaction for \"{{title}}\" will be reopened.",
+    "emergencyTitle": "Emergency shutdown?",
+    "emergencyText": "The audience for \"{{title}}\" will be shut down immediately (emergency action)."
+  },
+  "empty": {
+    "title": "No broadcasts yet",
+    "description": "Start by creating your first live broadcast or channel.",
+    "trashTitle": "No trashed broadcasts",
+    "trashDescription": "There are no deleted broadcasts to show."
+  },
+  "schedule": {
+    "title": "Schedule broadcast",
+    "label": "Scheduled time",
+    "submit": "Schedule",
+    "tz": "Timezone: {{tz}}",
+    "hint": "The broadcast moves to \"Scheduled\" and goes live automatically at the time."
+  },
+  "failModal": {
+    "title": "Mark broadcast as failed",
+    "reasonLabel": "Reason (optional)",
+    "reasonPlaceholder": "e.g. external source outage",
+    "hint": "The reason will be recorded in health alerts."
+  },
+  "form": {
+    "createTitle": "New broadcast",
+    "editTitle": "Edit broadcast",
+    "save": "Save",
+    "saving": "Saving…",
+    "saved": "Saved successfully.",
+    "basics": "Basics",
+    "titleLabel": "Title",
+    "descriptionLabel": "Description",
+    "excerptLabel": "Excerpt",
+    "kindLabel": "Broadcast kind",
+    "sourceSection": "Source",
+    "coverSection": "Cover",
+    "coverLabel": "Cover image",
+    "coverHint": "Upload an image or pick one from the media library. Ideal size 1200×630.",
+    "coverFallbackLabel": "Or external cover URL (fallback)",
+    "coverFallbackHint": "Optional — used only when no library image is set.",
+    "posterPlaceholder": "https://…/poster.jpg",
+    "lifecycleSection": "Lifecycle",
+    "lifecycleNote": "Status is not edited here — use lifecycle actions in the list or command center (go live / offline / end…).",
+    "scheduleSection": "Schedule",
+    "scheduledAtLabel": "Scheduled time",
+    "scheduledAtHint": "Optional. Timezone: {{tz}}",
+    "flagsSection": "Flags",
+    "featuredLabel": "Breaking / featured",
+    "featuredHint": "Highlights the broadcast on public surfaces.",
+    "publicLabel": "Public",
+    "publicHint": "Make the broadcast available to the public.",
+    "categorySection": "Category",
+    "category": "Category",
+    "categoryNone": "No category",
+    "vodSection": "VOD link",
+    "vodLabel": "VOD video ID",
+    "vodPlaceholder": "e.g. 1024",
+    "vodHint": "Optional — link a recorded (VOD) copy from the video library by its numeric ID.",
+    "vodLinked": "Linked to: {{title}}",
+    "slugSection": "Slug",
+    "slugLabel": "Slug",
+    "slugPlaceholder": "Auto-generated if left empty",
+    "seoSection": "SEO",
+    "seoExpand": "Expand",
+    "seoCollapse": "Collapse",
+    "seoHint": "Expand to set SEO title, description and keywords.",
+    "seoTitle": "SEO title",
+    "seoDescription": "SEO description",
+    "seoKeywords": "Keywords",
+    "canonicalUrl": "Canonical URL",
+    "robots": "Robots directive",
+    "robotsPlaceholder": "index,follow",
+    "unsavedTitle": "Unsaved changes",
+    "unsavedText": "You have unsaved changes. Leave anyway?",
+    "unsavedLeave": "Leave",
+    "source": {
+      "typeLabel": "Source type",
+      "typeHint": {
+        "hls": "Live HLS stream (m3u8 manifest). For public channels and live broadcasts.",
+        "iptv": "Trusted IPTV playlist or channel URL.",
+        "youtube_live": "YouTube Live URL (watch page or embed).",
+        "external_provider": "Trusted embed URL from an external broadcast provider.",
+        "icecast": "Audio stream URL over Icecast.",
+        "shoutcast": "Audio stream URL over Shoutcast."
+      },
+      "urlLabel": {
+        "hls": "HLS URL (m3u8)",
+        "iptv": "IPTV playlist URL",
+        "youtube_live": "YouTube Live URL",
+        "external_provider": "External embed URL",
+        "icecast": "Icecast stream URL",
+        "shoutcast": "Shoutcast stream URL"
+      },
+      "urlPlaceholder": {
+        "hls": "https://…/stream.m3u8",
+        "iptv": "https://…/playlist.m3u8",
+        "youtube_live": "https://www.youtube.com/watch?v=…",
+        "external_provider": "https://…/embed/…",
+        "icecast": "https://…:8000/stream",
+        "shoutcast": "https://…:8000/;"
+      },
+      "urlGenericHint": "Trusted external URL over https only — broadcasts are fully external (no file upload)."
+    }
+  },
+  "categories": {
+    "title": "Broadcast categories",
+    "subtitle": "Flat categories to organize broadcasts.",
+    "new": "New category",
+    "empty": "No categories yet",
+    "emptyDescription": "Create your first category to organize broadcasts.",
+    "col": {
+      "name": "Name",
+      "status": "Status",
+      "count": "Broadcasts",
+      "order": "Order"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "action": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "confirm": {
+      "deleteTitle": "Delete category?",
+      "deleteText": "\"{{name}}\" will be deleted.",
+      "yes": "Delete"
+    },
+    "form": {
+      "createTitle": "New category",
+      "editTitle": "Edit category",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Saved successfully.",
+      "name": "Name",
+      "slug": "Slug",
+      "slugPlaceholder": "Auto-generated if left empty",
+      "sortOrder": "Order",
+      "description": "Description",
+      "active": "Active",
+      "seoSection": "SEO",
+      "seoTitle": "SEO title",
+      "seoDescription": "SEO description",
+      "validation": {
+        "nameRequired": "Name is required (at least 2 characters)."
+      }
+    }
+  },
+  "moderation": {
+    "kick": "Kick viewer",
+    "ban": "Ban viewer",
+    "close": "Close audience",
+    "reopen": "Reopen audience",
+    "emergency": "Emergency shutdown",
+    "kickTitle": "Kick viewer",
+    "banTitle": "Ban viewer",
+    "kickSubmit": "Kick",
+    "banSubmit": "Ban",
+    "targetHint": "No live viewer roster — enter the target manually by user ID or member ID.",
+    "byUserId": "User ID",
+    "byMember": "Member ID",
+    "userIdLabel": "User ID",
+    "userIdPlaceholder": "e.g. 42",
+    "memberLabel": "Member ID",
+    "memberPlaceholder": "e.g. u42 or f8a1…",
+    "memberHint": "Opaque presence member ID (starts with u or f).",
+    "durationLabel": "Duration (minutes)",
+    "durationPlaceholder": "Leave empty for permanent ban",
+    "durationHint": "Optional — ban duration in minutes.",
+    "reasonLabel": "Reason",
+    "reasonPlaceholder": "Ban reason (optional)"
+  },
+  "analytics2": {
+    "title": "Broadcast analytics",
+    "loadingTitle": "Loading…",
+    "error": "Failed to load analytics.",
+    "retry": "Retry",
+    "none": "—",
+    "yes": "Yes",
+    "no": "No",
+    "range": { "24h": "24h", "7d": "7 days", "30d": "30 days", "custom": "Custom" },
+    "engagement": { "likes": "Likes", "dislikes": "Dislikes" },
+    "live": {
+      "current": "Watching now",
+      "peak": "Peak",
+      "average": "Avg concurrent",
+      "samples": "Samples"
+    },
+    "concurrency": {
+      "title": "Concurrency curve",
+      "subtitle": "Concurrent presence over time (forward-only)",
+      "empty": "No samples in this period"
+    },
+    "unique": {
+      "title": "Unique viewers",
+      "note": "Not tracked — presence is approximate/aggregate (no identity union)."
+    },
+    "timeline": {
+      "title": "Timeline",
+      "scheduled": "Scheduled",
+      "started": "Actually started",
+      "ended": "Ended",
+      "startDelay": "Start delay",
+      "late": "{{value}} late",
+      "early": "{{value}} early",
+      "duration": "Duration"
+    },
+    "health": {
+      "title": "Health",
+      "window": "{{days}}-day window",
+      "failures": "Failures",
+      "recoveries": "Recoveries",
+      "avgLatency": "Avg latency",
+      "empty": "No checks in this period",
+      "status": { "healthy": "Healthy", "failed": "Failed" }
+    },
+    "moderation": {
+      "title": "Moderation",
+      "kicks": "Kicks",
+      "bans": "Bans",
+      "unbans": "Unbans",
+      "closures": "Closures",
+      "reopens": "Reopens",
+      "emergency_shutdowns": "Emergency",
+      "empty": "No moderation actions"
+    },
+    "modEvent": {
+      "viewer_kicked": "Viewer kicked",
+      "viewer_banned": "Viewer banned",
+      "viewer_unbanned": "Viewer unbanned",
+      "audience_closed": "Audience closed",
+      "audience_reopened": "Audience reopened",
+      "emergency_shutdown": "Emergency shutdown"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "reminders": "Reminder subscribers",
+      "global": "Global subscribers",
+      "liveNotified": "Go-live notified",
+      "reminderSent": "Reminder sent"
+    },
+    "delivery": {
+      "title": "Delivery & conversion",
+      "note": "Not measurable — FCM is a log stub (not provisioned) and the topic model captures no per-user receipts."
+    }
+  }
+}

@@ -1,0 +1,477 @@
+{
+  "status": {
+    "draft": "مسودة",
+    "scheduled": "مجدول",
+    "published": "منشور",
+    "archived": "مؤرشف",
+    "submitted": "تم الإرسال",
+    "in_review": "بانتظار المراجعة",
+    "rejected": "مرفوض"
+  },
+  "visibility": {
+    "public": "عام",
+    "unlisted": "غير مُدرَج",
+    "private": "خاص"
+  },
+  "source": {
+    "uploaded": "مرفوع",
+    "youtube": "يوتيوب",
+    "vimeo": "فيميو",
+    "direct_mp4": "MP4 مباشر"
+  },
+  "processing": {
+    "ready": "جاهز",
+    "processing": "قيد المعالجة",
+    "queued": "في الطابور",
+    "failed": "فشل",
+    "none": "بلا وسائط"
+  },
+  "locale": {
+    "ar": "العربية",
+    "en": "الإنجليزية"
+  },
+  "dashboard": {
+    "title": "مكتبة الفيديو",
+    "subtitle": "صحّة المكتبة وحالة المعالجة والجمهور في لمحة.",
+    "kpi": {
+      "totalVideos": "إجمالي الفيديوهات",
+      "totalViews": "إجمالي المشاهدات",
+      "published": "منشور",
+      "featured": "مميَّز",
+      "playlists": "قوائم التشغيل",
+      "categories": "التصنيفات"
+    },
+    "processing": {
+      "title": "صحّة المعالجة",
+      "subtitle": "حالة ترميز الوسائط المرفوعة",
+      "ready": "جاهز",
+      "processing": "قيد المعالجة",
+      "failed": "فشل",
+      "healthy": "كل الوسائط المرفوعة جاهزة",
+      "attention": "بعض المرفوعات تحتاج انتباهاً"
+    },
+    "sources": {
+      "title": "توزيع المصادر",
+      "subtitle": "كيف تدخل الفيديوهات إلى المكتبة",
+      "empty": "لا فيديوهات بعد"
+    },
+    "statusMix": {
+      "title": "توزيع الحالات"
+    },
+    "playlists": {
+      "title": "قوائم التشغيل",
+      "total": "الإجمالي",
+      "published": "منشور",
+      "featured": "مميَّز"
+    },
+    "categories": {
+      "title": "التصنيفات",
+      "total": "الإجمالي",
+      "active": "نشِط"
+    },
+    "topVideos": {
+      "title": "الأكثر مشاهدة",
+      "views": "مشاهدة",
+      "empty": "لا فيديوهات منشورة بعد"
+    },
+    "topCategories": {
+      "title": "أبرز التصنيفات",
+      "count": "فيديو",
+      "empty": "لا تصنيفات بعد"
+    }
+  },
+  "videos": {
+    "title": "الفيديوهات",
+    "subtitle": "إدارة مكتبة الفيديو — المصادر والنشر والجدولة.",
+    "new": "فيديو جديد",
+    "featured": "مميَّز",
+    "error": "تعذّر تحميل الفيديوهات. أعد المحاولة.",
+    "retry": "إعادة المحاولة",
+    "stats": { "total": "الكل", "trashed": "المحذوفات" },
+    "col": {
+      "title": "العنوان",
+      "status": "الحالة",
+      "visibility": "الظهور",
+      "source": "المصدر",
+      "media": "الوسائط",
+      "locale": "اللغة",
+      "views": "المشاهدات",
+      "date": "التاريخ",
+      "category": "التصنيف"
+    },
+    "mediaState": {
+      "external": "تضمين جاهز",
+      "noCategory": "بلا تصنيف"
+    },
+    "scheduledFor": "مجدول في {{date}}",
+    "filter": {
+      "search": "بحث بالعنوان…",
+      "statusAll": "كل الحالات",
+      "visibilityAll": "كل مستويات الظهور",
+      "sourceAll": "كل المصادر",
+      "localeAll": "كل اللغات",
+      "sortNewest": "الأحدث",
+      "sortPublished": "الأحدث نشراً",
+      "sortViews": "الأكثر مشاهدة",
+      "sortTitle": "العنوان (أ–ي)",
+      "sortOrder": "ترتيب يدوي",
+      "trashedNone": "النشِطة",
+      "trashedOnly": "المحذوفات",
+      "reset": "تصفير"
+    },
+    "action": {
+      "edit": "تعديل",
+      "analytics": "التحليلات",
+      "publish": "نشر الآن",
+      "schedule": "جدولة…",
+      "archive": "أرشفة",
+      "delete": "حذف",
+      "restore": "استرجاع",
+      "forceDelete": "حذف نهائي"
+    },
+    "confirm": {
+      "yes": "تأكيد",
+      "publishTitle": "نشر هذا الفيديو؟",
+      "publishText": "سيصبح ظاهراً للعموم فوراً.",
+      "archiveTitle": "أرشفة هذا الفيديو؟",
+      "archiveText": "سيُزال من القوائم العامة.",
+      "deleteTitle": "حذف هذا الفيديو؟",
+      "deleteText": "سينتقل «{{title}}» إلى المحذوفات ويمكن استرجاعه.",
+      "forceTitle": "حذف نهائي؟",
+      "forceText": "سيُحذف «{{title}}» نهائياً ولا يمكن التراجع.",
+      "forceYes": "حذف نهائي",
+      "unpublishTitle": "إلغاء نشر الفيديوهات المحددة؟",
+      "featureTitle": "تمييز الفيديوهات المحددة؟",
+      "unfeatureTitle": "إلغاء تمييز الفيديوهات المحددة؟"
+    },
+    "schedule": {
+      "title": "جدولة النشر",
+      "label": "تاريخ ووقت النشر",
+      "submit": "جدولة",
+      "tz": "الوقت بتوقيتك المحلّي: {{tz}}",
+      "hint": "يُنشَر الفيديو تلقائياً في هذا الوقت (يجب أن تكون الوسائط جاهزة)."
+    },
+    "bulk": {
+      "selected": "{{count}} محدَّد",
+      "publish": "نشر",
+      "unpublish": "إلغاء النشر",
+      "feature": "تمييز",
+      "unfeature": "إلغاء التمييز",
+      "moveCategory": "نقل إلى تصنيف…",
+      "addPlaylist": "إضافة إلى قائمة…",
+      "delete": "حذف",
+      "clear": "مسح",
+      "moveTitle": "نقل {{count}} فيديو إلى تصنيف",
+      "moveLabel": "التصنيف الهدف",
+      "moveNone": "— بلا تصنيف —",
+      "moveSubmit": "نقل",
+      "playlistTitle": "إضافة {{count}} فيديو إلى قائمة تشغيل",
+      "playlistLabel": "قائمة التشغيل الهدف",
+      "playlistSubmit": "إضافة",
+      "playlistEmpty": "لا قوائم تشغيل متاحة"
+    },
+    "empty": {
+      "title": "لا فيديوهات بعد",
+      "description": "أنشئ أول فيديو من رفع أو من مصدر خارجي.",
+      "trashTitle": "المحذوفات فارغة",
+      "trashDescription": "ستظهر الفيديوهات المحذوفة هنا."
+    }
+  },
+  "form": {
+    "createTitle": "فيديو جديد",
+    "editTitle": "تعديل الفيديو",
+    "save": "حفظ",
+    "saving": "جارٍ الحفظ…",
+    "saved": "تم الحفظ.",
+    "basics": "الأساسيات",
+    "titleLabel": "العنوان",
+    "descriptionLabel": "الوصف",
+    "excerptLabel": "المقتطف",
+    "locale": "اللغة",
+    "visibility": "الظهور",
+    "category": "التصنيف",
+    "categoryNone": "— بلا تصنيف —",
+    "featured": "مميَّز",
+    "featuredHint": "إبراز هذا الفيديو في الواجهات المميَّزة.",
+    "sourceSection": "مصدر الفيديو",
+    "aiTools": "مساعد الذكاء الاصطناعي",
+    "publishing": "النشر",
+    "scheduledFor": "مجدول في {{time}}",
+    "mediaNotReadyHint": "النشر/الجدولة غير متاحين حتى تجهز وسائط الفيديو.",
+    "schedule": "الجدولة",
+    "scheduleBtn": "جدولة",
+    "slugSection": "المُعرّف (slug)",
+    "slugLabel": "المُعرّف",
+    "slugPlaceholder": "يُولَّد-تلقائياً-من-العنوان",
+    "seoSection": "SEO المتقدّم",
+    "seoExpand": "توسيع",
+    "seoCollapse": "طيّ",
+    "seoHint": "إعدادات canonical والمشاركة والبيانات المنظَّمة. وسّع للتعديل.",
+    "unsavedTitle": "تغييرات غير محفوظة",
+    "unsavedText": "لديك تغييرات غير محفوظة. المغادرة دون حفظ؟",
+    "unsavedLeave": "مغادرة",
+    "source": {
+      "tabUpload": "رفع",
+      "tabExternal": "رابط خارجي",
+      "uploadHint": "انقر لرفع ملف فيديو MP4/WebM",
+      "uploading": "جارٍ الرفع… {{percent}}%",
+      "urlPlaceholder": "https://youtube.com/watch?v=… أو رابط .mp4 مباشر",
+      "urlHint": "يوتيوب أو فيميو أو رابط MP4 مباشر من مضيف مُصرَّح.",
+      "resolve": "تحليل",
+      "external": "مصدر خارجي",
+      "replace": "استبدال المصدر",
+      "retry": "إعادة المعالجة",
+      "uploadFailed": "فشل الرفع. حاول مجدداً.",
+      "resolveFailed": "تعذّر تحليل الرابط. تحقّق منه.",
+      "processingHint": "الترميز جارٍ — قد يستغرق دقائق.",
+      "failedHint": "فشلت المعالجة. أعد المحاولة أو استبدل المصدر.",
+      "replaceTitle": "استبدال مصدر الفيديو؟",
+      "replaceTextUploaded": "عند الحفظ سيستخدم الفيديو المصدر الجديد. الملف المرفوع السابق يبقى في مكتبة الوسائط (لا يُحذف هنا).",
+      "replaceTextExternal": "عند الحفظ سيشير الفيديو إلى المصدر الجديد. المصادر الخارجية مراجع مكتبة مشتركة ولا تُزال.",
+      "replaceConfirm": "اختيار مصدر جديد"
+    }
+  },
+  "categories": {
+    "title": "تصنيفات الفيديو",
+    "subtitle": "نظّم المكتبة في تصنيف تحريري هرمي (حتى 3 مستويات).",
+    "new": "تصنيف جديد",
+    "empty": "لا تصنيفات بعد. أنشئ أوّلها لتنظيم الفيديوهات.",
+    "noMatches": "لا تصنيفات تطابق المرشّحات.",
+    "col": { "name": "الاسم", "videos": "الفيديوهات", "status": "نشِط", "locale": "اللغة", "order": "الترتيب" },
+    "status": { "active": "نشِط", "inactive": "غير نشِط" },
+    "toggleStatus": "تبديل التفعيل",
+    "collapse": "طيّ",
+    "expand": "توسيع",
+    "expandAll": "توسيع الكل",
+    "collapseAll": "طيّ الكل",
+    "moveUp": "تحريك لأعلى",
+    "moveDown": "تحريك لأسفل",
+    "filter": { "search": "بحث في التصنيفات…", "localeAll": "كل اللغات", "statusAll": "كل الحالات", "reset": "تصفير" },
+    "action": { "edit": "تعديل", "addChild": "إضافة تصنيف فرعي", "delete": "حذف" },
+    "confirm": {
+      "deleteTitle": "حذف هذا التصنيف؟",
+      "deleteText": "سينتقل «{{name}}» إلى المحذوفات. لا يمكن حذف تصنيف له أبناء.",
+      "yes": "حذف"
+    },
+    "form": {
+      "createTitle": "تصنيف جديد",
+      "editTitle": "تعديل التصنيف",
+      "createHint": "أنشئ تصنيفاً تحريرياً لمكتبة الفيديو.",
+      "save": "حفظ",
+      "saving": "جارٍ الحفظ…",
+      "saved": "تم حفظ التصنيف.",
+      "name": "الاسم",
+      "slug": "المُعرّف",
+      "locale": "اللغة",
+      "parent": "التصنيف الأب",
+      "parentNone": "— لا شيء (مستوى أعلى) —",
+      "description": "الوصف",
+      "active": "نشِط (يظهر في القوائم العامة)",
+      "depthHint": "أقصى عمق 3 مستويات. لا يمكن نقل تصنيف تحت نفسه أو نسله.",
+      "seoSection": "SEO (اختياري)",
+      "seoTitle": "عنوان SEO",
+      "seoDescription": "وصف SEO",
+      "validation": { "nameRequired": "الاسم يجب ألّا يقلّ عن حرفين." }
+    }
+  },
+  "playlists": {
+    "title": "قوائم التشغيل",
+    "subtitle": "نسّق مجموعات فيديو مرتّبة للواجهة.",
+    "new": "قائمة جديدة",
+    "error": "تعذّر تحميل قوائم التشغيل. أعد المحاولة.",
+    "retry": "إعادة المحاولة",
+    "col": { "title": "العنوان", "status": "الحالة", "visibility": "الظهور", "videos": "الفيديوهات", "locale": "اللغة", "date": "التاريخ" },
+    "filter": {
+      "search": "بحث بالعنوان…",
+      "statusAll": "كل الحالات",
+      "localeAll": "كل اللغات",
+      "sortNewest": "الأحدث",
+      "sortPublished": "الأحدث نشراً",
+      "sortTitle": "العنوان (أ–ي)",
+      "sortOrder": "ترتيب يدوي",
+      "trashedNone": "النشِطة",
+      "trashedOnly": "المحذوفات",
+      "reset": "تصفير"
+    },
+    "action": { "edit": "تعديل", "delete": "حذف", "restore": "استرجاع", "forceDelete": "حذف نهائي" },
+    "confirm": {
+      "deleteTitle": "حذف قائمة التشغيل؟",
+      "deleteText": "سينتقل «{{title}}» إلى المحذوفات ويمكن استرجاعه. لا تتأثّر فيديوهات القائمة.",
+      "forceTitle": "حذف نهائي؟",
+      "forceText": "سيُحذف «{{title}}» نهائياً. لا تتأثّر فيديوهات القائمة.",
+      "forceYes": "حذف نهائي"
+    },
+    "empty": {
+      "title": "لا قوائم تشغيل بعد",
+      "description": "أنشئ أول قائمة لتنسيق الفيديوهات.",
+      "trashTitle": "المحذوفات فارغة",
+      "trashDescription": "ستظهر القوائم المحذوفة هنا."
+    },
+    "form": {
+      "createTitle": "قائمة جديدة",
+      "editTitle": "تعديل القائمة",
+      "saved": "تم حفظ القائمة.",
+      "basics": "التفاصيل",
+      "titleLabel": "العنوان",
+      "descriptionLabel": "الوصف",
+      "status": "الحالة",
+      "featured": "مميَّزة",
+      "featuredHint": "إبراز هذه القائمة في الواجهات المميَّزة.",
+      "slugHint": "تغيير المُعرّف يحافظ على الروابط القديمة عبر إعادة توجيه تلقائية."
+    },
+    "videos": {
+      "title": "الفيديوهات في هذه القائمة",
+      "add": "إضافة فيديوهات",
+      "saveFirst": "احفظ القائمة أولاً، ثم أضِف الفيديوهات.",
+      "empty": "لا فيديوهات بعد. استخدم «إضافة فيديوهات» لبناء القائمة.",
+      "remove": "إزالة من القائمة"
+    },
+    "picker": {
+      "title": "إضافة فيديوهات إلى القائمة",
+      "search": "بحث في الفيديوهات…",
+      "add": "إضافة {{count}} فيديو",
+      "empty": "لا فيديوهات.",
+      "added": "مُضاف"
+    }
+  },
+  "entityAnalytics": {
+    "title": "تحليلات الفيديو",
+    "loadingTitle": "جارٍ التحميل…",
+    "error": "تعذّر تحميل التحليلات.",
+    "retry": "إعادة المحاولة",
+    "forwardOnly": "منذ بدء التتبّع (إلى-الأمام فقط)",
+    "uniqueReactors": "متفاعلون فريدون",
+    "engagementRate": "معدّل التفاعل",
+    "none": "—",
+    "yes": "نعم",
+    "no": "لا",
+    "range": { "24h": "٢٤ ساعة", "7d": "٧ أيام", "30d": "٣٠ يوماً", "custom": "مخصّص" },
+    "trend": {
+      "title": "النشاط عبر الزمن",
+      "rangeTotal": "الإجمالي في الفترة: {{value}}",
+      "empty": "لا بيانات في هذه الفترة"
+    },
+    "traffic": {
+      "title": "مصادر الزيارات",
+      "subtitle": "تصنيف خشن (إلى-الأمام فقط)",
+      "empty": "لا زيارات مُتعقَّبة بعد"
+    },
+    "channel": {
+      "direct": "مباشر",
+      "internal": "داخلي",
+      "search": "بحث",
+      "social": "تواصل اجتماعي",
+      "referral": "إحالة"
+    },
+    "distribution": {
+      "title": "التوزيع والعلاقات",
+      "category": "التصنيف",
+      "featured": "مميَّز",
+      "playlists": "قوائم التشغيل",
+      "linkedVods": "تسجيلات مرتبطة (VOD)"
+    },
+    "publishing": {
+      "title": "النشر",
+      "status": "الحالة",
+      "visibility": "الظهور",
+      "publishedAt": "تاريخ النشر",
+      "timeline": "سجلّ التغييرات"
+    },
+    "field": {
+      "status": "الحالة",
+      "visibility": "الظهور",
+      "published_at": "تاريخ النشر"
+    },
+    "seo": {
+      "title": "SEO والمسارات",
+      "slug": "الاسم اللطيف",
+      "canonical": "المسار القانوني",
+      "redirects": "إعادة التوجيه",
+      "noRedirects": "لا إعادة توجيه"
+    },
+    "watch": {
+      "title": "مقاييس المشاهدة",
+      "deferredTitle": "غير متعقَّبة بعد",
+      "deferredNote": "تتطلّب منارة مشغّل (بدء/متوسّط مشاهدة/إكمال/تسرّب) — مرحلة تيليمتري مستقلّة."
+    }
+  },
+  "analytics": {
+    "title": "التحليلات",
+    "subtitle": "أداء مكتبة الفيديو — تفاعل حقيقي ومصادر وحالة نشر.",
+    "allTime": "كل الأرقام تراكمية لكامل المدة (غير مقيّدة بفترة).",
+    "error": "تعذّر تحميل التحليلات. أعد المحاولة.",
+    "retry": "إعادة المحاولة",
+    "engagement": {
+      "views": "المشاهدات",
+      "likes": "الإعجابات",
+      "favorites": "المفضّلة",
+      "dislikes": "عدم الإعجاب"
+    },
+    "distribution": {
+      "title": "توزيع التفاعل",
+      "subtitle": "حصّة كل نوع تفاعل (عدا المشاهدات)",
+      "empty": "لا تفاعل بعد."
+    },
+    "sources": {
+      "title": "توزيع المصادر",
+      "subtitle": "كيف تدخل الفيديوهات إلى المكتبة",
+      "empty": "لا فيديوهات بعد"
+    },
+    "status": {
+      "title": "توزيع حالات النشر"
+    },
+    "trending": {
+      "title": "الرائج الآن",
+      "subtitle": "وزن: مشاهدة×1 + إعجاب×4 + مفضّلة×6 − عدم إعجاب×2",
+      "score": "النقاط",
+      "views": "مشاهدة",
+      "empty": "لا فيديوهات عامة قابلة للتشغيل بعد."
+    },
+    "topVideos": {
+      "title": "الأكثر مشاهدة",
+      "views": "مشاهدة",
+      "empty": "لا فيديوهات منشورة بعد"
+    },
+    "topPlaylists": {
+      "title": "أكبر قوائم التشغيل",
+      "count": "فيديو",
+      "empty": "لا قوائم تشغيل بعد."
+    },
+    "topCategories": {
+      "title": "أبرز التصنيفات",
+      "count": "فيديو",
+      "empty": "لا تصنيفات بعد"
+    }
+  },
+  "operations": {
+    "title": "مركز العمليات",
+    "subtitle": "صحّة المعالجة وطابور النشر وإجراءات الصيانة.",
+    "error": "تعذّر تحميل بيانات العمليات. أعد المحاولة.",
+    "retry": "إعادة المحاولة",
+    "refresh": "تحديث",
+    "kpi": {
+      "processing": "قيد المعالجة",
+      "failed": "فشل المعالجة",
+      "scheduled": "مجدول",
+      "dueNow": "مستحقّ الآن"
+    },
+    "attention": {
+      "title": "يحتاج انتباهاً",
+      "subtitle": "فيديوهات مرفوعة بوسائط فاشلة أو قيد المعالجة",
+      "empty": "كل الوسائط المرفوعة سليمة — لا شيء يحتاج انتباهاً.",
+      "col": { "title": "الفيديو", "status": "حالة الوسائط", "updated": "آخر تحديث" },
+      "reprocess": "إعادة المعالجة",
+      "reprocessing": "جارٍ…",
+      "confirmTitle": "إعادة معالجة هذه الوسائط؟",
+      "confirmText": "سيُعاد تشغيل خطّ الترميز (HLS) لـ «{{title}}». قد يستغرق دقائق.",
+      "confirmYes": "إعادة المعالجة"
+    },
+    "queue": {
+      "title": "طابور النشر",
+      "subtitle": "الفيديوهات المجدولة وحالة استحقاقها",
+      "empty": "لا فيديوهات مجدولة.",
+      "overdue": "متأخّر",
+      "scheduledFor": "مجدول في {{date}}"
+    }
+  }
+}

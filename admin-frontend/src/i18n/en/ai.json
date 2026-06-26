@@ -1,0 +1,68 @@
+{
+  "usage": {
+    "title": "AI usage",
+    "subtitle": "Operational visibility into AI consumption and estimated cost — who, which provider, which action, and how much.",
+    "refresh": "Refresh",
+    "estimateNote": "Tokens and cost are estimates (derived from input/output size), not exact billing.",
+    "totals": {
+      "today": "Today",
+      "month": "This month",
+      "requests": "Requests",
+      "tokens": "Tokens",
+      "cost": "Estimated cost"
+    },
+    "budget": {
+      "title": "Caps & remaining",
+      "dailyRequests": "Daily request cap",
+      "monthlyRequests": "Monthly request cap",
+      "monthlyBudget": "Monthly estimated budget",
+      "remaining": "Remaining",
+      "used": "Used",
+      "unlimited": "Unlimited",
+      "ofCap": "of {{cap}}"
+    },
+    "breakdown": {
+      "byProvider": "By provider",
+      "byAction": "By action",
+      "requests": "req",
+      "noData": "No data yet"
+    },
+    "trend": {
+      "title": "Last 30 days trend",
+      "requests": "Requests",
+      "cost": "Estimated cost",
+      "empty": "Not enough data to render a trend"
+    },
+    "filters": {
+      "title": "Filter",
+      "provider": "Provider",
+      "action": "Action",
+      "source": "Source",
+      "from": "From",
+      "to": "To",
+      "all": "All",
+      "apply": "Apply",
+      "reset": "Reset"
+    },
+    "source": { "ai": "AI", "auto": "Fallback" },
+    "action": {
+      "headlines": "Headlines",
+      "excerpt": "Excerpt",
+      "rewrite": "Rewrite",
+      "tags": "Tags",
+      "seo": "SEO analysis",
+      "analyze": "Content analysis"
+    },
+    "col": {
+      "user": "User",
+      "provider": "Provider",
+      "action": "Action",
+      "source": "Source",
+      "tokens": "Tokens",
+      "cost": "Cost",
+      "at": "Time"
+    },
+    "system": "System",
+    "empty": "No matching usage records"
+  }
+}

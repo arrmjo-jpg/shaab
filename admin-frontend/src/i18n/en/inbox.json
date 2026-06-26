@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "title": "Inbox"
+  },
+  "title": "Contact & Advertising",
+  "subtitle": "Contact messages and advertisement requests received from the site",
+  "tabs": {
+    "contact": "Contact Messages",
+    "ads": "Advertisement Requests"
+  },
+  "common": {
+    "search": "Search by name, email, or subject…",
+    "reset": "Clear filters",
+    "details": "Details",
+    "close": "Close",
+    "apply": "Apply",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "by": "by",
+    "sort": {
+      "newest": "Newest first",
+      "oldest": "Oldest first"
+    }
+  },
+  "contact": {
+    "col": {
+      "sender": "Sender",
+      "subject": "Subject",
+      "status": "Status",
+      "date": "Date"
+    },
+    "type": {
+      "inquiry": "Inquiry",
+      "complaint": "Complaint",
+      "suggestion": "Suggestion",
+      "other": "Other"
+    },
+    "status": {
+      "new": "New",
+      "in_review": "In review",
+      "replied": "Replied",
+      "closed": "Closed"
+    },
+    "filter": {
+      "statusAll": "All statuses",
+      "typeAll": "All types"
+    },
+    "detail": {
+      "title": "Contact message",
+      "message": "Message"
+    },
+    "reply": {
+      "title": "Reply to message",
+      "placeholder": "Write your reply here… it will be emailed to the sender.",
+      "send": "Send reply",
+      "previous": "Previous reply"
+    },
+    "status_action": {
+      "title": "Change status",
+      "to_in_review": "Move to in review",
+      "to_closed": "Close"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "created": "Message received",
+      "read": "Seen",
+      "replied": "Replied"
+    },
+    "confirm": {
+      "deleteTitle": "Delete message?",
+      "deleteText": "The message will no longer appear in the list after deletion."
+    },
+    "empty": {
+      "title": "No messages",
+      "description": "No matching contact messages yet."
+    }
+  },
+  "ads": {
+    "col": {
+      "company": "Company",
+      "adType": "Ad type",
+      "status": "Status",
+      "date": "Date"
+    },
+    "status": {
+      "new": "New",
+      "contacted": "Contacted",
+      "negotiating": "Negotiating",
+      "completed": "Completed",
+      "rejected": "Rejected",
+      "closed": "Closed"
+    },
+    "filter": {
+      "statusAll": "All statuses"
+    },
+    "detail": {
+      "title": "Advertisement request",
+      "email": "Email",
+      "phone": "Phone",
+      "website": "Website",
+      "adType": "Ad type",
+      "description": "Request details"
+    },
+    "ad_type": {
+      "image": "Image ad",
+      "html": "HTML ad"
+    },
+    "attachment": {
+      "title": "Attachment",
+      "downloadImage": "Download image",
+      "downloadZip": "Download ZIP",
+      "error": "Failed to download the attachment."
+    },
+    "status_action": {
+      "title": "Change status",
+      "apply": "Apply"
+    },
+    "notes": {
+      "title": "Internal notes",
+      "placeholder": "Add an internal note… (not visible to the requester)",
+      "add": "Add note",
+      "empty": "No notes yet."
+    },
+    "timeline": {
+      "title": "Timeline",
+      "created": "Request received",
+      "read": "Seen",
+      "reviewed": "Reviewed"
+    },
+    "confirm": {
+      "deleteTitle": "Delete request?",
+      "deleteText": "The request will no longer appear in the list after deletion."
+    },
+    "empty": {
+      "title": "No requests",
+      "description": "No matching advertisement requests yet."
+    }
+  }
+}

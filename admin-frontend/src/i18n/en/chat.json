@@ -1,0 +1,35 @@
+{
+  "navTitle": "Chat",
+  "title": "Conversations",
+  "empty": "No conversations yet",
+  "selectPrompt": "Select a conversation to start messaging",
+  "new": "New conversation",
+  "loadingMessages": "Loading messages…",
+  "noMessages": "No messages yet — start the conversation",
+  "composer": {
+    "placeholder": "Type a message…",
+    "send": "Send",
+    "attach": "Attach image",
+    "attaching": "Uploading…",
+    "removeAttachment": "Remove attachment",
+    "hint": "Enter to send · Shift+Enter for a new line"
+  },
+  "message": {
+    "deleted": "This message was deleted",
+    "edited": "edited",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "deleteTitle": "Delete message?",
+    "deleteText": "It will appear as “This message was deleted”.",
+    "deleteYes": "Yes, delete"
+  },
+  "modal": {
+    "title": "New conversation",
+    "searchPlaceholder": "Search a colleague…",
+    "empty": "No matching contacts",
+    "loading": "Loading…",
+    "start": "Search and pick a colleague to start a direct message"
+  }
+}

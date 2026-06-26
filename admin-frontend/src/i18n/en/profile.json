@@ -1,0 +1,148 @@
+{
+  "title": "Profile",
+  "subtitle": "Your operational account center — identity, activity, security and output",
+  "tabs": {
+    "overview": "Overview",
+    "analytics": "My output",
+    "activity": "Operational log",
+    "security": "Security center",
+    "permissions": "Permissions",
+    "edit": "Edit profile"
+  },
+  "meta": {
+    "email": "Email",
+    "status": "Account status",
+    "roles": "Roles",
+    "joined": "Joined",
+    "lastLogin": "Last login",
+    "lastActivity": "Last activity",
+    "writer": "Writer",
+    "verified": "Email verified",
+    "unverified": "Email unverified",
+    "currentSession": "Your current session",
+    "none": "—"
+  },
+  "overview": {
+    "identity": "Identity",
+    "details": "Professional details",
+    "quickStats": "At a glance",
+    "noBio": "No bio yet.",
+    "ip": "IP address",
+    "permissionsSummary": "Permissions summary",
+    "fullAccess": "Full access (super admin)",
+    "capabilities": "{{permissions}} permissions across {{groups}} groups"
+  },
+  "analytics": {
+    "section": "My operational output",
+    "hint": "Real numbers for your contributions across the platform",
+    "estimateNote": "AI tokens/cost are estimates, not exact billing.",
+    "content": "Content",
+    "ai": "AI",
+    "articlesCreated": "Articles created",
+    "articlesPublished": "Published articles",
+    "articlesDrafts": "Drafts",
+    "viewsGenerated": "Views on your articles",
+    "reelsCreated": "Reels created",
+    "reelsPublished": "Published reels",
+    "reelsDrafts": "Reel drafts",
+    "mediaUploads": "Media uploads",
+    "aiRequests": "AI requests",
+    "aiTokens": "Estimated tokens",
+    "aiCost": "Estimated cost"
+  },
+  "permissions": {
+    "section": "Your roles & permissions",
+    "hint": "Effective capabilities derived from all your roles",
+    "roles": "Roles",
+    "rolesCount": "Roles",
+    "permissionsCount": "Effective permissions",
+    "groupsCount": "Groups",
+    "fullAccess": "This account has full, unrestricted access (super admin).",
+    "empty": "No permissions assigned."
+  },
+  "security": {
+    "section": "Security center",
+    "hint": "Your account security state and actions",
+    "summary": "Security summary",
+    "passwordChanged": "Password last changed",
+    "emailVerified": "Email verification",
+    "lastLogin": "Last login",
+    "lastLoginIp": "Last login IP",
+    "resetRequests": "Reset requests",
+    "lastReset": "Last reset request",
+    "activeSessions": "Active sessions",
+    "accountCreated": "Account created",
+    "never": "Never",
+    "verified": "Verified",
+    "unverified": "Unverified",
+    "revokeAll": "Log out all other sessions",
+    "revokeAllConfirmTitle": "Log out all other sessions?",
+    "revokeAllConfirmText": "Every device except your current one will be signed out.",
+    "revokeAllYes": "Yes, log them out"
+  },
+  "info": {
+    "section": "Basic information",
+    "sectionHint": "Name, bio and social links",
+    "name": "Full name",
+    "bio": "Bio",
+    "avatarChoose": "Click to choose an image",
+    "avatarHint": "JPG · PNG · WEBP — up to 2MB",
+    "avatarRemove": "Remove image",
+    "social": "Social links",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "emailRestricted": "Email change is restricted for security — an administrator handles it via user management.",
+    "soc": {
+      "facebook": "Facebook",
+      "twitter_x": "X (Twitter)",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    }
+  },
+  "password": {
+    "section": "Change password",
+    "sectionHint": "All other sessions will be revoked after the change",
+    "current": "Current password",
+    "new": "New password",
+    "confirm": "Confirm password",
+    "save": "Change password",
+    "saving": "Changing…"
+  },
+  "activity": {
+    "section": "Operational log",
+    "hint": "Your operational life inside the platform",
+    "empty": "No activity yet.",
+    "event": "Event",
+    "source": "Source",
+    "ip": "IP",
+    "when": "Date",
+    "filterAll": "All",
+    "filter": {
+      "auth": "Authentication",
+      "rbac": "Permissions",
+      "settings": "Settings",
+      "system": "System",
+      "user": "Account"
+    }
+  },
+  "sessions": {
+    "section": "Active sessions",
+    "hint": "Access tokens/devices for your account",
+    "current": "Current session",
+    "revoke": "Revoke",
+    "lastUsed": "Last used",
+    "created": "Created",
+    "empty": "No sessions.",
+    "confirmTitle": "Revoke session?",
+    "confirmText": "That device will be signed out immediately.",
+    "yes": "Confirm"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "min2": "Must be at least 2 characters.",
+    "password": "Password must be at least 12 chars with upper/lowercase, numbers and symbols.",
+    "passwordMatch": "Password confirmation does not match.",
+    "url": "Invalid URL format."
+  }
+}

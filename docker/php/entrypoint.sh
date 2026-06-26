@@ -1,22 +1,15 @@
 #!/bin/sh
-
 set -e
 
-echo "🚀 Starting AlphaCMS..."
+# Per-container boot for the Laravel image (php-fpm / workers / scheduler). Caches config/routes/
+# views from the RUNTIME env (so secrets/URLs are correct), and links public storage on the API
+# role. DB migrations are a DEPLOY step (run once, not per-container) — see DEPLOYMENT.md.
 
-mkdir -p /run/php
-mkdir -p /var/log/nginx
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
 
-cd /var/www/html
+# storage symlink (idempotent) — only meaningful for the php-fpm/API container, harmless elsewhere.
+php artisan storage:link 2>/dev/null || true
 
-# Laravel
-php artisan storage:link || true
-php artisan config:cache || true
-php artisan route:cache || true
-php artisan view:cache || true
-
-# Start PHP-FPM
-php-fpm -D
-
-# Start Nginx
-nginx -g "daemon off;"
+exec "$@"

@@ -1,0 +1,167 @@
+{
+  "ops": {
+    "title": "Operations overview",
+    "subtitle": "Live operational health: queue, media sync, transcoding, mirror and scheduler",
+    "refresh": "Refresh",
+    "section": { "queue": "Queue", "media": "Media", "infra": "Storage & scheduler" },
+    "queue": { "pending": "Pending jobs", "failed": "Failed jobs" },
+    "media": {
+      "unsynced": "Unsynced media",
+      "stuckTranscoding": "Stuck transcoding",
+      "failedTranscode": "Failed transcodes (24h)",
+      "failedMirror": "Failed mirror"
+    },
+    "remote": {
+      "title": "Remote mirror",
+      "healthy": "Connected",
+      "down": "Unavailable",
+      "disabled": "Disabled"
+    },
+    "scheduler": {
+      "failedLastRun": "Tasks failed (last run)",
+      "lastRun": "Last scheduler run"
+    }
+  },
+  "failed": {
+    "title": "Failed jobs",
+    "subtitle": "Inspect, retry and clear failed queue jobs",
+    "searchPlaceholder": "Search name / queue / error…",
+    "empty": "No failed jobs",
+    "select": "Select",
+    "selectAll": "Select page",
+    "maxTries": "Max tries",
+    "col": {
+      "job": "Job",
+      "exception": "Exception",
+      "failedAt": "Failed at",
+      "actions": "Actions"
+    },
+    "action": {
+      "retry": "Retry",
+      "retrySelected": "Retry ({{count}})",
+      "deleteSelected": "Delete ({{count}})",
+      "retryAll": "Retry all",
+      "deleteAll": "Delete all"
+    },
+    "confirm": {
+      "retryAllTitle": "Retry all failed jobs?",
+      "retryAllText": "All failed jobs will be re-queued.",
+      "deleteAllTitle": "Delete all failed jobs?",
+      "deleteAllText": "All failed jobs will be permanently removed.",
+      "cancel": "Cancel"
+    },
+    "pageOf": "Page {{page}} of {{last}} ({{total}} total)",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "scheduler": {
+    "title": "Scheduler",
+    "subtitle": "Manage scheduled-task visibility and activation — commands and timing cannot be edited",
+    "notice": "Task definitions (command and timing) are fixed in code and owned by the Laravel scheduler. Here you can only: enable/disable, add notes, and manually run whitelisted tasks.",
+    "empty": "No scheduled tasks",
+    "critical": "Critical",
+    "disabledHint": "Disabled — will not run automatically",
+    "col": {
+      "task": "Task",
+      "schedule": "Schedule",
+      "status": "Status",
+      "lastRun": "Last run",
+      "nextRun": "Next run",
+      "actions": "Actions"
+    },
+    "health": {
+      "healthy": "Healthy",
+      "stale": "Stale",
+      "failed": "Failed",
+      "never": "Never run",
+      "disabled": "Disabled"
+    },
+    "status": {
+      "never": "Never run",
+      "running": "Running",
+      "success": "Success",
+      "failed": "Failed"
+    },
+    "action": {
+      "run": "Run now",
+      "manage": "Manage"
+    },
+    "modal": {
+      "title": "Manage: {{name}}",
+      "desc": "You can only control activation and notes",
+      "enabled": "Enabled",
+      "enabledHint": "When disabled, the scheduler will not run this task automatically",
+      "notes": "Notes",
+      "notesPlaceholder": "Optional internal note…",
+      "save": "Save"
+    },
+    "confirm": {
+      "runTitle": "Run task now?",
+      "runText": "“{{name}}” will be run manually now.",
+      "runYes": "Run",
+      "cancel": "Cancel"
+    },
+    "toast": {
+      "saved": "Changes saved",
+      "runOk": "Task ran successfully",
+      "runFailed": "Task run failed"
+    }
+  },
+  "diagnostics": {
+    "title": "System diagnostics",
+    "subtitle": "A safe operational runtime snapshot — no secrets. Complements the operations overview and health checks.",
+    "refresh": "Refresh",
+    "checkedAt": "Last checked: {{at}}",
+    "status": { "ok": "Healthy", "down": "Unreachable", "yes": "Yes", "no": "No" },
+    "section": {
+      "runtime": "Runtime",
+      "connectivity": "Connectivity & health",
+      "queueScheduler": "Queue & scheduler",
+      "maintenance": "Maintenance mode"
+    },
+    "runtime": {
+      "environment": "Environment",
+      "laravel": "Laravel version",
+      "php": "PHP version",
+      "debug": "Debug mode",
+      "locale": "Default locale",
+      "timezone": "Timezone",
+      "url": "App URL",
+      "opcache": "OPcache"
+    },
+    "drivers": {
+      "title": "Drivers",
+      "cache": "Cache",
+      "queue": "Queue",
+      "session": "Session",
+      "database": "Database",
+      "mail": "Mail"
+    },
+    "connectivity": {
+      "database": "Database connectivity",
+      "cache": "Cache connectivity",
+      "cacheTagging": "Cache tagging support"
+    },
+    "queue": { "pending": "Pending jobs", "failed": "Failed jobs" },
+    "scheduler": { "tasks": "Scheduled tasks", "lastRun": "Last run" },
+    "maintenance": {
+      "down": "The application is in maintenance mode",
+      "up": "The application is running normally",
+      "hint": "Maintenance mode is managed via CLI (php artisan down/up) — not toggled from the panel to avoid locking yourself out.",
+      "debugWarn": "Debug mode is enabled — it should be disabled in production."
+    }
+  },
+  "cacheClear": {
+    "title": "Clear content cache",
+    "desc": "Flushes the public content cache (articles, reels, sitemaps, categories); it rebuilds on first request. Does not touch system, session, or settings cache.",
+    "button": "Clear cache now",
+    "confirmTitle": "Clear the public content cache?",
+    "confirmText": "Articles, reels, sitemaps, and categories caches will be flushed. This is safe but may briefly increase load while rebuilding.",
+    "confirmYes": "Yes, clear now",
+    "cancel": "Cancel",
+    "success": "Public content cache cleared successfully",
+    "clearedGroups": "Cleared groups: {{groups}}",
+    "auditNote": "This action is recorded in the activity log (who and when).",
+    "noPermission": "You don't have permission to clear the cache (cache.clear)."
+  }
+}

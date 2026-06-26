@@ -1,0 +1,1377 @@
+{
+  "reviewQueue": {
+    "title": "Review queue",
+    "subtitle": "Writer-submitted content awaiting your decision (publish or reject).",
+    "tabs": { "articles": "Articles", "reels": "Reels", "videos": "Videos" },
+    "waitingMedia": "Awaiting media",
+    "editToFix": "Add media",
+    "col": {
+      "title": "Title",
+      "author": "Author",
+      "date": "Submitted",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "action": {
+      "publish": "Publish",
+      "reject": "Reject"
+    },
+    "confirm": {
+      "yes": "Yes, continue",
+      "published": {
+        "title": "Publish this article now?",
+        "text": "The article becomes public immediately and the writer is notified."
+      },
+      "rejected": {
+        "title": "Reject this article?",
+        "text": "It returns to the writer as rejected and they are notified."
+      }
+    },
+    "empty": "No content awaiting review."
+  },
+  "comments": {
+    "title": "Comments moderation",
+    "subtitle": "Review reader comments — approve, reject, mark as spam, or delete.",
+    "guest": "Guest",
+    "reply": "Reply",
+    "col": { "comment": "Comment", "status": "Status", "date": "Date" },
+    "status": { "pending": "Pending", "approved": "Approved", "rejected": "Rejected", "spam": "Spam" },
+    "action": { "approved": "Approve", "rejected": "Reject", "spam": "Mark as spam", "delete": "Delete" },
+    "confirm": {
+      "approvedTitle": "Approve this comment?",
+      "rejectedTitle": "Reject this comment?",
+      "spamTitle": "Mark this comment as spam?",
+      "deleteTitle": "Delete this comment?",
+      "text": "You can change moderation later."
+    },
+    "filter": { "search": "Search in comments…", "statusAll": "All statuses", "reset": "Clear" },
+    "empty": { "title": "No comments", "description": "Reader comments will appear here for moderation." }
+  },
+  "tags": {
+    "title": "Tags",
+    "subtitle": "Manage content tags — rename or delete, with usage counts.",
+    "col": { "name": "Tag", "usage": "Usage" },
+    "action": { "rename": "Rename", "delete": "Delete" },
+    "filter": { "search": "Search tags…", "reset": "Clear" },
+    "rename": {
+      "title": "Rename tag",
+      "nameAr": "Arabic name",
+      "nameEn": "English name",
+      "save": "Save",
+      "saving": "Saving…"
+    },
+    "renamed": "Tag renamed.",
+    "confirm": {
+      "deleteTitle": "Delete this tag?",
+      "deleteText": "\"{{name}}\" will be removed from all content.",
+      "yes": "Yes, delete"
+    },
+    "empty": { "title": "No tags", "description": "Tags appear here once content is tagged." }
+  },
+  "articleAnalytics": {
+    "title": "Article analytics",
+    "loadingTitle": "Loading…",
+    "error": "Failed to load analytics.",
+    "retry": "Retry",
+    "forwardOnly": "Since tracking began (forward-only)",
+    "uniqueReactors": "Unique reactors",
+    "engagementRate": "Engagement rate",
+    "none": "—",
+    "yes": "Yes",
+    "no": "No",
+    "range": { "24h": "24h", "7d": "7 days", "30d": "30 days", "custom": "Custom" },
+    "metric": { "views": "Views", "likes": "Likes", "dislikes": "Dislikes", "favorites": "Saves" },
+    "perf": {
+      "trendingScore": "Trending score",
+      "velocity": "Velocity (views/day)",
+      "momentum": "Momentum",
+      "vsBaseline": "vs average"
+    },
+    "trend": {
+      "title": "Activity over time",
+      "rangeTotal": "Range total: {{value}}",
+      "empty": "No data in this period"
+    },
+    "traffic": {
+      "title": "Traffic sources",
+      "subtitle": "Coarse attribution (forward-only)",
+      "empty": "No traffic tracked yet"
+    },
+    "channel": {
+      "direct": "Direct",
+      "internal": "Internal",
+      "search": "Search",
+      "social": "Social",
+      "referral": "Referral"
+    },
+    "publishing": {
+      "title": "Publishing",
+      "status": "Status",
+      "featured": "Featured",
+      "type": "Type",
+      "publishedAt": "Published at",
+      "language": "Language",
+      "translations": "Linked translations"
+    },
+    "overview": {
+      "title": "Article analytics",
+      "subtitle": "Article fleet performance — real engagement, leaderboard, language, and featured impact.",
+      "allTime": "All figures are cumulative (all-time)."
+    },
+    "leaderboard": {
+      "title": "Top performers",
+      "subtitle": "Highest weighted (views·1 + likes·4 + saves·6 − dislikes·2)",
+      "empty": "No published articles yet"
+    },
+    "featured": {
+      "title": "Featured impact",
+      "subtitle": "Avg views — featured vs regular",
+      "featured": "Featured",
+      "regular": "Regular",
+      "lift": "{{value}}% lift vs regular",
+      "noBaseline": "No baseline yet"
+    },
+    "language": {
+      "title": "Language segmentation",
+      "empty": "No data"
+    },
+    "publishTime": {
+      "title": "Publish-time performance",
+      "subtitle": "Avg views by publish hour (storage time)",
+      "empty": "No data"
+    }
+  },
+  "reelAnalytics": {
+    "title": "Reel analytics",
+    "loadingTitle": "Loading…",
+    "error": "Failed to load analytics.",
+    "retry": "Retry",
+    "forwardOnly": "Since tracking began (forward-only)",
+    "uniqueReactors": "Unique reactors",
+    "engagementRate": "Engagement rate",
+    "none": "—",
+    "yes": "Yes",
+    "no": "No",
+    "range": { "24h": "24h", "7d": "7 days", "30d": "30 days", "custom": "Custom" },
+    "metric": { "views": "Views", "likes": "Likes", "dislikes": "Dislikes", "favorites": "Saves" },
+    "perf": {
+      "trendingScore": "Trending score",
+      "velocity": "Velocity (views/day)",
+      "momentum": "Momentum",
+      "vsBaseline": "vs average"
+    },
+    "trend": {
+      "title": "Activity over time",
+      "rangeTotal": "Range total: {{value}}",
+      "empty": "No data in this period"
+    },
+    "traffic": {
+      "title": "Traffic sources",
+      "subtitle": "Coarse attribution (forward-only)",
+      "empty": "No traffic tracked yet"
+    },
+    "channel": {
+      "direct": "Direct",
+      "internal": "Internal",
+      "search": "Search",
+      "social": "Social",
+      "referral": "Referral"
+    },
+    "publishing": {
+      "title": "Publishing",
+      "status": "Status",
+      "featured": "Featured",
+      "duration": "Duration",
+      "publishedAt": "Published at",
+      "language": "Language",
+      "translations": "Linked translations"
+    },
+    "watch": {
+      "title": "Watch behavior",
+      "deferredTitle": "Not tracked yet",
+      "deferredNote": "Completion / avg watch / drop-off / retention curve / loops / swipe-away / first seconds — require short-form player telemetry (a separate phase)."
+    },
+    "discovery": {
+      "title": "Discovery",
+      "deferredTitle": "Not tracked yet",
+      "deferredNote": "Impressions / feed discovery / recommendation attribution — require impression telemetry (a separate phase)."
+    },
+    "overview": {
+      "title": "Reel analytics",
+      "subtitle": "Reel fleet performance — real engagement, leaderboard, language, and featured impact.",
+      "allTime": "All figures are cumulative (all-time)."
+    },
+    "leaderboard": {
+      "title": "Top performers",
+      "subtitle": "Highest weighted (views·1 + likes·4 + saves·6 − dislikes·2)",
+      "empty": "No published reels yet"
+    },
+    "featured": {
+      "title": "Featured impact",
+      "subtitle": "Avg views — featured vs regular",
+      "featured": "Featured",
+      "regular": "Regular",
+      "lift": "{{value}}% lift vs regular",
+      "noBaseline": "No baseline yet"
+    },
+    "language": {
+      "title": "Language segmentation",
+      "empty": "No data"
+    },
+    "publishTime": {
+      "title": "Publish-time performance",
+      "subtitle": "Avg views by publish hour (storage time)",
+      "empty": "No data"
+    }
+  },
+  "reels": {
+    "title": "Reels",
+    "subtitle": "Short vertical videos",
+    "new": "New reel",
+    "status": {
+      "draft": "Draft",
+      "scheduled": "Scheduled",
+      "published": "Published",
+      "archived": "Archived",
+      "submitted": "Submitted",
+      "in_review": "In review",
+      "rejected": "Rejected"
+    },
+    "stats": {
+      "total": "Total",
+      "trashed": "Trashed"
+    },
+    "mediaState": {
+      "ready": "Ready",
+      "processing": "Processing",
+      "queued": "Queued",
+      "failed": "Failed",
+      "none": "No video"
+    },
+    "featured": "Featured",
+    "col": {
+      "title": "Title",
+      "status": "Status",
+      "locale": "Locale",
+      "media": "Video",
+      "duration": "Duration",
+      "author": "Author",
+      "date": "Date",
+      "metrics": "Engagement"
+    },
+    "action": {
+      "preview": "Preview",
+      "edit": "Edit",
+      "analytics": "Analytics",
+      "publish": "Publish",
+      "archive": "Archive",
+      "delete": "Delete",
+      "restore": "Restore",
+      "forceDelete": "Delete permanently"
+    },
+    "player": {
+      "unavailable": "Video is not available for preview."
+    },
+    "filter": {
+      "search": "Search by title…",
+      "statusAll": "All statuses",
+      "localeAll": "All locales",
+      "trashedNone": "Not deleted",
+      "trashedOnly": "Trashed only",
+      "reset": "Clear filters",
+      "sortNewest": "Newest",
+      "sortPublished": "Recently published",
+      "sortTitle": "Title (A–Z)",
+      "sortOrder": "Manual order"
+    },
+    "empty": {
+      "title": "No reels yet",
+      "description": "Start by creating your first reel.",
+      "trashTitle": "Trash is empty",
+      "trashDescription": "No deleted reels."
+    },
+    "confirm": {
+      "deleteTitle": "Delete reel?",
+      "deleteText": "«{{title}}» will be deleted. Sure?",
+      "yes": "Yes, delete",
+      "forceTitle": "Permanently delete reel?",
+      "forceText": "«{{title}}» will be permanently deleted and cannot be restored.",
+      "forceYes": "Yes, delete permanently",
+      "publishTitle": "Publish reel?",
+      "publishText": "The reel will become publicly available.",
+      "archiveTitle": "Archive reel?",
+      "archiveText": "The reel will be removed from public display."
+    },
+    "form": {
+      "createTitle": "New reel",
+      "editTitle": "Edit reel",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Reel saved.",
+      "basics": "Basics",
+      "titleLabel": "Title",
+      "descriptionLabel": "Description",
+      "featured": "Featured reel",
+      "featuredHint": "Appears in the public featured reels.",
+      "video": "Reel video",
+      "aiTools": "AI tools",
+      "publishing": "Publishing",
+      "schedule": "Schedule publish",
+      "scheduleBtn": "Schedule",
+      "scheduledFor": "Scheduled for: {{time}}",
+      "mediaNotReadyHint": "Cannot publish or schedule until a video is uploaded and finished processing.",
+      "unsavedTitle": "Unsaved changes",
+      "unsavedText": "You have unsaved edits. Leave without saving?",
+      "unsavedLeave": "Leave without saving",
+      "slugSection": "Slug",
+      "slugLabel": "Slug"
+    },
+    "media": {
+      "upload": "Upload reel video",
+      "uploading": "Uploading… {{percent}}%",
+      "uploadFailed": "Video upload failed.",
+      "processing": "Processing",
+      "processingHint": "Processing the video (renditions + thumbnail). Updates automatically.",
+      "ready": "Ready",
+      "failed": "Processing failed",
+      "failedHint": "Video processing failed. Reprocess or replace the file.",
+      "replace": "Replace",
+      "replaceTitle": "Replace video?",
+      "replaceText": "The current video will be detached from the reel and may be removed during cleanup.",
+      "replaceConfirm": "Yes, replace",
+      "removeTitle": "Remove video?",
+      "removeText": "The video will be detached from the reel (it stays in the central library).",
+      "retry": "Reprocess",
+      "remove": "Remove",
+      "artifacts": {
+        "title": "Processing pipeline",
+        "summary": "{{completed}} / {{total}} artifacts ready",
+        "failedAt": "Failed at: {{stage}}",
+        "skipped": "skipped",
+        "errors": {
+          "undecodable": "Unreadable or unsupported video (no decodable stream).",
+          "duration_exceeded": "Video is too long for this content type.",
+          "dimensions_exceeded": "Video dimensions are too large.",
+          "hls_failed": "Streaming (HLS) generation failed.",
+          "transcode_error": "An unexpected error occurred during processing.",
+          "source_missing": "The source file is missing from storage."
+        },
+        "steps": {
+          "source": "Source uploaded",
+          "metadata": "Metadata extracted",
+          "poster": "Poster generated",
+          "hls_master": "HLS master playlist",
+          "hls_segments": "HLS segments",
+          "thumbnail_webp": "WebP thumbnail",
+          "finalize": "Finalize"
+        }
+      }
+    }
+  },
+  "page": {
+    "title": "Static pages",
+    "subtitle": "CMS-managed pages — About us, Contact, Privacy policy, and similar",
+    "new": "New page",
+    "status": {
+      "draft": "Draft",
+      "published": "Published",
+      "archived": "Archived"
+    },
+    "placement": {
+      "header": "Shown in header",
+      "footer": "Shown in footer",
+      "headerShort": "H",
+      "footerShort": "F"
+    },
+    "col": {
+      "title": "Title",
+      "status": "Status",
+      "locale": "Locale",
+      "placement": "Placement",
+      "order": "Order",
+      "author": "Created by",
+      "date": "Date"
+    },
+    "action": {
+      "edit": "Edit",
+      "publish": "Publish",
+      "archive": "Archive",
+      "toDraft": "Back to draft",
+      "delete": "Delete",
+      "restore": "Restore",
+      "forceDelete": "Delete permanently"
+    },
+    "filter": {
+      "search": "Search by title…",
+      "statusAll": "All statuses",
+      "localeAll": "All locales",
+      "headerAll": "Header — any",
+      "headerYes": "Shown in header",
+      "headerNo": "Hidden from header",
+      "footerAll": "Footer — any",
+      "footerYes": "Shown in footer",
+      "footerNo": "Hidden from footer",
+      "trashedNone": "Not deleted",
+      "trashedOnly": "Trashed only",
+      "reset": "Clear filters",
+      "sortNewest": "Newest",
+      "sortPublished": "Recently published",
+      "sortTitle": "Title (A–Z)",
+      "sortOrder": "Manual order"
+    },
+    "empty": {
+      "title": "No pages yet",
+      "description": "Start by creating your first static page.",
+      "trashTitle": "Trash is empty",
+      "trashDescription": "No deleted pages."
+    },
+    "confirm": {
+      "deleteTitle": "Delete page?",
+      "deleteText": "«{{title}}» will be deleted. Sure?",
+      "yes": "Yes, delete",
+      "forceTitle": "Permanently delete page?",
+      "forceText": "«{{title}}» will be permanently deleted and cannot be restored.",
+      "forceYes": "Yes, delete permanently",
+      "publishTitle": "Publish page?",
+      "publishText": "The page will become publicly available.",
+      "archiveTitle": "Archive page?",
+      "archiveText": "The page will be removed from public display.",
+      "draftTitle": "Move page back to draft?",
+      "draftText": "This will undo the current published/archived state."
+    },
+    "form": {
+      "createTitle": "New page",
+      "editTitle": "Edit page",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Page saved.",
+      "invalid": "Some fields are missing or invalid.",
+      "unsavedTitle": "Unsaved changes",
+      "unsavedText": "You have unsaved edits. Leave without saving?",
+      "unsavedLeave": "Leave without saving",
+      "basics": "Basics",
+      "basicsHint": "Title, locale, and slug",
+      "titleLabel": "Page title",
+      "locale": "Locale",
+      "slug": "Slug",
+      "slugPlaceholder": "Auto-generated if left blank",
+      "slugAutoHint": "Auto-updates from the title until you edit it manually.",
+      "publishedAt": "Published",
+      "updatedAt": "Last updated",
+      "dirty": "Unsaved changes",
+      "dirtyHint": "You have unsaved edits — press Save or Ctrl/⌘+S.",
+      "saveShortcut": "Save (Ctrl/⌘+S)",
+      "seoTitleHint": "Optimal length between {{min}} and {{max}} characters.",
+      "seoDescHint": "Optimal length between {{min}} and {{max}} characters.",
+      "snippetPreview": "Search result preview (Google-like)",
+      "snippetPlaceholderUrl": "/pages/example",
+      "snippetPlaceholderTitle": "— Page title will appear here —",
+      "snippetPlaceholderDesc": "— SEO description will appear here. Write something engaging that motivates clicks. —",
+      "contentSection": "Page content",
+      "contentHint": "Rich editor with strict allow-list matching the server-side sanitizer (TipTap).",
+      "seoSection": "Search engine optimization (SEO)",
+      "seoHint": "Title and description for better appearance in search results",
+      "seoTitle": "SEO title",
+      "seoTitlePlaceholder": "Falls back to the page title if left blank",
+      "seoDescription": "SEO description",
+      "seoDescriptionPlaceholder": "A short summary that appears in search results",
+      "seoKeywords": "Keywords",
+      "canonicalUrl": "Canonical URL",
+      "robots": "Robots",
+      "workflow": "Publishing workflow",
+      "workflowHint": "Change the page state — publish, archive, or revert to draft",
+      "currentStatus": "Current status",
+      "display": "Display & order",
+      "displayHint": "Control where the page appears (header/footer) and its order",
+      "showInHeader": "Show in header",
+      "showInHeaderHint": "Appears in the front-end top navigation.",
+      "showInFooter": "Show in footer",
+      "showInFooterHint": "Appears in the front-end footer.",
+      "sortOrder": "Sort order",
+      "template": "Template",
+      "templatePlaceholder": "Leave blank to use the default template"
+    },
+    "editor": {
+      "h4": "Heading 4",
+      "stats": {
+        "words_zero": "no words",
+        "words_one": "1 word",
+        "words_other": "{{count}} words",
+        "chars_zero": "no chars",
+        "chars_one": "1 char",
+        "chars_other": "{{count}} chars",
+        "readingTime_one": "≈ 1 min read",
+        "readingTime_other": "≈ {{count}} min read",
+        "empty": "Start writing…"
+      }
+    },
+    "validation": {
+      "required": "This field is required.",
+      "titleMin": "Title is too short (at least 2 characters).",
+      "titleMax": "Title is too long.",
+      "slugFormat": "Slug must contain alphanumeric tokens separated by -.",
+      "slugMax": "Slug is too long.",
+      "contentRequired": "Page content is required.",
+      "seoTitleMax": "SEO title is too long.",
+      "seoDescMax": "SEO description is too long.",
+      "seoKwMax": "Keywords list is too long.",
+      "url": "Invalid URL.",
+      "orderRange": "Sort order must be a non-negative integer.",
+      "templateMax": "Template name is too long."
+    }
+  },
+  "engagement": {
+    "title": "Engagement metrics",
+    "colHeader": "Metrics",
+    "views": "Views",
+    "likes": "Likes",
+    "dislikes": "Dislikes",
+    "favorites": "Favorites"
+  },
+  "ai": {
+    "loading": "Generating…",
+    "apply": "Apply",
+    "regenerate": "Regenerate",
+    "dismiss": "Dismiss",
+    "autoNote": "Generated automatically from the article text (no AI).",
+    "headlines": {
+      "button": "Suggest headline",
+      "news": "News style",
+      "editorial": "Strong editorial",
+      "seo": "SEO-friendly"
+    },
+    "excerpt": {
+      "button": "Generate excerpt"
+    },
+    "tags": {
+      "button": "Smart suggest",
+      "topics": "Topics",
+      "people": "People",
+      "locations": "Locations",
+      "organizations": "Organizations"
+    },
+    "seo": {
+      "title": "AI SEO analysis",
+      "button": "Analyze",
+      "hint": "Get advisory feedback on the title, description and keywords.",
+      "missingKeywords": "Suggested keywords"
+    },
+    "rewrite": {
+      "button": "Rewrite",
+      "selectFirst": "Select text first to rewrite it",
+      "modes": {
+        "journalistic": "Journalistic",
+        "formal": "Formal",
+        "concise": "Concise",
+        "stronger": "Stronger",
+        "simplified": "Simplified",
+        "professional": "Professional",
+        "seo": "SEO-friendly"
+      }
+    },
+    "analyze": {
+      "title": "Content quality analysis",
+      "button": "Analyze content",
+      "hint": "Advisory suggestions on repetition, structure and readability — never edits the text.",
+      "issues": "Issues",
+      "suggestions": "Suggestions"
+    }
+  },
+  "mediaStudio": {
+    "title": "Media studio",
+    "hint": "Images and video from the central shared library — attached when the article is saved",
+    "tabs": {
+      "images": "Images",
+      "video": "Video",
+      "library": "Library"
+    },
+    "common": {
+      "remove": "Remove"
+    },
+    "images": {
+      "drop": "Drag images here or click to select",
+      "dropHint": "JPG / PNG / WebP — up to 5 MB — multiple files allowed",
+      "cover": "Cover image",
+      "coverHint": "Pick an image from the gallery and set it as cover via the star button.",
+      "setCover": "Set as cover",
+      "unsetCover": "Unset cover",
+      "gallery": "Gallery",
+      "galleryHint": "Drag and drop to reorder",
+      "empty": "No images yet"
+    },
+    "video": {
+      "drop": "Drag video files here or click to select",
+      "dropHint": "MP4 / WebM",
+      "empty": "No video clips yet",
+      "external": "External video (URL)",
+      "externalPlaceholder": "Paste a YouTube / Vimeo / TikTok / Instagram / MP4 link…",
+      "externalHint": "Supported providers: YouTube, Vimeo, TikTok, Instagram, Facebook, X, and direct MP4 links.",
+      "detecting": "Checking the link…",
+      "invalid": "Unsupported or invalid video link.",
+      "add": "Add",
+      "added": "Video added.",
+      "retry": "Retry",
+      "status": {
+        "queued": "Queued",
+        "processing": "Processing",
+        "ready": "Ready",
+        "failed": "Failed"
+      },
+      "processingHint": "The video is being processed into adaptive streaming in the background."
+    },
+    "library": {
+      "search": "Search the library…",
+      "typeAll": "All types",
+      "typeImage": "Images",
+      "typeVideo": "Video",
+      "empty": "No matching assets.",
+      "add": "Add",
+      "added": "Added"
+    }
+  },
+  "mediaLibrary": {
+    "title": "Media library",
+    "subtitle": "Manage central assets: metadata, where they're used, and safe deletion.",
+    "search": "Search by name, alt, caption or source…",
+    "filter": {
+      "typeAll": "All types",
+      "typeImage": "Images",
+      "typeVideo": "Uploaded video",
+      "typeExternal": "External video"
+    },
+    "empty": "No matching assets.",
+    "loadError": "Failed to load the library.",
+    "usageBadge": "{{count}} uses",
+    "unused": "Unused",
+    "pagination": {
+      "prev": "Previous",
+      "next": "Next",
+      "page": "Page {{page}} of {{total}}"
+    },
+    "kind": {
+      "image": "Image",
+      "video": "Uploaded video",
+      "external": "External video"
+    },
+    "preview": {
+      "uploaded": "Uploaded"
+    },
+    "detail": {
+      "title": "Asset details",
+      "metadata": "Metadata",
+      "alt": "Alt text",
+      "altHint": "Describes the image for screen readers and search engines.",
+      "caption": "Caption",
+      "credit": "Credit / photographer",
+      "source": "Source",
+      "save": "Save metadata",
+      "saving": "Saving…",
+      "saved": "Asset metadata updated.",
+      "fileInfo": "File info",
+      "dimensions": "Dimensions",
+      "mime": "Type",
+      "size": "Size",
+      "duration": "Duration",
+      "provider": "Provider",
+      "checksum": "Checksum",
+      "created": "Added",
+      "processing": "Processing status",
+      "usage": "Where used",
+      "noUsage": "This asset is not used in any content.",
+      "ctxArticle": "Article",
+      "ctxLiveUpdate": "Live coverage update",
+      "untitled": "Untitled"
+    },
+    "delete": {
+      "action": "Delete",
+      "title": "Delete asset?",
+      "text": "The asset and all its derivatives will be permanently removed.",
+      "yes": "Yes, delete",
+      "inUseTitle": "Asset is in use",
+      "inUseText": "This asset is used in {{count}} place(s). Force delete will remove it from those too. Continue?",
+      "forceYes": "Force delete"
+    }
+  },
+  "media": {
+    "studioTitle": "Article media",
+    "studioHint": "Cover image, gallery, and video",
+    "saveFirst": "Save the article first to manage media.",
+    "inlineNote": "In-body images are managed directly from the body editor.",
+    "confirm": { "yes": "Yes, delete" },
+    "cover": {
+      "title": "Cover image",
+      "upload": "Upload cover",
+      "replace": "Replace",
+      "remove": "Remove",
+      "removeTitle": "Remove cover image?",
+      "removeText": "The cover image will be removed from this article.",
+      "empty": "No cover image",
+      "hint": "JPG / PNG / WebP — up to 5 MB. Used in cards and social shares."
+    },
+    "gallery": {
+      "title": "Gallery",
+      "hint": "Drag and drop to reorder",
+      "add": "Add image",
+      "empty": "No gallery images yet",
+      "remove": "Delete",
+      "removeTitle": "Delete image?",
+      "removeText": "The image will be removed from the gallery."
+    },
+    "video": {
+      "title": "Video",
+      "hint": "MP4 / WebM",
+      "add": "Upload video",
+      "empty": "No video clips yet",
+      "remove": "Delete",
+      "removeTitle": "Delete video?",
+      "removeText": "The video clip will be removed from this article."
+    }
+  },
+  "liveCoverage": {
+    "title": "Live coverage",
+    "liveBadge": "LIVE",
+    "manageButton": "Manage live coverage",
+    "backToArticle": "Back to article",
+    "notLive": "This console is only available for live-coverage articles.",
+    "readOnly": "Posting updates is editorial-only. You can follow the timeline here.",
+    "empty": "No updates yet",
+    "emptyHint": "Post the first coverage update from the composer above.",
+    "loadMore": "Load older",
+    "loadingMore": "Loading…",
+    "eventStatus": {
+      "scheduled": "Scheduled",
+      "live": "Live now",
+      "paused": "Paused",
+      "completed": "Completed"
+    },
+    "settings": {
+      "eventStatus": "Event status",
+      "editorial": "Editorial controls",
+      "seo": "SEO (live event)",
+      "saveSeo": "Save SEO",
+      "seoSaved": "SEO settings saved."
+    },
+    "composer": {
+      "heading": "Add a new update",
+      "titlePlaceholder": "Update title (optional)",
+      "pin": "Pin",
+      "pinned": "Pinned",
+      "breaking": "Breaking update",
+      "featured": "Featured update",
+      "post": "Post update",
+      "posting": "Posting…",
+      "posted": "Update posted.",
+      "empty": "Write the update content first.",
+      "media": "Add media",
+      "mediaPreview": "Display preview",
+      "shortcut": "Ctrl/⌘ + Enter to post quickly"
+    },
+    "card": {
+      "pinnedBadge": "Pinned",
+      "breakingBadge": "Breaking",
+      "featuredBadge": "Featured",
+      "pin": "Pin",
+      "unpin": "Unpin",
+      "breaking": "Toggle breaking",
+      "featured": "Toggle featured",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "edit": "Edit",
+      "save": "Save",
+      "delete": "Delete",
+      "deleteTitle": "Delete update?",
+      "deleteText": "This update will be permanently removed from the timeline.",
+      "deleteYes": "Yes, delete"
+    },
+    "og": {
+      "label": "Share image (og:image)",
+      "hint": "A dedicated social-share image that overrides the cover. Ideal size 1200×630.",
+      "choose": "Choose image",
+      "remove": "Remove",
+      "upload": "Upload new image",
+      "uploading": "Uploading…",
+      "uploadFailed": "Failed to upload the image."
+    }
+  },
+  "articles": {
+    "title": "Articles",
+    "subtitle": "Manage news, opinions, and live coverage content",
+    "new": "New article",
+    "by": "By",
+    "clearBreaking": "Clear all breaking",
+    "clearPinned": "Clear all pinned",
+    "stats": {
+      "total": "Total articles",
+      "published": "Published",
+      "draft": "Drafts",
+      "breaking": "Breaking",
+      "featured": "Homepage",
+      "deleted": "Deleted"
+    },
+    "searchPlaceholder": "Search in title…",
+    "col": {
+      "title": "Title",
+      "type": "Type",
+      "status": "Status",
+      "locale": "Locale",
+      "category": "Categories",
+      "primaryTag": "Primary category",
+      "author": "Author",
+      "display": "Display",
+      "published": "Published",
+      "actions": "Actions"
+    },
+    "type": {
+      "news": "News",
+      "opinion": "Opinion",
+      "live": "Live"
+    },
+    "status": {
+      "draft": "Draft",
+      "submitted": "Submitted",
+      "in_review": "In review",
+      "scheduled": "Scheduled",
+      "published": "Published",
+      "rejected": "Rejected",
+      "archived": "Archived"
+    },
+    "locale": {
+      "ar": "Arabic",
+      "en": "English"
+    },
+    "filter": {
+      "statusAll": "All statuses",
+      "typeAll": "All types",
+      "localeAll": "All locales",
+      "categoryAll": "All categories",
+      "trashedNone": "Active",
+      "trashedOnly": "Deleted only"
+    },
+    "sort": {
+      "createdDesc": "Newest created",
+      "publishedDesc": "Newest published",
+      "titleAsc": "Title (A–Z)",
+      "idAsc": "ID"
+    },
+    "action": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "liveCoverage": "Manage live coverage",
+      "viewOnSite": "View on site",
+      "removePlacement": "Remove from this placement",
+      "restore": "Restore",
+      "forceDelete": "Delete permanently"
+    },
+    "confirm": {
+      "deleteTitle": "Delete article?",
+      "deleteText": "«{{title}}» will be permanently deleted. Are you sure?",
+      "yes": "Yes, delete",
+      "clearBreakingTitle": "Clear all breaking news?",
+      "clearBreakingText": "The «breaking» flag will be removed from every article. Are you sure?",
+      "clearBreakingYes": "Yes, clear all",
+      "clearPinnedTitle": "Unpin all articles?",
+      "clearPinnedText": "The «pinned» flag will be removed from every pinned article. Are you sure?",
+      "clearPinnedYes": "Yes, unpin all",
+      "removePlacementTitle": "Remove from display zone?",
+      "removePlacementText": "The article will be removed from «{{zone}}».",
+      "removePlacementYes": "Yes, remove",
+      "forceDeleteTitle": "Permanently delete article?",
+      "forceDeleteText": "«{{title}}» will be permanently deleted with no way to restore it. Are you sure?",
+      "forceDeleteYes": "Yes, delete permanently"
+    },
+    "savedDraft": "Article saved.",
+    "savedPublished": "Article published.",
+    "savedSubmitted": "Article submitted for review.",
+    "share": {
+      "title": "Share & preview",
+      "hint": "The article's permanent link on the website, plus social share actions.",
+      "copy": "Copy",
+      "copied": "Link copied.",
+      "copyFailed": "Copy failed. Copy the link manually.",
+      "shareOn": "Share on:",
+      "followChannel": "Follow WhatsApp Channel",
+      "saveToShare": "Save the article to enable share links."
+    },
+    "preview": {
+      "title": "Article preview",
+      "hint": "Matches what readers will see based on the current draft.",
+      "trueHint": "Rendered by the server exactly as published — same HTML, media and SEO.",
+      "serverBadge": "True preview",
+      "untitled": "— Untitled —",
+      "byline": "by {{name}}",
+      "tags": "Tags:"
+    },
+    "seoGuidance": {
+      "title": "SEO guidance",
+      "title_ok": "Title length is good for search results.",
+      "title_too_long": "Title is long ({{length}} chars) — keep it under {{max}} for search results.",
+      "title_too_short": "Title is short ({{length}} chars) — aim for at least {{min}}.",
+      "description_missing": "No SEO description or excerpt — add one for better snippets.",
+      "description_too_long": "Description is long ({{length}} chars) — keep it under {{max}}.",
+      "description_short": "Description is short ({{length}} chars) — aim for at least {{min}}.",
+      "description_ok": "Description length is good.",
+      "cover_ok": "A cover/share image is set.",
+      "cover_missing": "No cover/share image — social cards and structured data are weaker.",
+      "seo_title_derived": "No custom SEO title — the article title is used.",
+      "canonical_overridden": "Canonical points elsewhere — this version may not be indexed.",
+      "robots_noindex": "Robots is set to noindex — this article will not be indexed."
+    },
+    "form": {
+      "createTitle": "New article",
+      "editTitle": "Edit article",
+      "save": "Save",
+      "createDraft": "Save as draft",
+      "saveDraft": "Save as draft",
+      "publishNow": "Publish now",
+      "submitReview": "Submit for review",
+      "cancel": "Cancel",
+      "secBasics": "Basic information",
+      "secBasicsHint": "Title, locale, type, and identifiers",
+      "secBody": "Article body",
+      "secBodyHint": "Rich editor with strict allow-list matching the server-side sanitizer (TipTap).",
+      "secSeo": "Search engine optimization (SEO)",
+      "secSeoHint": "Title, description, and keywords for search engines",
+      "secTaxonomy": "Categories",
+      "secTaxonomyHint": "Pick one or more — all equal",
+      "categoriesHelp": "Select at least one category; you may pick any number.",
+      "noCategories": "No categories available for this type/locale.",
+      "secOpinionAuthor": "Opinion author",
+      "secOpinionAuthorHint": "A user with the writer flag (is_writer)",
+      "secTags": "Tags",
+      "secTagsHint": "Aids indexing and discovery — up to 30 tags",
+      "secFlags": "Display & interaction",
+      "secFlagsHint": "Surface the story in display zones and control interaction",
+      "displayGroup": "Display emphasis",
+      "interactionGroup": "Interaction",
+      "title": "Title",
+      "subtitle": "Subtitle",
+      "type": "Type",
+      "locale": "Locale",
+      "slug": "Slug",
+      "slugPlaceholder": "Auto-generated if left blank",
+      "slugPreview": "Will save as:",
+      "slugAutoHint": "Leave blank to auto-generate from the title.",
+      "slugAutoButton": "Auto-generate",
+      "slugRegenerate": "Revert to auto-generated from title",
+      "slugChecking": "Checking availability…",
+      "slugAvailable": "Slug is available.",
+      "slugTaken": "Slug already in use.",
+      "slugUseSuggestion": "Use “{{slug}}”",
+      "excerpt": "Short excerpt",
+      "primaryCategory": "Primary category",
+      "pickCategory": "— pick a category —",
+      "secondaryCategories": "Secondary categories",
+      "secondaryHelp": "Up to 3 secondaries. Not available for opinion articles.",
+      "opinionAuthor": "Author",
+      "pickAuthor": "— pick an author —",
+      "loadingWriters": "Loading writers…",
+      "author": {
+        "searchPlaceholder": "Search by name or email…",
+        "loading": "Searching…",
+        "empty": "No results for «{{query}}».",
+        "startTyping": "Type to search, or browse existing writers.",
+        "addNew": "+ Add new writer",
+        "clear": "Clear selection",
+        "quickAdd": {
+          "title": "Add a new writer",
+          "hint": "Quick-create a writer account. The writer flag is set automatically.",
+          "avatar": "Writer photo",
+          "avatarHint": "PNG / JPG / WebP — used as the writer photo and cover fallback.",
+          "avatarFailed": "Failed to upload the writer photo.",
+          "name": "Full name",
+          "email": "Email",
+          "password": "Initial password",
+          "passwordHint": "Auto-generated to satisfy password requirements. Override or regenerate as needed.",
+          "regenerate": "Generate new password",
+          "showPassword": "Show",
+          "hidePassword": "Hide",
+          "copy": "Copy",
+          "passwordCopied": "Password copied.",
+          "copyFailed": "Copy failed. Copy manually.",
+          "sendInvite": "Send password-reset email",
+          "sendInviteHint": "The writer receives a secure link to set their own password.",
+          "save": "Create and assign",
+          "created": "Writer created.",
+          "inviteSent": "Password-reset link sent.",
+          "nameRequired": "Name is required (at least 2 characters).",
+          "emailInvalid": "Invalid email address."
+        }
+      },
+      "commentsEnabled": "Enable comments",
+      "commentsEnabledHint": "Disabled by default — opt-in only",
+      "viewsCount": "Views count",
+      "isFeatured": "Slider",
+      "isBreaking": "Breaking",
+      "isPinned": "Pin article",
+      "isHeader": "Latest updates",
+      "isEditorPick": "Editor's pick",
+      "isPinnedHint": "Pins the article to the top of its category and feeds (hero/latest) — it shows first, ahead of newer stories.",
+      "isBreakingHint": "Shows in the breaking-news ticker (fast lane). Use sparingly for urgent stories.",
+      "isFeaturedHint": "Promotes the article into the homepage slider.",
+      "isHeaderHint": "Surfaces the article in the latest-updates header strip.",
+      "isEditorPickHint": "Marks the article as an editor's pick for curated zones.",
+      "seoTitle": "SEO title",
+      "seoTitlePlaceholder": "Falls back to the article title if left blank",
+      "seoTitleHint": "Optimal length between {{min}} and {{max}} characters.",
+      "seoDescription": "SEO description",
+      "seoDescriptionPlaceholder": "Falls back to the excerpt if left blank",
+      "seoDescriptionHint": "Optimal length between {{min}} and {{max}} characters.",
+      "seoKeywords": "SEO keywords",
+      "seoSnippetPreview": "As it would appear in search results",
+      "seoSnippetEmpty": "— Title is incomplete —",
+      "seoSnippetEmptyDesc": "— Description is incomplete —",
+      "socialPreview": "Social share card",
+      "canonicalUrl": "Canonical URL",
+      "robots": "Robots",
+      "bodyImageHint": "Save the article first, then you can upload inline images from the editor toolbar.",
+      "preview": "Preview",
+      "tags": {
+        "placeholder": "Type a tag then press Enter…",
+        "help": "Live suggestions from the existing tag pool; Enter to add, Backspace to remove last.",
+        "searching": "Searching…",
+        "addNew": "Add new tag: «{{name}}»",
+        "remove": "Remove tag",
+        "suggested": "Suggestions:"
+      },
+      "cockpit": {
+        "titlePlaceholder": "Headline — write the story title…",
+        "summary": "Summary",
+        "summaryHint": "Subtitle and excerpt — shown in cards, search results, and social.",
+        "body": "Story",
+        "bodyHint": "Write the article. Add inline images, embeds, and links from the toolbar.",
+        "advancedSeo": "SEO & search appearance",
+        "advancedSeoHint": "Optional — sensible defaults are derived from the title and excerpt.",
+        "advancedMeta": "Advanced",
+        "advancedMetaHint": "Slug, canonical URL, and robots — auto-handled unless you override.",
+        "settings": "Settings",
+        "settingsHint": "Type and language — drive sections and publishing rules.",
+        "publish": "Publishing",
+        "categories": "Sections",
+        "categoriesSelected": "{{count}} selected",
+        "categorySearch": "Search sections…",
+        "categoryNoResults": "No matching sections.",
+        "categoryClear": "Clear",
+        "media": "Featured media",
+        "tagsTitle": "Tags",
+        "visibility": "Display & interaction",
+        "author": "Author",
+        "expand": "Expand",
+        "collapse": "Collapse",
+        "autosave": {
+          "saving": "Saving…",
+          "saved": "Saved",
+          "savedAgo": "Saved {{rel}}",
+          "unsaved": "Unsaved changes",
+          "draftUnsaved": "Draft — not saved yet",
+          "justNow": "just now",
+          "secondsAgo": "{{n}}s ago",
+          "minutesAgo": "{{n}}m ago",
+          "hoursAgo": "{{n}}h ago"
+        }
+      }
+    },
+    "validation": {
+      "titleMin": "Title is too short.",
+      "titleMax": "Title is too long.",
+      "subtitleMax": "Subtitle is too long.",
+      "slug": "Slug must contain alphanumeric tokens separated by -.",
+      "slugMax": "Slug is too long.",
+      "excerptRequired": "A short summary is required.",
+      "excerptMax": "Excerpt is too long.",
+      "primaryRequired": "Select at least one category.",
+      "secondaryMax": "Maximum 3 secondary categories.",
+      "opinionNoSecondary": "Opinion articles cannot have secondary categories.",
+      "primaryInSecondary": "Primary category cannot also be a secondary.",
+      "opinionAuthorRequired": "An opinion author must be selected.",
+      "tagsMax": "Maximum 30 tags.",
+      "formInvalid": "Some fields are missing or invalid."
+    },
+    "workflow": {
+      "title": "Publishing workflow",
+      "hint": "Available transitions depend on the current status and your role",
+      "currentStatus": "Current status",
+      "publishedAt": "Published at",
+      "noActions": "No transitions available from this status.",
+      "scheduledAtLabel": "Scheduled at:",
+      "action": {
+        "draft": "Back to draft",
+        "submitted": "Submit for review",
+        "in_review": "Start review",
+        "scheduled": "Schedule",
+        "published": "Publish now",
+        "rejected": "Reject",
+        "archived": "Archive"
+      },
+      "confirm": {
+        "yes": "Yes, continue",
+        "draft": {
+          "title": "Move article back to draft?",
+          "text": "This will undo the current published/scheduled state."
+        },
+        "submitted": {
+          "title": "Submit article for review?",
+          "text": "The article will appear in the editorial review queue."
+        },
+        "in_review": {
+          "title": "Start the review?",
+          "text": "The article will be marked as under review."
+        },
+        "scheduled": {
+          "title": "Schedule the publication?",
+          "text": "The article will auto-publish at the chosen time."
+        },
+        "published": {
+          "title": "Publish the article now?",
+          "text": "The article will be visible to the public immediately."
+        },
+        "rejected": {
+          "title": "Reject the article?",
+          "text": "It will be returned to the author as rejected."
+        },
+        "archived": {
+          "title": "Archive the article?",
+          "text": "The article will be hidden from public listings."
+        }
+      }
+    }
+  },
+  "categories": {
+    "title": "Categories",
+    "subtitle": "Per-locale content category tree",
+    "new": "New category",
+    "empty": "No categories yet",
+    "noMatches": "No categories match your search/filters",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "expandAll": "Expand all",
+    "collapseAll": "Collapse all",
+    "openArticles": "View category articles",
+    "toggleStatus": "Toggle status (active/hidden)",
+    "moveUp": "Move up",
+    "moveDown": "Move down",
+    "visShort": {
+      "show_in_header": "H",
+      "show_in_body": "B",
+      "show_in_footer": "F"
+    },
+    "col": {
+      "name": "Category",
+      "articles": "Articles",
+      "scope": "Scope",
+      "status": "Status",
+      "locale": "Locale",
+      "order": "Order"
+    },
+    "vis": {
+      "showIn": "Show in {{zone}}",
+      "hideFrom": "Hide from {{zone}}"
+    },
+    "scope": {
+      "news": "News",
+      "opinion": "Opinion",
+      "both": "Mixed"
+    },
+    "status": {
+      "active": "Active",
+      "hidden": "Hidden"
+    },
+    "filter": {
+      "search": "Search by name or slug…",
+      "localeAll": "All locales",
+      "scopeAll": "All scopes",
+      "statusAll": "All statuses",
+      "visAll": "All placements",
+      "reset": "Clear filters"
+    },
+    "bulk": {
+      "select": "Select category",
+      "selected": "{{count}} selected",
+      "activate": "Activate",
+      "hide": "Hide",
+      "delete": "Delete",
+      "clear": "Clear selection",
+      "deleteTitle": "Delete selected categories?",
+      "deleteText": "{{count}} categories will be deleted. Categories with children will be skipped."
+    },
+    "trash": {
+      "title": "Trash",
+      "exit": "Back to categories",
+      "empty": "No deleted categories",
+      "deletedAt": "Deleted at",
+      "under": "under {{name}}",
+      "restore": "Restore",
+      "forceDelete": "Delete permanently",
+      "forceTitle": "Permanently delete category?",
+      "forceText": "«{{name}}» will be permanently deleted and cannot be restored. Sure?",
+      "forceConfirm": "Yes, delete permanently",
+      "selected": "{{count}} selected",
+      "bulkRestore": "Restore selected",
+      "bulkForceDelete": "Delete selected permanently",
+      "bulkDeleteTitle": "Permanently delete selected categories?",
+      "bulkDeleteText": "{{count}} categories will be permanently deleted and cannot be restored. Categories still primary for articles will be skipped."
+    },
+    "action": {
+      "edit": "Edit",
+      "addChild": "Add subcategory",
+      "delete": "Delete"
+    },
+    "confirm": {
+      "deleteTitle": "Delete category?",
+      "deleteText": "«{{name}}» will be deleted. Are you sure?",
+      "yes": "Yes, delete"
+    },
+    "form": {
+      "createTitle": "New category",
+      "createHint": "Add a new category to the editorial hierarchy.",
+      "editTitle": "Edit category",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Category saved.",
+      "name": "Category name",
+      "slug": "Slug",
+      "parent": "Parent category",
+      "parentNone": "— Root category —",
+      "scope": "Scope",
+      "status": "Status",
+      "description": "Short description",
+      "show_in_header": "In header",
+      "show_in_body": "In body",
+      "show_in_footer": "In footer",
+      "validation": {
+        "nameRequired": "Category name is required (at least 2 characters)."
+      }
+    }
+  },
+  "placements": {
+    "title": "Editorial placements",
+    "subtitle": "Control where articles surface per zone, locale, and time window",
+    "new": "Add placement",
+    "localeLabel": "Locale",
+    "zone": {
+      "hero": "Hero",
+      "breaking": "Breaking",
+      "header": "Header",
+      "editors_pick": "Editor's pick",
+      "story": "Story"
+    },
+    "summary": {
+      "total": "{{count}} placement",
+      "total_plural": "{{count}} placements",
+      "active": "{{count}} active",
+      "active_plural": "{{count}} active"
+    },
+    "list": {
+      "empty": "No placements in this zone yet",
+      "emptyHint": "Add an article to this zone to see it here.",
+      "position": "Position",
+      "active": "Active now",
+      "inactive": "Outside window",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "edit": "Edit",
+      "delete": "Delete",
+      "missingArticle": "(article unavailable)"
+    },
+    "form": {
+      "createTitle": "Add placement — {{zone}}",
+      "createHint": "Pick an article in the same locale and set ordering and time window.",
+      "editTitle": "Edit placement",
+      "editHint": "Moving an article to a different zone/locale requires deleting this and creating a new one.",
+      "saveCreate": "Save placement",
+      "saveEdit": "Save changes",
+      "savedCreate": "Placement created.",
+      "savedEdit": "Placement updated.",
+      "target": "Target",
+      "pickArticle": "Pick an article",
+      "selected": "Selected article",
+      "searchArticle": "Search article titles…",
+      "eligibilityHint": "Showing published articles in the selected locale only — backend guard requires a locale match.",
+      "loadingArticles": "Loading…",
+      "noArticles": "No matching articles in this locale.",
+      "alreadyPlaced": "Already placed",
+      "lockedArticle": "Linked article",
+      "lockedArticleHint": "To swap the article, delete this placement and create a new one.",
+      "position": "Position",
+      "positionAuto": "Auto (appended to the end)",
+      "positionHint": "Leave empty for auto-numbering.",
+      "startsAt": "Starts at",
+      "endsAt": "Ends at",
+      "windowHint": "Leave both blank for a permanent placement. ends_at is most useful for breaking.",
+      "invalidWindow": "End must be after start.",
+      "invalidPosition": "Position must be a non-negative integer.",
+      "articleRequired": "An article must be selected."
+    },
+    "confirm": {
+      "deleteTitle": "Remove placement?",
+      "deleteText": "«{{title}}» will be removed from this zone. The article itself stays.",
+      "yes": "Yes, remove"
+    }
+  },
+  "editor": {
+    "tool": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "strike": "Strikethrough",
+      "inlineCode": "Inline code",
+      "h1": "Heading 1",
+      "h2": "Heading 2",
+      "h3": "Heading 3",
+      "bulletList": "Bullet list",
+      "orderedList": "Numbered list",
+      "blockquote": "Blockquote",
+      "codeBlock": "Code block",
+      "hr": "Horizontal rule",
+      "alignRight": "Align right",
+      "alignCenter": "Align center",
+      "alignJustify": "Justify",
+      "alignLeft": "Align left",
+      "link": "Link",
+      "image": "Insert image",
+      "imageSaveFirst": "Save the article first to upload images",
+      "embed": "Insert embed",
+      "poll": "Insert poll",
+      "table": "Insert table",
+      "undo": "Undo",
+      "redo": "Redo"
+    },
+    "link": {
+      "title": "Insert / edit link",
+      "hint": "Allowed schemes: http / https / mailto",
+      "urlLabel": "URL",
+      "invalid": "URL is invalid or uses an unsupported scheme.",
+      "allowedSchemes": "Supported protocols: http, https, mailto.",
+      "apply": "Apply",
+      "remove": "Remove link"
+    },
+    "embed": {
+      "title": "Insert embed",
+      "hint": "Paste a URL from a supported provider — it will be resolved server-side.",
+      "urlLabel": "Embed URL",
+      "supported": "Supported providers: YouTube, Vimeo, Twitter/X, Facebook, Instagram.",
+      "insert": "Insert",
+      "resolving": "Resolving…",
+      "remove": "Remove embed",
+      "providers": {
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "twitter": "Twitter/X",
+        "facebook": "Facebook",
+        "instagram": "Instagram"
+      }
+    },
+    "poll": {
+      "title": "Insert poll",
+      "hint": "Search for an existing poll and select it to embed.",
+      "label": "Poll",
+      "searchPlaceholder": "Search polls…",
+      "loading": "Loading polls…",
+      "empty": "No matching polls.",
+      "error": "Failed to load polls.",
+      "remove": "Remove poll"
+    }
+  },
+  "common": {
+    "cancel": "Cancel"
+  }
+}

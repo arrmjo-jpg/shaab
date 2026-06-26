@@ -1,89 +1,40 @@
-FROM php:8.4-fpm
+# syntax=docker/dockerfile:1
+# ── AlphaCMS backend — Laravel (PHP 8.4-FPM) production image ───────────────────
+# Used by three roles (same image, different commands): php-fpm (API), queue workers, scheduler.
+# Includes ffmpeg (video transcode) + image optimizers (spatie/image-optimizer) + Redis ext.
 
-# =========================
-# System packages
-# =========================
-RUN apt-get update && apt-get install -y \
-    git \
-    unzip \
-    curl \
-    zip \
-    libicu-dev \
-    libzip-dev \
-    libpng-dev \
-    libjpeg62-turbo-dev \
-    libwebp-dev \
-    libfreetype6-dev \
-    libonig-dev \
-    ffmpeg \
-    jpegoptim \
-    optipng \
-    pngquant \
-    gifsicle \
-    webp \
-    supervisor \
-    nginx \
-    && docker-php-ext-configure gd \
-        --with-freetype \
-        --with-jpeg \
-        --with-webp \
-    && docker-php-ext-install \
-        pdo_mysql \
-        bcmath \
-        exif \
-        gd \
-        intl \
-        pcntl \
-        zip \
-        opcache
+FROM php:8.4-fpm AS base
 
-# Redis
-RUN pecl install redis \
-    && docker-php-ext-enable redis
+# System libraries + media tooling. ffmpeg/ffprobe → video HLS/MP4 transcode; the optimizer
+# binaries are auto-detected by spatie/laravel-image-optimizer.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      git unzip libicu-dev libzip-dev libpng-dev libjpeg62-turbo-dev libwebp-dev libfreetype6-dev \
+      ffmpeg jpegoptim optipng pngquant gifsicle webp \
+    && docker-php-ext-configure gd --with-jpeg --with-webp --with-freetype \
+    && docker-php-ext-install -j"$(nproc)" pdo_mysql gd intl zip bcmath exif pcntl opcache \
+    && pecl install redis && docker-php-ext-enable redis \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+COPY docker/php/php.ini /usr/local/etc/php/conf.d/zz-alphacms.ini
 
 WORKDIR /var/www/html
 
-# =========================
-# Install dependencies
-# =========================
+# Vendor layer (cached on composer.lock). --no-scripts: artisan isn't bootable until app is copied.
 COPY composer.json composer.lock ./
+RUN composer install --no-dev --no-interaction --no-progress --prefer-dist --optimize-autoloader --no-scripts
 
-RUN composer install \
-    --no-dev \
-    --prefer-dist \
-    --optimize-autoloader \
-    --no-interaction \
-    --no-scripts
-
-# =========================
-# Copy project
-# =========================
+# Application code, then finalize the autoloader + package manifest.
 COPY . .
+RUN composer dump-autoload --optimize --no-dev \
+    && php artisan package:discover --ansi || true \
+    && php artisan storage:link \
+    && chown -R www-data:www-data storage bootstrap/cache
 
-RUN composer dump-autoload --optimize
+COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
-RUN php artisan package:discover --ansi || true
-
-RUN mkdir -p storage bootstrap/cache
-
-RUN chown -R www-data:www-data \
-    storage \
-    bootstrap/cache
-
-# =========================
-# Copy configs
-# =========================
-COPY docker/php/php.ini /usr/local/etc/php/conf.d/app.ini
-
-COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
-
-COPY docker/php/entrypoint.sh /entrypoint.sh
-
-RUN chmod +x /entrypoint.sh
-
-EXPOSE 80
-
-ENTRYPOINT ["/entrypoint.sh"]
+USER www-data
+EXPOSE 9000
+ENTRYPOINT ["entrypoint.sh"]
+CMD ["php-fpm"]

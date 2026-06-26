@@ -1,0 +1,88 @@
+{
+  "title": "إعدادات CDN",
+  "subtitle": "Cloudflare — الحالة والإعدادات وتفريغ الكاش",
+  "overview": {
+    "health": "قوّة النظام",
+    "healthCaption": "الجاهزية الإجمالية",
+    "successRate": "نسبة نجاح التفريغ"
+  },
+  "status": {
+    "title": "الحالة",
+    "enabled": "مُفعّلة",
+    "configured": "مكتملة الإعداد",
+    "plan": "الباقة",
+    "autoPurge": "تفريغ تلقائي",
+    "yes": "نعم",
+    "no": "لا",
+    "purgeSuccess": "عمليات تفريغ ناجحة",
+    "purgeFailed": "عمليات تفريغ فاشلة",
+    "purgedUrls": "روابط مُفرّغة",
+    "lastPurge": "آخر تفريغ",
+    "lastTest": "آخر اختبار اتصال",
+    "never": "—"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "desc": "تفعيل الخدمة ومفاتيح Cloudflare",
+    "enabled": "تفعيل CDN",
+    "auto_purge": "التفريغ التلقائي",
+    "plan": "الباقة",
+    "zone_id": "Zone ID",
+    "api_token": "API Token",
+    "configured": "مُهيّأ",
+    "notConfigured": "غير مُهيّأ",
+    "secretHint": "اتركه فارغاً للإبقاء على الرمز الحالي.",
+    "save": "حفظ الإعدادات",
+    "saving": "جارٍ الحفظ…",
+    "noEditPermission": "لا تملك صلاحية تعديل CDN."
+  },
+  "plans": { "free": "مجاني", "pro": "احترافي", "business": "أعمال", "enterprise": "مؤسسي" },
+  "actions": {
+    "title": "الإجراءات",
+    "test": "اختبار الاتصال",
+    "testing": "جارٍ الاختبار…",
+    "purgeUrls": "تفريغ روابط محددة",
+    "purgeUrlsHint": "رابط واحد في كل سطر (حتى 100)",
+    "purging": "جارٍ التفريغ…",
+    "purgeAll": "تفريغ كامل الكاش",
+    "purgeAllConfirmTitle": "تفريغ كامل الكاش؟",
+    "purgeAllConfirmText": "سيُحذف كل كاش الـ CDN. لا يمكن التراجع.",
+    "confirm": "نعم، فرّغ الكل",
+    "cancel": "إلغاء",
+    "noPurgePermission": "لا تملك صلاحية تفريغ الكاش.",
+    "urlsRequired": "أدخل رابطاً واحداً على الأقل."
+  },
+  "recommendations": {
+    "title": "توصيات كاش CDN",
+    "subtitle": "دليل إعداد Cloudflare عمليّ للمواقع الإخباريّة عالية الزيارات — مبنيّ على وثائق Cloudflare Cache وأفضل الممارسات الصناعيّة.",
+    "cols": {
+      "type": "نوع المحتوى",
+      "status": "الحالة",
+      "browser": "كاش المتصفّح",
+      "edge": "كاش الحافة",
+      "purge": "استراتيجيّة التفريغ",
+      "plan": "أدنى باقة",
+      "notes": "ملاحظات"
+    },
+    "sections": {
+      "cacheMatrix": "مصفوفة كاش Cloudflare",
+      "rulesRef": "مرجع قواعد Cloudflare",
+      "ruleOrder": "ترتيب قواعد AlphaCMS الموصى به",
+      "expressions": "تعابير جاهزة للنسخ",
+      "presets": "إعدادات AlphaCMS الجاهزة",
+      "config": "إعدادات Cloudflare الموصى بها",
+      "matrix": "الميزة حسب باقة Cloudflare",
+      "current": "السياسة الحاليّة في AlphaCMS",
+      "rules": "قواعد Cloudflare الموصى بها",
+      "donot": "ممنوع تخزينه في الكاش",
+      "longterm": "أصول التخزين طويل الأمد (سنة)",
+      "checklist": "قائمة جاهزيّة Cloudflare",
+      "setupChecklist": "قائمة إعداد Cloudflare",
+      "notice": "تنبيه إنشاء Zone"
+    },
+    "donotHint": "Bypass cache + تجاوز على كوكي الجلسة؛ لا تُعلَّم \"Eligible for cache\" أبدًا. اعتماد/جلسة/تخصيص ⇐ التخزين يُخاطر بتسريب البيانات.",
+    "longtermHint": "Edge + Browser TTL = سنة، immutable، مؤهّل لـCache Reserve، بلا تفريغ — أسماء الملفّات المُعنونة بالمحتوى تتغيّر عند التحديث.",
+    "noticeText": "عند إنشاء Zone جديدة داخل AlphaCMS لا يتم تطبيق أي Cache Rules أو TTL أو Cache Everything تلقائيًا. تبدأ كل Zone بدون سياسات كاش حتى يقوم المدير بتكوينها يدويًا.",
+    "disclaimer": "مستخرجة من وثائق Cloudflare Cache الرسميّة + أفضل الممارسات الصناعيّة للأخبار عالية الزيارات. تحقّق من الميزات المرتبطة بالباقة في لوحة Cloudflare قبل الاعتماد عليها."
+  }
+}

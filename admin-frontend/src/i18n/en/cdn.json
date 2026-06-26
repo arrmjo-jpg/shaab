@@ -1,0 +1,88 @@
+{
+  "title": "CDN settings",
+  "subtitle": "Cloudflare — status, settings and cache purge",
+  "overview": {
+    "health": "System power",
+    "healthCaption": "Overall readiness",
+    "successRate": "Purge success rate"
+  },
+  "status": {
+    "title": "Status",
+    "enabled": "Enabled",
+    "configured": "Configured",
+    "plan": "Plan",
+    "autoPurge": "Auto purge",
+    "yes": "Yes",
+    "no": "No",
+    "purgeSuccess": "Successful purges",
+    "purgeFailed": "Failed purges",
+    "purgedUrls": "Purged URLs",
+    "lastPurge": "Last purge",
+    "lastTest": "Last connection test",
+    "never": "—"
+  },
+  "settings": {
+    "title": "Settings",
+    "desc": "Enable the service and Cloudflare keys",
+    "enabled": "Enable CDN",
+    "auto_purge": "Auto purge",
+    "plan": "Plan",
+    "zone_id": "Zone ID",
+    "api_token": "API Token",
+    "configured": "Configured",
+    "notConfigured": "Not set",
+    "secretHint": "Leave empty to keep the current token.",
+    "save": "Save settings",
+    "saving": "Saving…",
+    "noEditPermission": "You don't have permission to edit CDN."
+  },
+  "plans": { "free": "Free", "pro": "Pro", "business": "Business", "enterprise": "Enterprise" },
+  "actions": {
+    "title": "Actions",
+    "test": "Test connection",
+    "testing": "Testing…",
+    "purgeUrls": "Purge specific URLs",
+    "purgeUrlsHint": "One URL per line (up to 100)",
+    "purging": "Purging…",
+    "purgeAll": "Purge everything",
+    "purgeAllConfirmTitle": "Purge entire cache?",
+    "purgeAllConfirmText": "All CDN cache will be cleared. This cannot be undone.",
+    "confirm": "Yes, purge all",
+    "cancel": "Cancel",
+    "noPurgePermission": "You don't have permission to purge cache.",
+    "urlsRequired": "Enter at least one URL."
+  },
+  "recommendations": {
+    "title": "CDN Cache Recommendations",
+    "subtitle": "A practical Cloudflare setup guide for high-traffic news sites — based on Cloudflare Cache docs + industry best practices.",
+    "cols": {
+      "type": "Content type",
+      "status": "Status",
+      "browser": "Browser TTL",
+      "edge": "Edge TTL",
+      "purge": "Purge strategy",
+      "plan": "Min plan",
+      "notes": "Notes"
+    },
+    "sections": {
+      "cacheMatrix": "Cloudflare Cache Matrix",
+      "rulesRef": "Cloudflare Rules Reference",
+      "ruleOrder": "AlphaCMS Recommended Rule Order",
+      "expressions": "Copy Ready Expressions",
+      "presets": "AlphaCMS presets",
+      "config": "Recommended Cloudflare configuration",
+      "matrix": "Feature by Cloudflare plan",
+      "current": "AlphaCMS current policy",
+      "rules": "Recommended Cloudflare rules",
+      "donot": "Do not cache",
+      "longterm": "Long-term cache assets (1 year)",
+      "checklist": "Cloudflare readiness checklist",
+      "setupChecklist": "Cloudflare Setup Checklist",
+      "notice": "Zone creation notice"
+    },
+    "donotHint": "Bypass cache + bypass-on-cookie; never mark \"Eligible for cache\". Credentials / session / personalization → caching risks data leakage.",
+    "longtermHint": "Edge + Browser TTL = 1 year, immutable, Cache Reserve eligible, never purged — content-addressed filenames change on update.",
+    "noticeText": "When you create a new Zone in AlphaCMS, no Cache Rules, TTLs, or Cache Everything are applied automatically. Every Zone starts with no cache policy until the administrator configures it manually.",
+    "disclaimer": "Sourced from the official Cloudflare Cache documentation + industry best practices for high-traffic news. Verify plan-gated features in your Cloudflare dashboard before relying on them."
+  }
+}

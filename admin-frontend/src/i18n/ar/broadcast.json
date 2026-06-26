@@ -1,0 +1,413 @@
+{
+  "status": {
+    "draft": "مسودة",
+    "scheduled": "مجدول",
+    "live": "مباشر",
+    "offline": "خارج البث",
+    "ended": "منتهٍ",
+    "failed": "فاشل",
+    "archived": "مؤرشف"
+  },
+  "kind": {
+    "live": "بث مباشر",
+    "tv": "قناة تلفزيونية",
+    "radio": "إذاعة"
+  },
+  "source": {
+    "hls": "بث HLS",
+    "iptv": "IPTV",
+    "youtube_live": "يوتيوب لايف",
+    "external_provider": "مزوّد خارجي",
+    "icecast": "Icecast",
+    "shoutcast": "Shoutcast"
+  },
+  "health": {
+    "unknown": "غير معروف",
+    "status": {
+      "healthy": "سليم",
+      "online": "متّصل",
+      "up": "يعمل",
+      "degraded": "متدهور",
+      "unknown": "غير معروف",
+      "down": "متوقف",
+      "failed": "فاشل",
+      "offline": "خارج الخدمة"
+    }
+  },
+  "dashboard": {
+    "title": "مركز قيادة البث",
+    "subtitle": "حالة البث المباشر والقنوات والجمهور والصحّة في الزمن الحقيقي.",
+    "kpi": {
+      "live": "مباشر الآن",
+      "liveViewers": "المشاهدون المباشرون",
+      "scheduled": "مجدول",
+      "failed": "فاشل",
+      "globalSubs": "المشتركون العامّون",
+      "closedAudiences": "جماهير مغلقة"
+    },
+    "liveNow": {
+      "title": "مباشر الآن",
+      "subtitle": "البثوث الجارية مع تحكّم سريع.",
+      "empty": "لا بثوث مباشرة حالياً.",
+      "featured": "عاجل",
+      "audienceClosed": "الجمهور مغلق",
+      "since": "منذ {{time}}"
+    },
+    "scheduledToday": {
+      "title": "مجدول اليوم",
+      "subtitle": "البثوث المجدولة خلال الـ 24 ساعة القادمة.",
+      "empty": "لا بثوث مجدولة اليوم.",
+      "soon": "قريباً",
+      "dispatched": "أُرسِل التذكير",
+      "pending": "بانتظار التذكير"
+    },
+    "channels": {
+      "tv": "قنوات التلفزيون",
+      "radio": "الإذاعات",
+      "total": "الإجمالي"
+    },
+    "statusMix": {
+      "title": "توزيع الحالات",
+      "subtitle": "نظرة عامة على حالات البث."
+    },
+    "healthAlerts": {
+      "title": "تنبيهات الصحّة",
+      "subtitle": "البثوث الفاشلة وآخر سبب معروف.",
+      "empty": "كل البثوث سليمة.",
+      "checkedAt": "آخر فحص: {{time}}"
+    },
+    "audience": {
+      "title": "حالة الجمهور",
+      "subtitle": "البثوث المُغلق جمهورها.",
+      "empty": "لا جماهير مغلقة.",
+      "closed": "مغلق",
+      "emergencyNote": "الإغلاق الطارئ يوقف تفاعل الجمهور فوراً دون قطع البث الخارجي."
+    },
+    "notifications": {
+      "title": "الإشعارات",
+      "globalSubs": "المشتركون العامّون",
+      "upcomingReminders": "قادم مع تذكيرات"
+    }
+  },
+  "broadcasts": {
+    "title": "البثوث",
+    "subtitle": "إدارة البثوث المباشرة والقنوات والإذاعات الخارجية.",
+    "new": "بث جديد",
+    "error": "تعذّر تحميل البثوث.",
+    "retry": "إعادة المحاولة"
+  },
+  "col": {
+    "title": "البث",
+    "kind": "النوع",
+    "status": "الحالة",
+    "source": "المصدر",
+    "health": "الصحّة",
+    "viewers": "المشاهدون",
+    "scheduled": "التوقيت",
+    "featured": "عاجل",
+    "private": "خاص",
+    "noCategory": "بلا تصنيف"
+  },
+  "filter": {
+    "search": "ابحث بالعنوان…",
+    "statusAll": "كل الحالات",
+    "kindAll": "كل الأنواع",
+    "sourceAll": "كل المصادر",
+    "visibilityAll": "كل الرؤية",
+    "public": "عام",
+    "private": "خاص",
+    "featuredAll": "الكل (عاجل)",
+    "featuredOnly": "العاجل فقط",
+    "notFeatured": "غير العاجل",
+    "categoryAll": "كل التصنيفات",
+    "sortNewest": "الأحدث",
+    "sortScheduled": "موعد الجدولة",
+    "sortStarted": "وقت البدء",
+    "sortTitle": "العنوان",
+    "sortOrder": "الترتيب اليدوي",
+    "trashedNone": "النشِط",
+    "trashedOnly": "المحذوف فقط",
+    "reset": "مسح الفلاتر"
+  },
+  "action": {
+    "edit": "تحرير",
+    "analytics": "التحليلات",
+    "delete": "حذف",
+    "lifecycle": "دورة الحياة",
+    "moderation": "الإشراف",
+    "schedule": "جدولة",
+    "start": "بدء البث",
+    "offline": "إيقاف مؤقت",
+    "resume": "استئناف",
+    "end": "إنهاء",
+    "fail": "تعليم كفاشل",
+    "archive": "أرشفة"
+  },
+  "confirm": {
+    "deleteTitle": "حذف البث؟",
+    "deleteText": "سيُحذف «{{title}}». يمكن استعادته من المحذوف.",
+    "scheduleTitle": "جدولة البث؟",
+    "scheduleText": "سيُجدوَل «{{title}}».",
+    "startTitle": "بدء البث؟",
+    "startText": "سيُبَثّ «{{title}}» مباشرةً.",
+    "offlineTitle": "إيقاف البث مؤقتاً؟",
+    "offlineText": "سيُوقَف «{{title}}» مؤقتاً (قابل للاستئناف).",
+    "resumeTitle": "استئناف البث؟",
+    "resumeText": "سيُستأنف بثّ «{{title}}».",
+    "endTitle": "إنهاء البث؟",
+    "endText": "سيُنهى «{{title}}» نهائياً.",
+    "failTitle": "تعليم البث كفاشل؟",
+    "failText": "سيُعلَّم «{{title}}» كفاشل.",
+    "archiveTitle": "أرشفة البث؟",
+    "archiveText": "سيُؤرشَف «{{title}}».",
+    "closeTitle": "إغلاق الجمهور؟",
+    "closeText": "سيُغلَق تفاعل الجمهور لـ «{{title}}».",
+    "reopenTitle": "إعادة فتح الجمهور؟",
+    "reopenText": "سيُعاد فتح تفاعل الجمهور لـ «{{title}}».",
+    "emergencyTitle": "إغلاق طارئ؟",
+    "emergencyText": "سيُغلَق جمهور «{{title}}» فوراً (إجراء طارئ)."
+  },
+  "empty": {
+    "title": "لا بثوث بعد",
+    "description": "ابدأ بإنشاء أول بث مباشر أو قناة.",
+    "trashTitle": "لا بثوث محذوفة",
+    "trashDescription": "لا يوجد بث محذوف لعرضه."
+  },
+  "schedule": {
+    "title": "جدولة البث",
+    "label": "موعد الجدولة",
+    "submit": "جدولة",
+    "tz": "المنطقة الزمنية: {{tz}}",
+    "hint": "سينتقل البث إلى الحالة «مجدول» وينطلق تلقائياً عند الموعد."
+  },
+  "failModal": {
+    "title": "تعليم البث كفاشل",
+    "reasonLabel": "السبب (اختياري)",
+    "reasonPlaceholder": "مثال: انقطاع المصدر الخارجي",
+    "hint": "سيُسجَّل السبب في تنبيهات الصحّة."
+  },
+  "form": {
+    "createTitle": "بث جديد",
+    "editTitle": "تحرير البث",
+    "save": "حفظ",
+    "saving": "جارٍ الحفظ…",
+    "saved": "تم الحفظ بنجاح.",
+    "basics": "الأساسيات",
+    "titleLabel": "العنوان",
+    "descriptionLabel": "الوصف",
+    "excerptLabel": "المقتطف",
+    "kindLabel": "نوع البث",
+    "sourceSection": "المصدر",
+    "coverSection": "الغلاف",
+    "coverLabel": "صورة الغلاف",
+    "coverHint": "ارفع صورة أو اخترها من مكتبة الوسائط. المقاس المثالي 1200×630.",
+    "coverFallbackLabel": "أو رابط غلاف خارجي (احتياطي)",
+    "coverFallbackHint": "اختياري — يُستخدَم فقط حين لا تُحدَّد صورة من المكتبة.",
+    "posterPlaceholder": "https://…/poster.jpg",
+    "lifecycleSection": "دورة الحياة",
+    "lifecycleNote": "الحالة لا تُحرَّر هنا — استخدم إجراءات دورة الحياة في القائمة أو مركز القيادة (بدء/إيقاف/إنهاء…).",
+    "scheduleSection": "الجدولة",
+    "scheduledAtLabel": "موعد الجدولة",
+    "scheduledAtHint": "اختياري. المنطقة الزمنية: {{tz}}",
+    "flagsSection": "الرايات",
+    "featuredLabel": "عاجل / مميَّز",
+    "featuredHint": "يُبرِز البث في الواجهات العامة.",
+    "publicLabel": "عام",
+    "publicHint": "إتاحة البث للجمهور العام.",
+    "categorySection": "التصنيف",
+    "category": "التصنيف",
+    "categoryNone": "بلا تصنيف",
+    "vodSection": "ربط VOD",
+    "vodLabel": "معرّف فيديو VOD",
+    "vodPlaceholder": "مثال: 1024",
+    "vodHint": "اختياري — اربط نسخة مسجّلة (VOD) من مكتبة الفيديو عبر معرّفها الرقمي.",
+    "vodLinked": "مرتبط بـ: {{title}}",
+    "slugSection": "الاسم اللطيف",
+    "slugLabel": "الاسم اللطيف (slug)",
+    "slugPlaceholder": "يُولَّد تلقائياً إن تُرك فارغاً",
+    "seoSection": "تحسين محركات البحث",
+    "seoExpand": "توسيع",
+    "seoCollapse": "طي",
+    "seoHint": "وسّع لضبط عنوان ووصف وكلمات SEO.",
+    "seoTitle": "عنوان SEO",
+    "seoDescription": "وصف SEO",
+    "seoKeywords": "كلمات مفتاحية",
+    "canonicalUrl": "الرابط الأساسي (canonical)",
+    "robots": "توجيه الروبوتات",
+    "robotsPlaceholder": "index,follow",
+    "unsavedTitle": "تغييرات غير محفوظة",
+    "unsavedText": "لديك تغييرات لم تُحفَظ. هل تريد المغادرة؟",
+    "unsavedLeave": "مغادرة",
+    "source": {
+      "typeLabel": "نوع المصدر",
+      "typeHint": {
+        "hls": "تدفّق HLS مباشر (ملف m3u8). للقنوات والبث المباشر العام.",
+        "iptv": "قائمة تشغيل IPTV أو رابط قناة موثوق.",
+        "youtube_live": "رابط بث يوتيوب المباشر (صفحة المشاهدة أو التضمين).",
+        "external_provider": "رابط تضمين موثوق من مزوّد بث خارجي.",
+        "icecast": "رابط تدفّق صوتي عبر Icecast.",
+        "shoutcast": "رابط تدفّق صوتي عبر Shoutcast."
+      },
+      "urlLabel": {
+        "hls": "رابط HLS (m3u8)",
+        "iptv": "رابط قائمة IPTV",
+        "youtube_live": "رابط يوتيوب لايف",
+        "external_provider": "رابط التضمين الخارجي",
+        "icecast": "رابط تدفّق Icecast",
+        "shoutcast": "رابط تدفّق Shoutcast"
+      },
+      "urlPlaceholder": {
+        "hls": "https://…/stream.m3u8",
+        "iptv": "https://…/playlist.m3u8",
+        "youtube_live": "https://www.youtube.com/watch?v=…",
+        "external_provider": "https://…/embed/…",
+        "icecast": "https://…:8000/stream",
+        "shoutcast": "https://…:8000/;"
+      },
+      "urlGenericHint": "رابط خارجي موثوق عبر https فقط — البث خارجي بالكامل (لا رفع ملفات)."
+    }
+  },
+  "categories": {
+    "title": "تصنيفات البث",
+    "subtitle": "تصنيفات مسطّحة لتنظيم البثوث.",
+    "new": "تصنيف جديد",
+    "empty": "لا تصنيفات بعد",
+    "emptyDescription": "أنشئ أول تصنيف لتنظيم البثوث.",
+    "col": {
+      "name": "الاسم",
+      "status": "الحالة",
+      "count": "عدد البثوث",
+      "order": "الترتيب"
+    },
+    "status": {
+      "active": "نشِط",
+      "inactive": "غير نشِط"
+    },
+    "action": {
+      "edit": "تحرير",
+      "delete": "حذف"
+    },
+    "confirm": {
+      "deleteTitle": "حذف التصنيف؟",
+      "deleteText": "سيُحذف «{{name}}».",
+      "yes": "حذف"
+    },
+    "form": {
+      "createTitle": "تصنيف جديد",
+      "editTitle": "تحرير التصنيف",
+      "save": "حفظ",
+      "saving": "جارٍ الحفظ…",
+      "saved": "تم الحفظ بنجاح.",
+      "name": "الاسم",
+      "slug": "الاسم اللطيف (slug)",
+      "slugPlaceholder": "يُولَّد تلقائياً إن تُرك فارغاً",
+      "sortOrder": "الترتيب",
+      "description": "الوصف",
+      "active": "نشِط",
+      "seoSection": "تحسين محركات البحث",
+      "seoTitle": "عنوان SEO",
+      "seoDescription": "وصف SEO",
+      "validation": {
+        "nameRequired": "الاسم مطلوب (حرفان على الأقل)."
+      }
+    }
+  },
+  "moderation": {
+    "kick": "طرد مشاهد",
+    "ban": "حظر مشاهد",
+    "close": "إغلاق الجمهور",
+    "reopen": "إعادة فتح الجمهور",
+    "emergency": "إغلاق طارئ",
+    "kickTitle": "طرد مشاهد",
+    "banTitle": "حظر مشاهد",
+    "kickSubmit": "طرد",
+    "banSubmit": "حظر",
+    "targetHint": "لا سجلّ مشاهدين حيّ — أدخل الهدف يدوياً عبر معرّف المستخدم أو معرّف العضو.",
+    "byUserId": "معرّف المستخدم",
+    "byMember": "معرّف العضو",
+    "userIdLabel": "معرّف المستخدم",
+    "userIdPlaceholder": "مثال: 42",
+    "memberLabel": "معرّف العضو",
+    "memberPlaceholder": "مثال: u42 أو f8a1…",
+    "memberHint": "معرّف عضو الحضور المُبهَم (يبدأ بـ u أو f).",
+    "durationLabel": "المدّة (دقائق)",
+    "durationPlaceholder": "اتركه فارغاً للحظر الدائم",
+    "durationHint": "اختياري — مدّة الحظر بالدقائق.",
+    "reasonLabel": "السبب",
+    "reasonPlaceholder": "سبب الحظر (اختياري)"
+  },
+  "analytics2": {
+    "title": "تحليلات البثّ",
+    "loadingTitle": "جارٍ التحميل…",
+    "error": "تعذّر تحميل التحليلات.",
+    "retry": "إعادة المحاولة",
+    "none": "—",
+    "yes": "نعم",
+    "no": "لا",
+    "range": { "24h": "٢٤ ساعة", "7d": "٧ أيام", "30d": "٣٠ يوماً", "custom": "مخصّص" },
+    "engagement": { "likes": "الإعجابات", "dislikes": "عدم الإعجاب" },
+    "live": {
+      "current": "المشاهدون الآن",
+      "peak": "الذروة",
+      "average": "متوسّط التزامن",
+      "samples": "العيّنات"
+    },
+    "concurrency": {
+      "title": "منحنى التزامن",
+      "subtitle": "حضور متزامن عبر الزمن (إلى-الأمام فقط)",
+      "empty": "لا عيّنات في هذه الفترة"
+    },
+    "unique": {
+      "title": "المشاهدون الفريدون",
+      "note": "غير متعقَّبين — الحضور تجميعيّ تقريبيّ (لا اتّحاد هويّات)."
+    },
+    "timeline": {
+      "title": "الخطّ الزمني",
+      "scheduled": "مجدوَل",
+      "started": "بدأ فعلياً",
+      "ended": "انتهى",
+      "startDelay": "تأخير البدء",
+      "late": "متأخّر {{value}}",
+      "early": "مبكّر {{value}}",
+      "duration": "المدّة"
+    },
+    "health": {
+      "title": "الصحّة",
+      "window": "نافذة {{days}} يوماً",
+      "failures": "إخفاقات",
+      "recoveries": "تعافٍ",
+      "avgLatency": "متوسّط الكمون",
+      "empty": "لا فحوصات في هذه الفترة",
+      "status": { "healthy": "سليم", "failed": "فاشل" }
+    },
+    "moderation": {
+      "title": "الإشراف",
+      "kicks": "طرد",
+      "bans": "حظر",
+      "unbans": "رفع حظر",
+      "closures": "إغلاق",
+      "reopens": "إعادة فتح",
+      "emergency_shutdowns": "إغلاق طارئ",
+      "empty": "لا إجراءات إشراف"
+    },
+    "modEvent": {
+      "viewer_kicked": "طرد مشاهد",
+      "viewer_banned": "حظر مشاهد",
+      "viewer_unbanned": "رفع حظر",
+      "audience_closed": "إغلاق الجمهور",
+      "audience_reopened": "إعادة فتح الجمهور",
+      "emergency_shutdown": "إغلاق طارئ"
+    },
+    "notifications": {
+      "title": "الإشعارات",
+      "reminders": "مشتركو التذكير",
+      "global": "المشتركون العامّون",
+      "liveNotified": "أُطلِق إشعار البدء",
+      "reminderSent": "أُرسِل التذكير"
+    },
+    "delivery": {
+      "title": "التسليم والتحويل",
+      "note": "غير قابل للقياس — FCM بوّابة سجلّ (غير مُهيّأ) ونموذج المواضيع لا يلتقط إيصالات لكل مستخدم."
+    }
+  }
+}

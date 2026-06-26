@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 99%;
+    --foreground: 215 28% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+    /* Brand #3B7597 */
+    --primary: 202 44% 41%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 215 25% 27%;
+    --muted: 210 30% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 202 44% 95%;
+    --accent-foreground: 202 44% 30%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 24% 91%;
+    --input: 214 24% 91%;
+    --ring: 202 44% 41%;
+    --radius: 0.9rem;
+  }
+
+  .dark {
+    --background: 215 19% 22%;
+    --foreground: 210 24% 95%;
+    --card: 215 17% 27%;
+    --card-foreground: 210 24% 95%;
+    --popover: 215 17% 27%;
+    --popover-foreground: 210 24% 95%;
+    --primary: 202 58% 60%;
+    --primary-foreground: 215 28% 14%;
+    --secondary: 215 14% 33%;
+    --secondary-foreground: 210 22% 95%;
+    --muted: 215 14% 33%;
+    --muted-foreground: 215 14% 72%;
+    --accent: 202 34% 38%;
+    --accent-foreground: 202 62% 88%;
+    --destructive: 0 62% 54%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 13% 38%;
+    --input: 215 13% 38%;
+    --ring: 202 58% 60%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  html[lang='en'] body {
+    font-family: theme('fontFamily.latin');
+  }
+
+  /* تمرير سلس وحواف ناعمة */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-border;
+  }
+}
+
+/* ─── TipTap editor content styling (P6.3) ──────────────────────────────
+   Direct styles instead of @tailwindcss/typography to keep the dependency
+   surface tight. Mirrors the backend allow-list output structure. */
+@layer components {
+  .ProseMirror {
+    @apply outline-none;
+  }
+  .ProseMirror > * + * {
+    @apply mt-3;
+  }
+  .ProseMirror p {
+    @apply leading-7;
+  }
+  .ProseMirror h1 {
+    @apply mt-6 text-3xl font-bold;
+  }
+  .ProseMirror h2 {
+    @apply mt-5 text-2xl font-bold;
+  }
+  .ProseMirror h3 {
+    @apply mt-4 text-xl font-bold;
+  }
+  .ProseMirror h4 {
+    @apply mt-4 text-lg font-bold;
+  }
+  .ProseMirror h5,
+  .ProseMirror h6 {
+    @apply mt-3 text-base font-bold;
+  }
+  .ProseMirror ul {
+    @apply list-disc ps-6;
+  }
+  .ProseMirror ol {
+    @apply list-decimal ps-6;
+  }
+  .ProseMirror li > p {
+    @apply my-0;
+  }
+  .ProseMirror blockquote {
+    @apply border-s-4 border-primary/40 bg-muted/30 ps-4 italic text-muted-foreground;
+  }
+  .ProseMirror code:not(pre code) {
+    @apply bg-muted px-1.5 py-0.5 font-mono text-[0.85em];
+  }
+  .ProseMirror pre {
+    @apply overflow-x-auto bg-foreground/90 p-4 font-mono text-sm text-background;
+    direction: ltr;
+  }
+  .ProseMirror pre code {
+    @apply bg-transparent p-0;
+  }
+  .ProseMirror hr {
+    @apply my-6 border-border;
+  }
+  .ProseMirror a {
+    @apply text-primary underline decoration-primary/40 underline-offset-2 hover:decoration-primary;
+  }
+  .ProseMirror img {
+    @apply h-auto max-w-full;
+  }
+
+  /*
+   * Rendered (read-only) editorial content — e.g. live-update feed items.
+   * Inline media is constrained to a sane, proportional, modern preview
+   * (live-blog feel) instead of full-width raw dumps. Applied on top of the
+   * base .ProseMirror typography via an extra `.live-content` class.
+   */
+  .live-content img {
+    @apply my-3 block max-h-96 w-auto max-w-full rounded-lg border border-border object-contain;
+  }
+  .live-content iframe,
+  .live-content video {
+    @apply my-3 block aspect-video w-full max-w-2xl rounded-lg border border-border;
+  }
+  .ProseMirror table {
+    @apply w-full border-collapse;
+  }
+  .ProseMirror th,
+  .ProseMirror td {
+    @apply border border-border p-2 align-top;
+  }
+  .ProseMirror th {
+    @apply bg-muted/50 text-start font-semibold;
+  }
+  .ProseMirror p.is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    @apply pointer-events-none float-start h-0 text-muted-foreground/60;
+  }
+}

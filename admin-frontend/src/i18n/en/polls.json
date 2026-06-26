@@ -1,0 +1,169 @@
+{
+  "active": "Active",
+  "inactive": "Inactive",
+  "pollState": {
+    "inactive": "Inactive",
+    "scheduled": "Scheduled",
+    "open": "Open",
+    "closed": "Closed"
+  },
+  "audienceMode": {
+    "public": "Everyone",
+    "authenticated": "Signed-in users"
+  },
+  "resultVisibility": {
+    "always": "Always visible",
+    "after_vote": "After voting",
+    "after_close": "After closing"
+  },
+  "polls": {
+    "title": "Polls",
+    "subtitle": "Questions with options that readers vote on.",
+    "new": "New poll",
+    "analytics": "Analytics",
+    "trash": "Trash",
+    "trashTitle": "Deleted polls",
+    "trashSubtitle": "Restore a poll or delete it permanently.",
+    "error": "Failed to load polls.",
+    "retry": "Retry",
+    "noWindow": "No window",
+    "multiple": "Multiple choice",
+    "filter": {
+      "search": "Search polls…",
+      "activeAll": "Active & inactive",
+      "activeOnly": "Active only",
+      "inactiveOnly": "Inactive only",
+      "sortNewest": "Newest",
+      "sortQuestion": "Question",
+      "reset": "Reset"
+    },
+    "col": {
+      "question": "Question",
+      "state": "State",
+      "allowMultiple": "Multiple",
+      "options": "Options",
+      "window": "Window",
+      "date": "Created",
+      "deletedAt": "Deleted"
+    },
+    "empty": {
+      "title": "No polls yet",
+      "description": "Create your first poll.",
+      "trashTitle": "Trash is empty",
+      "trashDescription": "No deleted polls."
+    },
+    "action": {
+      "edit": "Edit",
+      "analytics": "Analytics",
+      "activate": "Activate",
+      "deactivate": "Deactivate",
+      "delete": "Delete",
+      "restore": "Restore",
+      "forceDelete": "Delete permanently"
+    },
+    "confirm": {
+      "activateTitle": "Activate poll?",
+      "activateText": "Activate \"{{question}}\"?",
+      "deactivateTitle": "Deactivate poll?",
+      "deactivateText": "Deactivate \"{{question}}\"?",
+      "toggle": "Confirm",
+      "deleteTitle": "Delete poll?",
+      "deleteText": "Delete \"{{question}}\"? It can be restored from trash.",
+      "delete": "Delete",
+      "forceTitle": "Permanently delete?",
+      "forceText": "Permanently delete \"{{question}}\" and all its options and votes? This cannot be undone.",
+      "forceYes": "Delete permanently"
+    },
+    "form": {
+      "createTitle": "New poll",
+      "editTitle": "Edit poll",
+      "inactiveNote": "New polls start inactive. Use the activation control to publish.",
+      "activation": "Activation",
+      "activeNow": "This poll is active.",
+      "inactiveNow": "This poll is inactive.",
+      "question": "Question",
+      "startsAt": "Starts at",
+      "endsAt": "Ends at",
+      "audienceMode": "Audience",
+      "resultVisibility": "Result visibility",
+      "allowMultiple": "Allow multiple answers",
+      "allowMultipleHint": "Let voters select more than one option.",
+      "options": "Options",
+      "optionsHint": "Add at least two options. Drag order with the arrows.",
+      "addOption": "Add option",
+      "optionPlaceholder": "Option {{n}}",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "votesCount": "{{count}} votes",
+      "cannotRemoveVoted": "Options with votes cannot be removed.",
+      "minOptions": "At least {{min}} options are required.",
+      "save": "Save poll",
+      "saving": "Saving…",
+      "back": "Back to polls"
+    }
+  },
+  "pollAnalytics": {
+    "title": "Poll analytics",
+    "loadingTitle": "Loading…",
+    "error": "Failed to load analytics.",
+    "retry": "Retry",
+    "yes": "Yes",
+    "no": "No",
+    "range": { "24h": "24h", "7d": "7d", "30d": "30d", "custom": "Custom" },
+    "overview": {
+      "title": "Poll analytics",
+      "subtitle": "Fleet-wide poll performance — real participation, leaders, and status breakdown.",
+      "allTime": "All figures are cumulative across the full period."
+    },
+    "kpi": {
+      "totalPolls": "Total polls",
+      "activePolls": "Active",
+      "openPolls": "Open",
+      "totalVotes": "Total votes",
+      "totalSelections": "Total selections"
+    },
+    "status": {
+      "title": "Status breakdown",
+      "subtitle": "Share of each state across all polls",
+      "empty": "No polls yet"
+    },
+    "leaderboard": {
+      "title": "Top polls",
+      "subtitle": "Ranked by unique voters",
+      "empty": "No participation yet"
+    },
+    "recent": {
+      "title": "Recent participation",
+      "subtitle": "Daily votes over the last {{days}} days",
+      "total": "Range total: {{value}}",
+      "empty": "No participation in this period"
+    },
+    "metric": {
+      "uniqueVoters": "Unique voters",
+      "totalSelections": "Total selections",
+      "avgSelections": "Avg selections per voter",
+      "optionsCount": "Options"
+    },
+    "distribution": {
+      "title": "Vote distribution",
+      "subtitle": "Each option's share of total selections",
+      "empty": "No votes yet"
+    },
+    "trend": {
+      "title": "Participation over time",
+      "subtitle": "Daily votes within the selected range",
+      "rangeTotal": "Range total: {{value}}",
+      "empty": "No participation in this period"
+    },
+    "setup": {
+      "title": "Setup",
+      "state": "State",
+      "allowMultiple": "Multiple choice",
+      "audience": "Audience",
+      "resultVisibility": "Result visibility",
+      "startsAt": "Starts at",
+      "endsAt": "Ends at",
+      "createdAt": "Created at"
+    }
+  }
+}

@@ -1,0 +1,1387 @@
+{
+  "reviewQueue": {
+    "title": "طابور المراجعة",
+    "subtitle": "محتوى مُرسَل من الكتّاب بانتظار قرارك (نشر أو رفض).",
+    "tabs": { "articles": "المقالات", "reels": "الريلز", "videos": "الفيديو" },
+    "waitingMedia": "بانتظار الوسائط",
+    "editToFix": "أضف الوسائط",
+    "col": {
+      "title": "العنوان",
+      "author": "الكاتب",
+      "date": "تاريخ الإرسال",
+      "status": "الحالة",
+      "actions": "إجراءات"
+    },
+    "action": {
+      "publish": "نشر",
+      "reject": "رفض"
+    },
+    "confirm": {
+      "yes": "نعم، تابع",
+      "published": {
+        "title": "نشر المقال الآن؟",
+        "text": "سيُتاح المقال للجمهور فوراً ويُخطَر الكاتب."
+      },
+      "rejected": {
+        "title": "رفض المقال؟",
+        "text": "سيُعاد للكاتب بحالة مرفوض ويُخطَر بذلك."
+      }
+    },
+    "empty": "لا يوجد محتوى بانتظار المراجعة."
+  },
+  "comments": {
+    "title": "إشراف التعليقات",
+    "subtitle": "راجع تعليقات القرّاء — اعتماد أو رفض أو سبام أو حذف.",
+    "guest": "زائر",
+    "reply": "رد",
+    "col": { "comment": "التعليق", "status": "الحالة", "date": "التاريخ" },
+    "status": { "pending": "قيد المراجعة", "approved": "معتمَد", "rejected": "مرفوض", "spam": "سبام" },
+    "action": { "approved": "اعتماد", "rejected": "رفض", "spam": "تعليم كسبام", "delete": "حذف" },
+    "confirm": {
+      "approvedTitle": "اعتماد هذا التعليق؟",
+      "rejectedTitle": "رفض هذا التعليق؟",
+      "spamTitle": "تعليم هذا التعليق كسبام؟",
+      "deleteTitle": "حذف هذا التعليق؟",
+      "text": "يمكنك تغيير الإشراف لاحقاً."
+    },
+    "filter": { "search": "ابحث في التعليقات…", "statusAll": "كل الحالات", "reset": "مسح" },
+    "empty": { "title": "لا تعليقات", "description": "ستظهر تعليقات القرّاء هنا للإشراف." }
+  },
+  "tags": {
+    "title": "الوسوم",
+    "subtitle": "إدارة وسوم المحتوى — إعادة تسمية أو حذف، مع عدّاد الاستخدام.",
+    "col": { "name": "الوسم", "usage": "الاستخدام" },
+    "action": { "rename": "إعادة تسمية", "delete": "حذف" },
+    "filter": { "search": "ابحث في الوسوم…", "reset": "مسح" },
+    "rename": {
+      "title": "إعادة تسمية الوسم",
+      "nameAr": "الاسم بالعربية",
+      "nameEn": "الاسم بالإنجليزية",
+      "save": "حفظ",
+      "saving": "جارٍ الحفظ…"
+    },
+    "renamed": "تمّت إعادة تسمية الوسم.",
+    "confirm": {
+      "deleteTitle": "حذف هذا الوسم؟",
+      "deleteText": "سيُزال «{{name}}» من كل المحتوى.",
+      "yes": "نعم، احذف"
+    },
+    "empty": { "title": "لا وسوم", "description": "تظهر الوسوم هنا بمجرّد وسم المحتوى." }
+  },
+  "articleAnalytics": {
+    "title": "تحليلات المقال",
+    "loadingTitle": "جارٍ التحميل…",
+    "error": "تعذّر تحميل التحليلات.",
+    "retry": "إعادة المحاولة",
+    "forwardOnly": "منذ بدء التتبّع (إلى-الأمام فقط)",
+    "uniqueReactors": "متفاعلون فريدون",
+    "engagementRate": "معدّل التفاعل",
+    "none": "—",
+    "yes": "نعم",
+    "no": "لا",
+    "range": { "24h": "٢٤ ساعة", "7d": "٧ أيام", "30d": "٣٠ يوماً", "custom": "مخصّص" },
+    "metric": { "views": "المشاهدات", "likes": "الإعجابات", "dislikes": "عدم الإعجاب", "favorites": "الحفظ" },
+    "perf": {
+      "trendingScore": "نقاط الرواج",
+      "velocity": "السرعة (مشاهدة/يوم)",
+      "momentum": "الزخم",
+      "vsBaseline": "مقابل المتوسّط"
+    },
+    "trend": {
+      "title": "النشاط عبر الزمن",
+      "rangeTotal": "الإجمالي في الفترة: {{value}}",
+      "empty": "لا بيانات في هذه الفترة"
+    },
+    "traffic": {
+      "title": "مصادر الزيارات",
+      "subtitle": "تصنيف خشن (إلى-الأمام فقط)",
+      "empty": "لا زيارات مُتعقَّبة بعد"
+    },
+    "channel": {
+      "direct": "مباشر",
+      "internal": "داخلي",
+      "search": "بحث",
+      "social": "تواصل اجتماعي",
+      "referral": "إحالة"
+    },
+    "publishing": {
+      "title": "النشر",
+      "status": "الحالة",
+      "featured": "مميَّز",
+      "type": "النوع",
+      "publishedAt": "تاريخ النشر",
+      "language": "اللغة",
+      "translations": "ترجمات مرتبطة"
+    },
+    "overview": {
+      "title": "تحليلات المقالات",
+      "subtitle": "أداء أسطول المقالات — تفاعل حقيقي ومتصدّرون ولغة وأثر التمييز.",
+      "allTime": "كل الأرقام تراكمية لكامل المدة."
+    },
+    "leaderboard": {
+      "title": "المتصدّرون",
+      "subtitle": "الأعلى وزناً (مشاهدة·1 + إعجاب·4 + حفظ·6 − عدم·2)",
+      "empty": "لا مقالات منشورة بعد"
+    },
+    "featured": {
+      "title": "أثر التمييز",
+      "subtitle": "متوسّط مشاهدات المميَّز مقابل العادي",
+      "featured": "مميَّز",
+      "regular": "عادي",
+      "lift": "رفع {{value}}% مقابل العادي",
+      "noBaseline": "لا أساس للمقارنة بعد"
+    },
+    "language": {
+      "title": "تقسيم اللغة",
+      "empty": "لا بيانات"
+    },
+    "publishTime": {
+      "title": "أداء وقت النشر",
+      "subtitle": "متوسّط المشاهدات حسب ساعة النشر (بتوقيت التخزين)",
+      "empty": "لا بيانات"
+    }
+  },
+  "reelAnalytics": {
+    "title": "تحليلات الريل",
+    "loadingTitle": "جارٍ التحميل…",
+    "error": "تعذّر تحميل التحليلات.",
+    "retry": "إعادة المحاولة",
+    "forwardOnly": "منذ بدء التتبّع (إلى-الأمام فقط)",
+    "uniqueReactors": "متفاعلون فريدون",
+    "engagementRate": "معدّل التفاعل",
+    "none": "—",
+    "yes": "نعم",
+    "no": "لا",
+    "range": { "24h": "٢٤ ساعة", "7d": "٧ أيام", "30d": "٣٠ يوماً", "custom": "مخصّص" },
+    "metric": { "views": "المشاهدات", "likes": "الإعجابات", "dislikes": "عدم الإعجاب", "favorites": "الحفظ" },
+    "perf": {
+      "trendingScore": "نقاط الرواج",
+      "velocity": "السرعة (مشاهدة/يوم)",
+      "momentum": "الزخم",
+      "vsBaseline": "مقابل المتوسّط"
+    },
+    "trend": {
+      "title": "النشاط عبر الزمن",
+      "rangeTotal": "الإجمالي في الفترة: {{value}}",
+      "empty": "لا بيانات في هذه الفترة"
+    },
+    "traffic": {
+      "title": "مصادر الزيارات",
+      "subtitle": "تصنيف خشن (إلى-الأمام فقط)",
+      "empty": "لا زيارات مُتعقَّبة بعد"
+    },
+    "channel": {
+      "direct": "مباشر",
+      "internal": "داخلي",
+      "search": "بحث",
+      "social": "تواصل اجتماعي",
+      "referral": "إحالة"
+    },
+    "publishing": {
+      "title": "النشر",
+      "status": "الحالة",
+      "featured": "مميَّز",
+      "duration": "المدّة",
+      "publishedAt": "تاريخ النشر",
+      "language": "اللغة",
+      "translations": "ترجمات مرتبطة"
+    },
+    "watch": {
+      "title": "سلوك المشاهدة",
+      "deferredTitle": "غير متعقَّب بعد",
+      "deferredNote": "الإكمال/متوسّط المشاهدة/التسرّب/المنحنى/التكرارات/التمرير/الثواني الأولى — تتطلّب تيليمتري مشغّل قصير-الشكل (مرحلة مستقلّة)."
+    },
+    "discovery": {
+      "title": "الاكتشاف",
+      "deferredTitle": "غير متعقَّب بعد",
+      "deferredNote": "الظهور/اكتشاف الخلاصة/إسناد التوصية — تتطلّب تيليمتري ظهور (مرحلة مستقلّة)."
+    },
+    "overview": {
+      "title": "تحليلات الريلز",
+      "subtitle": "أداء أسطول الريلز — تفاعل حقيقي ومتصدّرون ولغة وأثر التمييز.",
+      "allTime": "كل الأرقام تراكمية لكامل المدة."
+    },
+    "leaderboard": {
+      "title": "المتصدّرون",
+      "subtitle": "الأعلى وزناً (مشاهدة·1 + إعجاب·4 + حفظ·6 − عدم·2)",
+      "empty": "لا ريلز منشورة بعد"
+    },
+    "featured": {
+      "title": "أثر التمييز",
+      "subtitle": "متوسّط مشاهدات المميَّز مقابل العادي",
+      "featured": "مميَّز",
+      "regular": "عادي",
+      "lift": "رفع {{value}}% مقابل العادي",
+      "noBaseline": "لا أساس للمقارنة بعد"
+    },
+    "language": {
+      "title": "تقسيم اللغة",
+      "empty": "لا بيانات"
+    },
+    "publishTime": {
+      "title": "أداء وقت النشر",
+      "subtitle": "متوسّط المشاهدات حسب ساعة النشر (بتوقيت التخزين)",
+      "empty": "لا بيانات"
+    }
+  },
+  "reels": {
+    "title": "الريلز",
+    "subtitle": "مقاطع فيديو عمودية قصيرة",
+    "new": "ريل جديد",
+    "status": {
+      "draft": "مسودة",
+      "scheduled": "مجدول",
+      "published": "منشور",
+      "archived": "مؤرشف",
+      "submitted": "تم الإرسال",
+      "in_review": "بانتظار المراجعة",
+      "rejected": "مرفوض"
+    },
+    "stats": {
+      "total": "الإجمالي",
+      "trashed": "المحذوفة"
+    },
+    "mediaState": {
+      "ready": "جاهز",
+      "processing": "قيد المعالجة",
+      "queued": "في الطابور",
+      "failed": "فشل",
+      "none": "لا يوجد فيديو"
+    },
+    "featured": "مميَّز",
+    "col": {
+      "title": "العنوان",
+      "status": "الحالة",
+      "locale": "اللغة",
+      "media": "الفيديو",
+      "duration": "المدّة",
+      "author": "الكاتب",
+      "date": "التاريخ",
+      "metrics": "التفاعل"
+    },
+    "action": {
+      "preview": "معاينة",
+      "edit": "تعديل",
+      "analytics": "التحليلات",
+      "publish": "نشر",
+      "archive": "أرشفة",
+      "delete": "حذف",
+      "restore": "استرجاع",
+      "forceDelete": "حذف نهائي"
+    },
+    "player": {
+      "unavailable": "الفيديو غير متاح للمعاينة."
+    },
+    "filter": {
+      "search": "بحث بالعنوان…",
+      "statusAll": "كل الحالات",
+      "localeAll": "كل اللغات",
+      "trashedNone": "غير المحذوفة",
+      "trashedOnly": "المحذوفة فقط",
+      "reset": "مسح الفلاتر",
+      "sortNewest": "الأحدث",
+      "sortPublished": "الأحدث نشراً",
+      "sortTitle": "العنوان (أ–ي)",
+      "sortOrder": "الترتيب اليدوي"
+    },
+    "empty": {
+      "title": "لا توجد ريلز بعد",
+      "description": "ابدأ بإنشاء أول ريل.",
+      "trashTitle": "سلة المحذوفات فارغة",
+      "trashDescription": "لا توجد ريلز محذوفة."
+    },
+    "confirm": {
+      "deleteTitle": "حذف الريل؟",
+      "deleteText": "سيتم حذف «{{title}}». متأكد؟",
+      "yes": "نعم، احذف",
+      "forceTitle": "حذف نهائي للريل؟",
+      "forceText": "سيُحذف «{{title}}» نهائياً دون استرجاع.",
+      "forceYes": "نعم، احذف نهائياً",
+      "publishTitle": "نشر الريل؟",
+      "publishText": "سيصبح الريل متاحاً للعموم.",
+      "archiveTitle": "أرشفة الريل؟",
+      "archiveText": "سيُزال الريل من العرض العام."
+    },
+    "form": {
+      "createTitle": "ريل جديد",
+      "editTitle": "تعديل الريل",
+      "save": "حفظ",
+      "saving": "جارٍ الحفظ…",
+      "saved": "تم حفظ الريل.",
+      "basics": "الأساسيات",
+      "titleLabel": "العنوان",
+      "descriptionLabel": "الوصف",
+      "featured": "ريل مميَّز",
+      "featuredHint": "يظهر ضمن الريلز المميّزة في الواجهة العامة.",
+      "video": "فيديو الريل",
+      "aiTools": "أدوات الذكاء الاصطناعي",
+      "publishing": "النشر",
+      "schedule": "جدولة النشر",
+      "scheduleBtn": "جدولة",
+      "scheduledFor": "مجدوَل للنشر: {{time}}",
+      "mediaNotReadyHint": "لا يمكن النشر أو الجدولة قبل رفع فيديو واكتمال معالجته.",
+      "unsavedTitle": "تغييرات غير محفوظة",
+      "unsavedText": "لديك تعديلات لم تُحفظ. هل تريد المغادرة دون حفظ؟",
+      "unsavedLeave": "مغادرة دون حفظ",
+      "slugSection": "المعرّف (slug)",
+      "slugLabel": "المعرّف (slug)"
+    },
+    "media": {
+      "upload": "ارفع فيديو الريل",
+      "uploading": "جارٍ الرفع… {{percent}}%",
+      "uploadFailed": "تعذّر رفع الفيديو.",
+      "processing": "جارٍ المعالجة",
+      "processingHint": "تجري معالجة الفيديو (نسخ متعددة + صورة مصغّرة). يُحدَّث تلقائياً.",
+      "ready": "جاهز",
+      "failed": "فشلت المعالجة",
+      "failedHint": "تعذّرت معالجة الفيديو. أعد المعالجة أو استبدل الملف.",
+      "replace": "استبدال",
+      "replaceTitle": "استبدال الفيديو؟",
+      "replaceText": "سيُفصل الفيديو الحالي عن الريل وقد يُحذف لاحقاً ضمن التنظيف الدوري.",
+      "replaceConfirm": "نعم، استبدل",
+      "removeTitle": "إزالة الفيديو؟",
+      "removeText": "سيُفصل الفيديو عن الريل (يبقى في المكتبة المركزية).",
+      "retry": "إعادة المعالجة",
+      "remove": "إزالة",
+      "artifacts": {
+        "title": "مسار المعالجة",
+        "summary": "{{completed}} / {{total}} عنصر جاهز",
+        "failedAt": "تعثّر عند: {{stage}}",
+        "skipped": "متخطّى",
+        "errors": {
+          "undecodable": "فيديو غير قابل للقراءة أو غير مدعوم (لا تيار قابل لفك الترميز).",
+          "duration_exceeded": "مدّة الفيديو أطول من المسموح لهذا النوع من المحتوى.",
+          "dimensions_exceeded": "أبعاد الفيديو أكبر من المسموح.",
+          "hls_failed": "تعذّر توليد بثّ HLS.",
+          "transcode_error": "حدث خطأ غير متوقّع أثناء المعالجة.",
+          "source_missing": "ملف المصدر غير موجود في التخزين."
+        },
+        "steps": {
+          "source": "رُفِع المصدر",
+          "metadata": "استُخرجت البيانات الوصفية",
+          "poster": "أُنشئت صورة الغلاف",
+          "hls_master": "قائمة HLS الرئيسية",
+          "hls_segments": "مقاطع HLS",
+          "thumbnail_webp": "صورة مصغّرة WebP",
+          "finalize": "الإنهاء"
+        }
+      }
+    }
+  },
+  "page": {
+    "title": "الصفحات الثابتة",
+    "subtitle": "صفحات مُدارة عبر اللوحة — مثل «من نحن» و«اتصل بنا» وسياسة الخصوصية",
+    "new": "صفحة جديدة",
+    "status": {
+      "draft": "مسودة",
+      "published": "منشورة",
+      "archived": "مؤرشفة"
+    },
+    "placement": {
+      "header": "تظهر في الهيدر",
+      "footer": "تظهر في الفوتر",
+      "headerShort": "هـ",
+      "footerShort": "ف"
+    },
+    "col": {
+      "title": "العنوان",
+      "status": "الحالة",
+      "locale": "اللغة",
+      "placement": "العرض",
+      "order": "الترتيب",
+      "author": "أنشأها",
+      "date": "التاريخ"
+    },
+    "action": {
+      "edit": "تعديل",
+      "publish": "نشر",
+      "archive": "أرشفة",
+      "toDraft": "إرجاع لمسودة",
+      "delete": "حذف",
+      "restore": "استرجاع",
+      "forceDelete": "حذف نهائي"
+    },
+    "filter": {
+      "search": "بحث بالعنوان…",
+      "statusAll": "كل الحالات",
+      "localeAll": "كل اللغات",
+      "headerAll": "الهيدر — الكل",
+      "headerYes": "تظهر في الهيدر",
+      "headerNo": "لا تظهر في الهيدر",
+      "footerAll": "الفوتر — الكل",
+      "footerYes": "تظهر في الفوتر",
+      "footerNo": "لا تظهر في الفوتر",
+      "trashedNone": "غير المحذوفة",
+      "trashedOnly": "المحذوفة فقط",
+      "reset": "مسح الفلاتر",
+      "sortNewest": "الأحدث",
+      "sortPublished": "الأحدث نشراً",
+      "sortTitle": "العنوان (أ–ي)",
+      "sortOrder": "الترتيب اليدوي"
+    },
+    "empty": {
+      "title": "لا توجد صفحات بعد",
+      "description": "ابدأ بإنشاء أول صفحة ثابتة.",
+      "trashTitle": "سلة المحذوفات فارغة",
+      "trashDescription": "لا توجد صفحات محذوفة."
+    },
+    "confirm": {
+      "deleteTitle": "حذف الصفحة؟",
+      "deleteText": "سيتم حذف «{{title}}». متأكد؟",
+      "yes": "نعم، احذف",
+      "forceTitle": "حذف نهائي للصفحة؟",
+      "forceText": "سيُحذف «{{title}}» نهائياً دون استرجاع.",
+      "forceYes": "نعم، احذف نهائياً",
+      "publishTitle": "نشر الصفحة؟",
+      "publishText": "ستصبح الصفحة متاحة للعموم.",
+      "archiveTitle": "أرشفة الصفحة؟",
+      "archiveText": "ستُزال الصفحة من العرض العام.",
+      "draftTitle": "إرجاع الصفحة لمسودّة؟",
+      "draftText": "ستُلغى حالة النشر/الأرشفة الحالية."
+    },
+    "form": {
+      "createTitle": "صفحة جديدة",
+      "editTitle": "تعديل الصفحة",
+      "save": "حفظ",
+      "saving": "جارٍ الحفظ…",
+      "saved": "تم حفظ الصفحة.",
+      "invalid": "يوجد حقول غير مكتملة أو غير صالحة.",
+      "unsavedTitle": "تغييرات غير محفوظة",
+      "unsavedText": "لديك تعديلات لم تُحفظ. هل تريد المغادرة دون حفظ؟",
+      "unsavedLeave": "مغادرة دون حفظ",
+      "basics": "الأساسيات",
+      "basicsHint": "العنوان واللغة والمعرّف",
+      "titleLabel": "عنوان الصفحة",
+      "locale": "اللغة",
+      "slug": "المعرّف (slug)",
+      "slugPlaceholder": "يُولَّد تلقائياً إذا تُرك فارغاً",
+      "slugAutoHint": "يُحدَّث تلقائياً من العنوان حتى تكتبه يدوياً.",
+      "publishedAt": "نُشِرت في",
+      "updatedAt": "آخر تحديث",
+      "dirty": "تغييرات غير محفوظة",
+      "dirtyHint": "لديك تعديلات لم تُحفظ بعد — اضغط حفظ أو Ctrl/⌘+S.",
+      "saveShortcut": "حفظ (Ctrl/⌘+S)",
+      "seoTitleHint": "الطول الأمثل بين {{min}} و {{max}} حرفاً.",
+      "seoDescHint": "الطول الأمثل بين {{min}} و {{max}} حرفاً.",
+      "snippetPreview": "معاينة نتيجة البحث (Google تقريباً)",
+      "snippetPlaceholderUrl": "/pages/example",
+      "snippetPlaceholderTitle": "— عنوان الصفحة سيظهر هنا —",
+      "snippetPlaceholderDesc": "— وصف SEO سيظهر هنا. اكتب وصفاً جذّاباً يحفّز المستخدم للنقر. —",
+      "contentSection": "محتوى الصفحة",
+      "contentHint": "محرّر غنيّ بقائمة سماح مطابقة لمصفاة الخادم (TipTap).",
+      "seoSection": "تحسين محرّكات البحث (SEO)",
+      "seoHint": "العنوان والوصف لتظهر بشكل أفضل في نتائج البحث",
+      "seoTitle": "عنوان SEO",
+      "seoTitlePlaceholder": "يعتمد على عنوان الصفحة إن تُرك فارغاً",
+      "seoDescription": "وصف SEO",
+      "seoDescriptionPlaceholder": "وصف موجز يظهر في نتائج البحث",
+      "seoKeywords": "الكلمات المفتاحية",
+      "canonicalUrl": "الرابط الأصلي (canonical)",
+      "robots": "Robots",
+      "workflow": "سير عمل النشر",
+      "workflowHint": "تغيير حالة الصفحة — نشر، أرشفة، أو إرجاع لمسودّة",
+      "currentStatus": "الحالة الحالية",
+      "display": "العرض والترتيب",
+      "displayHint": "تحكّم بظهور الصفحة في الهيدر والفوتر وترتيبها",
+      "showInHeader": "إظهار في الهيدر",
+      "showInHeaderHint": "تظهر في قائمة التنقّل العلوية في الواجهة.",
+      "showInFooter": "إظهار في الفوتر",
+      "showInFooterHint": "تظهر في تذييل الواجهة.",
+      "sortOrder": "الترتيب",
+      "template": "قالب العرض",
+      "templatePlaceholder": "اتركه فارغاً لاستخدام القالب الافتراضي"
+    },
+    "editor": {
+      "h4": "عنوان 4",
+      "stats": {
+        "words_zero": "لا كلمات",
+        "words_one": "كلمة واحدة",
+        "words_two": "كلمتان",
+        "words_few": "{{count}} كلمات",
+        "words_many": "{{count}} كلمة",
+        "words_other": "{{count}} كلمة",
+        "chars_zero": "لا أحرف",
+        "chars_one": "حرف واحد",
+        "chars_two": "حرفان",
+        "chars_few": "{{count}} أحرف",
+        "chars_many": "{{count}} حرفاً",
+        "chars_other": "{{count}} حرفاً",
+        "readingTime_one": "≈ دقيقة قراءة",
+        "readingTime_two": "≈ دقيقتان قراءة",
+        "readingTime_few": "≈ {{count}} دقائق قراءة",
+        "readingTime_many": "≈ {{count}} دقيقة قراءة",
+        "readingTime_other": "≈ {{count}} دقيقة قراءة",
+        "empty": "ابدأ الكتابة…"
+      }
+    },
+    "validation": {
+      "required": "هذا الحقل مطلوب.",
+      "titleMin": "العنوان قصير جداً (حدّ أدنى حرفان).",
+      "titleMax": "العنوان طويل جداً.",
+      "slugFormat": "المعرّف يجب أن يحتوي حروفاً وأرقاماً مفصولة بـ -.",
+      "slugMax": "المعرّف طويل جداً.",
+      "contentRequired": "محتوى الصفحة مطلوب.",
+      "seoTitleMax": "عنوان SEO طويل جداً.",
+      "seoDescMax": "وصف SEO طويل جداً.",
+      "seoKwMax": "قائمة الكلمات المفتاحية طويلة جداً.",
+      "url": "رابط غير صالح.",
+      "orderRange": "الترتيب يجب أن يكون رقماً صحيحاً غير سالب.",
+      "templateMax": "اسم القالب طويل جداً."
+    }
+  },
+  "engagement": {
+    "title": "مقاييس التفاعل",
+    "colHeader": "التفاعل",
+    "views": "المشاهدات",
+    "likes": "الإعجابات",
+    "dislikes": "عدم الإعجاب",
+    "favorites": "المحفوظات"
+  },
+  "ai": {
+    "loading": "جارٍ التوليد…",
+    "apply": "تطبيق",
+    "regenerate": "إعادة التوليد",
+    "dismiss": "تجاهل",
+    "autoNote": "تم التوليد تلقائياً من نصّ المقال (بدون ذكاء اصطناعي).",
+    "headlines": {
+      "button": "اقتراح عنوان",
+      "news": "أسلوب إخباري",
+      "editorial": "تحريري قوي",
+      "seo": "صديق لمحركات البحث"
+    },
+    "excerpt": {
+      "button": "توليد ملخص"
+    },
+    "tags": {
+      "button": "اقتراح ذكي",
+      "topics": "مواضيع",
+      "people": "أشخاص",
+      "locations": "أماكن",
+      "organizations": "منظمات"
+    },
+    "seo": {
+      "title": "تحليل السيو بالذكاء الاصطناعي",
+      "button": "تحليل",
+      "hint": "احصل على ملاحظات استشارية حول العنوان والوصف والكلمات المفتاحية.",
+      "missingKeywords": "كلمات مفتاحية مقترحة"
+    },
+    "rewrite": {
+      "button": "إعادة صياغة",
+      "selectFirst": "حدّد نصاً أولاً لإعادة صياغته",
+      "modes": {
+        "journalistic": "صحفي",
+        "formal": "رسمي",
+        "concise": "مختصر",
+        "stronger": "أقوى",
+        "simplified": "مبسّط",
+        "professional": "احترافي",
+        "seo": "صديق للسيو"
+      }
+    },
+    "analyze": {
+      "title": "تحليل جودة المحتوى",
+      "button": "حلّل المحتوى",
+      "hint": "اقتراحات استشارية حول التكرار والبنية وسهولة القراءة — لا تُعدّل النصّ.",
+      "issues": "ملاحظات",
+      "suggestions": "اقتراحات التحسين"
+    }
+  },
+  "mediaStudio": {
+    "title": "استوديو الوسائط",
+    "hint": "الصور والفيديو من المكتبة المركزية المشتركة — تُربط عند حفظ المقال",
+    "tabs": {
+      "images": "الصور",
+      "video": "الفيديو",
+      "library": "المكتبة"
+    },
+    "common": {
+      "remove": "إزالة"
+    },
+    "images": {
+      "drop": "اسحب الصور هنا أو اضغط للاختيار",
+      "dropHint": "JPG / PNG / WebP — حتى 5 ميغابايت — يمكن اختيار عدّة ملفات",
+      "cover": "صورة الغلاف",
+      "coverHint": "اختر صورة من المعرض وعيّنها كغلاف عبر زر النجمة.",
+      "setCover": "تعيين كغلاف",
+      "unsetCover": "إلغاء الغلاف",
+      "gallery": "المعرض",
+      "galleryHint": "اسحب وأفلت لإعادة الترتيب",
+      "empty": "لا توجد صور بعد"
+    },
+    "video": {
+      "drop": "اسحب مقاطع الفيديو هنا أو اضغط للاختيار",
+      "dropHint": "MP4 / WebM",
+      "empty": "لا توجد مقاطع فيديو بعد",
+      "external": "فيديو خارجي (رابط)",
+      "externalPlaceholder": "ألصق رابط YouTube / Vimeo / TikTok / Instagram / MP4…",
+      "externalHint": "المزوّدون المدعومون: YouTube، Vimeo، TikTok، Instagram، Facebook، X، وروابط MP4 المباشرة.",
+      "detecting": "جارٍ التحقّق من الرابط…",
+      "invalid": "رابط الفيديو غير مدعوم أو غير صالح.",
+      "add": "إضافة",
+      "added": "تمت إضافة الفيديو.",
+      "retry": "إعادة المحاولة",
+      "status": {
+        "queued": "في الانتظار",
+        "processing": "قيد المعالجة",
+        "ready": "جاهز",
+        "failed": "فشل"
+      },
+      "processingHint": "تتم معالجة الفيديو وتحويله للبثّ التكيّفي في الخلفية."
+    },
+    "library": {
+      "search": "ابحث في المكتبة…",
+      "typeAll": "كل الأنواع",
+      "typeImage": "صور",
+      "typeVideo": "فيديو",
+      "empty": "لا توجد أصول مطابقة.",
+      "add": "إضافة",
+      "added": "مُضاف"
+    }
+  },
+  "mediaLibrary": {
+    "title": "مكتبة الوسائط",
+    "subtitle": "إدارة الأصول المركزية: البيانات الوصفية، أماكن الاستخدام، والحذف الآمن.",
+    "search": "ابحث بالاسم أو النص البديل أو التعليق أو المصدر…",
+    "filter": {
+      "typeAll": "كل الأنواع",
+      "typeImage": "صور",
+      "typeVideo": "فيديو مرفوع",
+      "typeExternal": "فيديو خارجي"
+    },
+    "empty": "لا توجد أصول مطابقة.",
+    "loadError": "تعذّر تحميل المكتبة.",
+    "usageBadge": "{{count}} استخدام",
+    "unused": "غير مُستخدَم",
+    "pagination": {
+      "prev": "السابق",
+      "next": "التالي",
+      "page": "صفحة {{page}} من {{total}}"
+    },
+    "kind": {
+      "image": "صورة",
+      "video": "فيديو مرفوع",
+      "external": "فيديو خارجي"
+    },
+    "preview": {
+      "uploaded": "مرفوع"
+    },
+    "detail": {
+      "title": "تفاصيل الأصل",
+      "metadata": "البيانات الوصفية",
+      "alt": "النص البديل",
+      "altHint": "وصف الصورة لقارئات الشاشة ومحرّكات البحث.",
+      "caption": "التعليق",
+      "credit": "المصدر/المصوّر",
+      "source": "الجهة المصدر",
+      "save": "حفظ البيانات",
+      "saving": "جارٍ الحفظ…",
+      "saved": "تم تحديث بيانات الأصل.",
+      "fileInfo": "معلومات الملف",
+      "dimensions": "الأبعاد",
+      "mime": "النوع",
+      "size": "الحجم",
+      "duration": "المدة",
+      "provider": "المزوّد",
+      "checksum": "البصمة",
+      "created": "تاريخ الإضافة",
+      "processing": "حالة المعالجة",
+      "usage": "أماكن الاستخدام",
+      "noUsage": "هذا الأصل غير مُستخدَم في أي محتوى.",
+      "ctxArticle": "خبر/مقال",
+      "ctxLiveUpdate": "تحديث تغطية حيّة",
+      "untitled": "بدون عنوان"
+    },
+    "delete": {
+      "action": "حذف",
+      "title": "حذف الأصل؟",
+      "text": "سيُحذف الأصل وكل مشتقّاته نهائياً.",
+      "yes": "نعم، احذف",
+      "inUseTitle": "الأصل مُستخدَم حالياً",
+      "inUseText": "هذا الأصل مُستخدَم في {{count}} موضع. الحذف القسري سيزيله من تلك المواضع أيضاً. متابعة؟",
+      "forceYes": "حذف قسري"
+    }
+  },
+  "media": {
+    "studioTitle": "وسائط المقال",
+    "studioHint": "صورة الغلاف، المعرض، والفيديو",
+    "saveFirst": "احفظ المقال أولاً لتتمكّن من إدارة الوسائط.",
+    "inlineNote": "الصور داخل النص تُدار من محرّر المتن مباشرةً.",
+    "confirm": { "yes": "نعم، احذف" },
+    "cover": {
+      "title": "صورة الغلاف",
+      "upload": "رفع غلاف",
+      "replace": "استبدال",
+      "remove": "إزالة",
+      "removeTitle": "إزالة صورة الغلاف؟",
+      "removeText": "سيتم حذف صورة الغلاف من هذا المقال.",
+      "empty": "لا توجد صورة غلاف",
+      "hint": "JPG / PNG / WebP — حتى 5 ميغابايت. تُستخدَم في البطاقات ومشاركات التواصل."
+    },
+    "gallery": {
+      "title": "معرض الصور",
+      "hint": "اسحب وأفلت لإعادة الترتيب",
+      "add": "إضافة صورة",
+      "empty": "لا توجد صور في المعرض بعد",
+      "remove": "حذف",
+      "removeTitle": "حذف الصورة؟",
+      "removeText": "سيتم حذف الصورة من المعرض."
+    },
+    "video": {
+      "title": "الفيديو",
+      "hint": "MP4 / WebM",
+      "add": "رفع فيديو",
+      "empty": "لا توجد مقاطع فيديو بعد",
+      "remove": "حذف",
+      "removeTitle": "حذف الفيديو؟",
+      "removeText": "سيتم حذف مقطع الفيديو من هذا المقال."
+    }
+  },
+  "liveCoverage": {
+    "title": "التغطية الحيّة",
+    "liveBadge": "مباشر",
+    "manageButton": "إدارة التغطية الحيّة",
+    "backToArticle": "العودة إلى المقال",
+    "notLive": "هذه الشاشة متاحة لمقالات التغطية الحيّة فقط.",
+    "readOnly": "إضافة التحديثات متاحة للفريق التحريري فقط. يمكنك متابعة الخط الزمني هنا.",
+    "empty": "لا توجد تحديثات بعد",
+    "emptyHint": "ابدأ بنشر أول تحديث للتغطية من الأعلى.",
+    "loadMore": "تحميل أقدم",
+    "loadingMore": "جارٍ التحميل…",
+    "eventStatus": {
+      "scheduled": "مجدوَل",
+      "live": "مباشر الآن",
+      "paused": "متوقّف مؤقتاً",
+      "completed": "منتهٍ"
+    },
+    "settings": {
+      "eventStatus": "حالة الحدث",
+      "editorial": "التحكّم التحريري",
+      "seo": "تحسين محركات البحث (للحدث)",
+      "saveSeo": "حفظ السيو",
+      "seoSaved": "تم حفظ إعدادات السيو."
+    },
+    "composer": {
+      "heading": "إضافة تحديث جديد",
+      "titlePlaceholder": "عنوان التحديث (اختياري)",
+      "pin": "تثبيت",
+      "pinned": "مثبّت",
+      "breaking": "تحديث عاجل",
+      "featured": "تحديث مميّز",
+      "post": "نشر التحديث",
+      "posting": "جارٍ النشر…",
+      "posted": "تم نشر التحديث.",
+      "empty": "اكتب محتوى التحديث أولاً.",
+      "media": "إضافة وسائط",
+      "mediaPreview": "معاينة العرض",
+      "shortcut": "Ctrl/⌘ + Enter للنشر السريع"
+    },
+    "card": {
+      "pinnedBadge": "مثبّت",
+      "breakingBadge": "عاجل",
+      "featuredBadge": "مميّز",
+      "pin": "تثبيت",
+      "unpin": "إلغاء التثبيت",
+      "breaking": "تبديل العاجل",
+      "featured": "تبديل المميّز",
+      "moveUp": "نقل لأعلى",
+      "moveDown": "نقل لأسفل",
+      "edit": "تعديل",
+      "save": "حفظ",
+      "delete": "حذف",
+      "deleteTitle": "حذف التحديث؟",
+      "deleteText": "سيُزال هذا التحديث من الخط الزمني نهائياً.",
+      "deleteYes": "نعم، احذف"
+    },
+    "og": {
+      "label": "صورة المشاركة (og:image)",
+      "hint": "صورة مخصّصة للمشاركة الاجتماعية تتجاوز الغلاف. المقاس المثالي 1200×630.",
+      "choose": "اختيار صورة",
+      "remove": "إزالة",
+      "upload": "رفع صورة جديدة",
+      "uploading": "جارٍ الرفع…",
+      "uploadFailed": "تعذّر رفع الصورة."
+    }
+  },
+  "articles": {
+    "title": "الأخبار والمقالات",
+    "subtitle": "إدارة الأخبار والمقالات والتغطيات الحيّة",
+    "new": "مقال جديد",
+    "by": "بواسطة",
+    "clearBreaking": "إلغاء كافة العاجل",
+    "clearPinned": "إلغاء كل المثبّت",
+    "stats": {
+      "total": "إجمالي الأخبار",
+      "published": "منشورة",
+      "draft": "مسودة",
+      "breaking": "عاجلة",
+      "featured": "رئيسية",
+      "deleted": "المحذوفة"
+    },
+    "searchPlaceholder": "بحث في العنوان…",
+    "col": {
+      "title": "العنوان",
+      "type": "النوع",
+      "status": "الحالة",
+      "locale": "اللغة",
+      "category": "الأقسام",
+      "primaryTag": "القسم الرئيسي",
+      "author": "الكاتب",
+      "display": "مكان العرض",
+      "published": "تاريخ النشر",
+      "actions": "إجراءات"
+    },
+    "type": {
+      "news": "خبر",
+      "opinion": "مقال",
+      "live": "تغطية حيّة"
+    },
+    "status": {
+      "draft": "مسودة",
+      "submitted": "تم الإرسال",
+      "in_review": "بانتظار المراجعة",
+      "scheduled": "مجدول",
+      "published": "منشور",
+      "rejected": "مرفوض",
+      "archived": "مؤرشف"
+    },
+    "locale": {
+      "ar": "العربية",
+      "en": "English"
+    },
+    "filter": {
+      "statusAll": "كل الحالات",
+      "typeAll": "كل الأنواع",
+      "placementAll": "كل أنواع العرض",
+      "localeAll": "كل اللغات",
+      "categoryAll": "كل الأقسام",
+      "trashedNone": "النشطة",
+      "trashedOnly": "المحذوفة فقط"
+    },
+    "sort": {
+      "createdDesc": "الأحدث إنشاءً",
+      "publishedDesc": "الأحدث نشراً",
+      "titleAsc": "العنوان (أ–ي)",
+      "idAsc": "رقم المعرّف"
+    },
+    "action": {
+      "edit": "تعديل",
+      "delete": "حذف",
+      "liveCoverage": "إدارة التغطية الحيّة",
+      "viewOnSite": "عرض على الموقع",
+      "removePlacement": "إزالة من هذا المكان",
+      "restore": "استرجاع",
+      "forceDelete": "حذف نهائي"
+    },
+    "confirm": {
+      "deleteTitle": "حذف المقال؟",
+      "deleteText": "سيتم حذف «{{title}}» نهائياً. هل أنت متأكد؟",
+      "yes": "نعم، احذف",
+      "clearBreakingTitle": "إلغاء كافة الأخبار العاجلة؟",
+      "clearBreakingText": "سيُزال وسم «عاجل» عن جميع المقالات. هل أنت متأكد؟",
+      "clearBreakingYes": "نعم، ألغِ الكل",
+      "clearPinnedTitle": "إلغاء تثبيت كل المقالات؟",
+      "clearPinnedText": "سيُزال وسم «تثبيت» عن جميع المقالات المثبّتة. هل أنت متأكد؟",
+      "clearPinnedYes": "نعم، ألغِ التثبيت",
+      "removePlacementTitle": "إزالة من مكان العرض؟",
+      "removePlacementText": "سيُزال المقال من «{{zone}}».",
+      "removePlacementYes": "نعم، أزِل",
+      "forceDeleteTitle": "حذف نهائي للمقال؟",
+      "forceDeleteText": "سيُحذف «{{title}}» نهائياً دون إمكانية استرجاع. هل أنت متأكد؟",
+      "forceDeleteYes": "نعم، احذف نهائياً"
+    },
+    "savedDraft": "تم حفظ المقال.",
+    "savedPublished": "تم نشر المقال.",
+    "savedSubmitted": "تم إرسال المقال للمراجعة.",
+    "share": {
+      "title": "المشاركة والمعاينة",
+      "hint": "الرابط الدائم للمقال على الموقع، وأزرار المشاركة على المنصّات.",
+      "copy": "نسخ",
+      "copied": "تم نسخ الرابط.",
+      "copyFailed": "تعذّر النسخ. انسخ الرابط يدوياً.",
+      "shareOn": "شارك عبر:",
+      "followChannel": "متابعة قناة واتساب",
+      "saveToShare": "احفظ المقال لتفعيل روابط المشاركة."
+    },
+    "preview": {
+      "title": "معاينة المقال",
+      "hint": "تطابق ما سيظهر للقارئ بناءً على المسوّدة الحالية.",
+      "trueHint": "مُولَّدة من الخادم تماماً كما تُنشَر — نفس HTML والوسائط وبيانات SEO.",
+      "serverBadge": "معاينة حقيقية",
+      "untitled": "— بدون عنوان —",
+      "byline": "بقلم {{name}}",
+      "tags": "وسوم:"
+    },
+    "seoGuidance": {
+      "title": "إرشاد SEO",
+      "title_ok": "طول العنوان مناسب لنتائج البحث.",
+      "title_too_long": "العنوان طويل ({{length}} حرفاً) — أبقِه تحت {{max}} لنتائج البحث.",
+      "title_too_short": "العنوان قصير ({{length}} حرفاً) — استهدف {{min}} على الأقل.",
+      "description_missing": "لا يوجد وصف SEO أو مقتطف — أضِف واحداً لمقتطفات أفضل.",
+      "description_too_long": "الوصف طويل ({{length}} حرفاً) — أبقِه تحت {{max}}.",
+      "description_short": "الوصف قصير ({{length}} حرفاً) — استهدف {{min}} على الأقل.",
+      "description_ok": "طول الوصف مناسب.",
+      "cover_ok": "صورة الغلاف/المشاركة مضبوطة.",
+      "cover_missing": "لا توجد صورة غلاف/مشاركة — بطاقات التواصل وstructured data أضعف.",
+      "seo_title_derived": "لا يوجد عنوان SEO مخصّص — يُستخدَم عنوان المقال.",
+      "canonical_overridden": "الـ canonical يشير لمكان آخر — قد لا تُفهرَس هذه النسخة.",
+      "robots_noindex": "robots مضبوط على noindex — لن يُفهرَس هذا المقال."
+    },
+    "form": {
+      "createTitle": "مقال جديد",
+      "editTitle": "تعديل المقال",
+      "save": "حفظ",
+      "createDraft": "حفظ كمسودّة",
+      "saveDraft": "حفظ كمسودّة",
+      "publishNow": "نشر الآن",
+      "submitReview": "إرسال للمراجعة",
+      "cancel": "إلغاء",
+      "secBasics": "البيانات الأساسية",
+      "secBasicsHint": "العنوان، اللغة، النوع، والمعرّفات",
+      "secBody": "محتوى الخبر / المقال",
+      "secBodyHint": "محرّر غنيّ بقائمة سماح مطابقة لمصفاة الخادم (TipTap).",
+      "secSeo": "تحسين محرّكات البحث (SEO)",
+      "secSeoHint": "العنوان والوصف والوسوم لمحرّكات البحث",
+      "secTaxonomy": "الأقسام",
+      "secTaxonomyHint": "اختر قسماً واحداً أو أكثر — كلها متساوية",
+      "categoriesHelp": "اختر قسماً واحداً على الأقل، ويمكنك اختيار أي عدد.",
+      "noCategories": "لا توجد أقسام متاحة لهذا النوع/اللغة.",
+      "secOpinionAuthor": "كاتب المقال",
+      "secOpinionAuthorHint": "كاتب يمتلك صفة الكتابة (is_writer)",
+      "secTags": "الوسوم",
+      "secTagsHint": "تساعد على الفهرسة والاكتشاف — حتى 30 وسماً",
+      "secFlags": "العرض والتفاعل",
+      "secFlagsHint": "إبراز الخبر في مناطق العرض والتحكّم بالتفاعل",
+      "displayGroup": "إبراز العرض",
+      "interactionGroup": "التفاعل",
+      "title": "العنوان",
+      "subtitle": "العنوان الفرعي",
+      "type": "النوع",
+      "locale": "اللغة",
+      "slug": "المعرّف (slug)",
+      "slugPlaceholder": "يُولَّد تلقائياً إذا تُرك فارغاً",
+      "slugPreview": "سيُحفظ كـ:",
+      "slugAutoHint": "اتركه فارغاً ليُولَّد تلقائياً من العنوان.",
+      "slugAutoButton": "توليد تلقائي",
+      "slugRegenerate": "عودة للتوليد التلقائي من العنوان",
+      "slugChecking": "جارٍ التحقّق من التوفّر…",
+      "slugAvailable": "الـ slug متاح.",
+      "slugTaken": "الـ slug مستخدَم بالفعل.",
+      "slugUseSuggestion": "استخدم «{{slug}}»",
+      "excerpt": "ملخّص قصير",
+      "primaryCategory": "القسم الرئيسي",
+      "pickCategory": "— اختر قسماً —",
+      "secondaryCategories": "الأقسام الثانوية",
+      "secondaryHelp": "حدّ أقصى 3 أقسام. غير متاح للمقالات.",
+      "opinionAuthor": "الكاتب",
+      "pickAuthor": "— اختر كاتباً —",
+      "loadingWriters": "جارٍ تحميل قائمة الكتّاب…",
+      "author": {
+        "searchPlaceholder": "ابحث بالاسم أو البريد…",
+        "loading": "جارٍ البحث…",
+        "empty": "لا توجد نتائج لـ «{{query}}».",
+        "startTyping": "اكتب للبحث، أو استعرض الكتّاب الحاليّين.",
+        "addNew": "+ إضافة كاتب جديد",
+        "clear": "إزالة الاختيار",
+        "quickAdd": {
+          "title": "إضافة كاتب جديد",
+          "hint": "إنشاء سريع لكاتب صحفي. يُفعَّل وضع الكتابة تلقائياً.",
+          "avatar": "صورة الكاتب",
+          "avatarHint": "PNG / JPG / WebP — تُستخدَم كصورة للكاتب وكبديل للغلاف.",
+          "avatarFailed": "تعذّر رفع صورة الكاتب.",
+          "name": "الاسم الكامل",
+          "email": "البريد الإلكتروني",
+          "password": "كلمة المرور الأوّلية",
+          "passwordHint": "تُولَّد عشوائياً ضمن متطلّبات النظام. يمكنك تعديلها أو تجديدها.",
+          "regenerate": "توليد كلمة مرور جديدة",
+          "showPassword": "إظهار",
+          "hidePassword": "إخفاء",
+          "copy": "نسخ",
+          "passwordCopied": "تم نسخ كلمة المرور.",
+          "copyFailed": "تعذّر النسخ. انسخها يدوياً.",
+          "sendInvite": "إرسال رابط ضبط كلمة المرور",
+          "sendInviteHint": "يصل الكاتب برابط آمن لاختيار كلمة مروره الخاصة.",
+          "save": "إنشاء وإسناد",
+          "created": "تم إنشاء الكاتب.",
+          "inviteSent": "تم إرسال رابط ضبط كلمة المرور.",
+          "nameRequired": "الاسم مطلوب (حدّ أدنى حرفان).",
+          "emailInvalid": "البريد الإلكتروني غير صالح."
+        }
+      },
+      "commentsEnabled": "تفعيل التعليقات",
+      "commentsEnabledHint": "افتراضياً معطّلة — تُفعَّل صراحةً فقط",
+      "viewsCount": "عدد المشاهدات",
+      "isFeatured": "سلايدر",
+      "isBreaking": "عاجل",
+      "isPinned": "تثبيت الخبر",
+      "isHeader": "آخر المستجدات",
+      "isEditorPick": "تريندنغ",
+      "isPinnedHint": "يثبّت الخبر في صدارة قسمه والخلاصات (الهيرو/الأحدث) — يظهر أوّلاً قبل الأحدث.",
+      "isBreakingHint": "يظهر في شريط الأخبار العاجلة (المسار السريع). استخدمه للأخبار العاجلة فقط.",
+      "isFeaturedHint": "يرفع المقال إلى سلايدر الصفحة الرئيسية.",
+      "isHeaderHint": "يُظهر المقال في شريط «آخر المستجدات».",
+      "isEditorPickHint": "يضع المقال ضمن «تريندنغ» للمناطق المنسّقة.",
+      "seoTitle": "عنوان SEO",
+      "seoTitlePlaceholder": "يعتمد على عنوان المقال إن تُرك فارغاً",
+      "seoTitleHint": "الطول الأمثل بين {{min}} و {{max}} حرفاً.",
+      "seoDescription": "وصف SEO",
+      "seoDescriptionPlaceholder": "يعتمد على الملخّص إن تُرك فارغاً",
+      "seoDescriptionHint": "الطول الأمثل بين {{min}} و {{max}} حرفاً.",
+      "seoKeywords": "كلمات SEO المفتاحية",
+      "seoSnippetPreview": "كما ستظهر في نتائج البحث",
+      "seoSnippetEmpty": "— العنوان غير مكتمل —",
+      "seoSnippetEmptyDesc": "— الوصف غير مكتمل —",
+      "socialPreview": "بطاقة المشاركة الاجتماعية",
+      "canonicalUrl": "الرابط الأصلي (canonical)",
+      "robots": "Robots",
+      "bodyImageHint": "احفظ المقال أولاً ثم يمكنك رفع صور داخلية من شريط أدوات المحرّر.",
+      "preview": "معاينة",
+      "tags": {
+        "placeholder": "اكتب وسماً ثم اضغط Enter…",
+        "help": "اقتراحات حيّة من قاعدة الوسوم الحالية؛ Enter لإضافة، Backspace لإزالة آخر وسم.",
+        "searching": "جارٍ البحث…",
+        "addNew": "إضافة وسم جديد: «{{name}}»",
+        "remove": "إزالة الوسم",
+        "suggested": "اقتراحات:"
+      },
+      "cockpit": {
+        "titlePlaceholder": "العنوان الرئيسيّ — اكتب عنوان الخبر…",
+        "summary": "الملخّص",
+        "summaryHint": "العنوان الفرعيّ والمقتطف — يظهران في البطاقات ونتائج البحث والمشاركة.",
+        "body": "المتن",
+        "bodyHint": "اكتب المقال. أضِف صوراً داخلية وتضمينات وروابط من شريط الأدوات.",
+        "advancedSeo": "السيو ومظهر البحث",
+        "advancedSeoHint": "اختياريّ — تُشتقّ قيم افتراضية معقولة من العنوان والمقتطف.",
+        "advancedMeta": "إعدادات متقدّمة",
+        "advancedMetaHint": "الـ slug والرابط القانونيّ وrobots — تُدار تلقائياً ما لم تتجاوزها.",
+        "settings": "الإعدادات",
+        "settingsHint": "النوع واللغة — يحكمان الأقسام وقواعد النشر.",
+        "publish": "النشر",
+        "categories": "الأقسام",
+        "categoriesSelected": "{{count}} مختار",
+        "categorySearch": "ابحث في الأقسام…",
+        "categoryNoResults": "لا أقسام مطابِقة.",
+        "categoryClear": "مسح",
+        "media": "الوسائط البارزة",
+        "tagsTitle": "الوسوم",
+        "visibility": "العرض والتفاعل",
+        "author": "الكاتب",
+        "expand": "توسيع",
+        "collapse": "طيّ",
+        "autosave": {
+          "saving": "جارٍ الحفظ…",
+          "saved": "محفوظ",
+          "savedAgo": "حُفِظ {{rel}}",
+          "unsaved": "تغييرات غير محفوظة",
+          "draftUnsaved": "مسودّة — لم تُحفظ بعد",
+          "justNow": "للتوّ",
+          "secondsAgo": "قبل {{n}} ثانية",
+          "minutesAgo": "قبل {{n}} دقيقة",
+          "hoursAgo": "قبل {{n}} ساعة"
+        }
+      }
+    },
+    "validation": {
+      "titleMin": "العنوان قصير جداً.",
+      "titleMax": "العنوان طويل جداً.",
+      "subtitleMax": "العنوان الفرعي طويل جداً.",
+      "slug": "المعرّف يجب أن يحتوي حروفاً وأرقاماً مفصولة بـ -.",
+      "slugMax": "المعرّف طويل جداً.",
+      "excerptRequired": "الملخّص القصير مطلوب.",
+      "excerptMax": "الملخّص طويل جداً.",
+      "primaryRequired": "اختر قسماً واحداً على الأقل.",
+      "secondaryMax": "الحد الأقصى 3 أقسام ثانوية.",
+      "opinionNoSecondary": "المقالات لا تقبل أقساماً ثانوية.",
+      "primaryInSecondary": "القسم الرئيسي لا يمكن أن يكون ثانوياً أيضاً.",
+      "opinionAuthorRequired": "يجب اختيار كاتب للمقال.",
+      "tagsMax": "الحد الأقصى 30 وسماً.",
+      "formInvalid": "يوجد حقول غير مكتملة أو غير صالحة."
+    },
+    "workflow": {
+      "title": "سير عمل النشر",
+      "hint": "الإجراءات المتاحة حسب الحالة الحالية وصلاحيتك",
+      "currentStatus": "الحالة الحالية",
+      "publishedAt": "تاريخ النشر",
+      "noActions": "لا توجد إجراءات متاحة في هذه الحالة.",
+      "scheduledAtLabel": "موعد النشر:",
+      "action": {
+        "draft": "إرجاع لمسودّة",
+        "submitted": "إرسال للمراجعة",
+        "in_review": "بدء المراجعة",
+        "scheduled": "جدولة",
+        "published": "نشر الآن",
+        "rejected": "رفض",
+        "archived": "أرشفة"
+      },
+      "confirm": {
+        "yes": "نعم، تابع",
+        "draft": {
+          "title": "إرجاع المقال لمسودّة؟",
+          "text": "ستُلغى حالة النشر/الجدولة الحالية."
+        },
+        "submitted": {
+          "title": "إرسال المقال للمراجعة؟",
+          "text": "سينتقل المقال إلى قائمة المراجعة التحريرية."
+        },
+        "in_review": {
+          "title": "بدء المراجعة؟",
+          "text": "سيتم تعليم المقال أنه قيد المراجعة."
+        },
+        "scheduled": {
+          "title": "جدولة النشر؟",
+          "text": "سينشر المقال تلقائياً في الموعد المحدّد."
+        },
+        "published": {
+          "title": "نشر المقال الآن؟",
+          "text": "سيُتاح المقال للجمهور فوراً."
+        },
+        "rejected": {
+          "title": "رفض المقال؟",
+          "text": "سيُعاد للكاتب بحالة مرفوض."
+        },
+        "archived": {
+          "title": "أرشفة المقال؟",
+          "text": "لن يظهر المقال في القوائم العامة."
+        }
+      }
+    }
+  },
+  "categories": {
+    "title": "الأقسام",
+    "subtitle": "شجرة أقسام المحتوى لكل لغة",
+    "new": "قسم جديد",
+    "empty": "لا توجد أقسام بعد",
+    "noMatches": "لا توجد أقسام مطابقة للبحث/الفلاتر",
+    "expand": "توسيع",
+    "collapse": "طي",
+    "expandAll": "توسيع الكل",
+    "collapseAll": "طي الكل",
+    "openArticles": "عرض مقالات القسم",
+    "toggleStatus": "تبديل الحالة (فعّال/مخفي)",
+    "moveUp": "نقل لأعلى",
+    "moveDown": "نقل لأسفل",
+    "visShort": {
+      "show_in_header": "هـ",
+      "show_in_body": "ب",
+      "show_in_footer": "ف"
+    },
+    "col": {
+      "name": "القسم",
+      "articles": "مقالات",
+      "scope": "النطاق",
+      "status": "الحالة",
+      "locale": "اللغة",
+      "order": "الترتيب"
+    },
+    "vis": {
+      "showIn": "إظهار {{zone}}",
+      "hideFrom": "إخفاء {{zone}}"
+    },
+    "scope": {
+      "news": "أخبار",
+      "opinion": "آراء",
+      "both": "مختلط"
+    },
+    "status": {
+      "active": "فعّال",
+      "hidden": "مخفي"
+    },
+    "filter": {
+      "search": "بحث بالاسم أو المعرّف…",
+      "localeAll": "كل اللغات",
+      "scopeAll": "كل النطاقات",
+      "statusAll": "كل الحالات",
+      "visAll": "كل أماكن الظهور",
+      "reset": "مسح الفلاتر"
+    },
+    "bulk": {
+      "select": "تحديد القسم",
+      "selected": "{{count}} قسم محدّد",
+      "activate": "تفعيل",
+      "hide": "إخفاء",
+      "delete": "حذف",
+      "clear": "إلغاء التحديد",
+      "deleteTitle": "حذف الأقسام المحددة؟",
+      "deleteText": "سيتم حذف {{count}} قسم. الأقسام التي تملك فروعاً لن تُحذف."
+    },
+    "trash": {
+      "title": "المحذوفات",
+      "exit": "عودة للأقسام",
+      "empty": "لا توجد أقسام محذوفة",
+      "deletedAt": "تاريخ الحذف",
+      "under": "ضمن {{name}}",
+      "restore": "استرجاع",
+      "forceDelete": "حذف نهائي",
+      "forceTitle": "حذف نهائي للقسم؟",
+      "forceText": "سيُحذف «{{name}}» نهائياً دون إمكانية استرجاع. متأكد؟",
+      "forceConfirm": "نعم، احذف نهائياً",
+      "selected": "{{count}} محدّد",
+      "bulkRestore": "استرجاع المحدد",
+      "bulkForceDelete": "حذف نهائي للمحدد",
+      "bulkDeleteTitle": "حذف نهائي للأقسام المحددة؟",
+      "bulkDeleteText": "سيُحذف {{count}} قسم نهائياً دون إمكانية استرجاع. الأقسام التي لا تزال رئيسية لأخبار لن تُحذف."
+    },
+    "action": {
+      "edit": "تعديل",
+      "addChild": "إضافة قسم فرعي",
+      "delete": "حذف"
+    },
+    "confirm": {
+      "deleteTitle": "حذف القسم؟",
+      "deleteText": "سيتم حذف «{{name}}». هل أنت متأكد؟",
+      "yes": "نعم، احذف"
+    },
+    "form": {
+      "createTitle": "قسم جديد",
+      "createHint": "أضف قسماً جديداً للهيكلية التحريرية.",
+      "editTitle": "تعديل القسم",
+      "save": "حفظ",
+      "saving": "جارٍ الحفظ…",
+      "saved": "تم حفظ القسم.",
+      "name": "اسم القسم",
+      "slug": "المعرّف (slug)",
+      "parent": "القسم الأب",
+      "parentNone": "— قسم جذري —",
+      "scope": "النطاق",
+      "status": "الحالة",
+      "description": "وصف مختصر",
+      "show_in_header": "في الهيدر",
+      "show_in_body": "في البودي",
+      "show_in_footer": "في الفوتر",
+      "validation": {
+        "nameRequired": "اسم القسم مطلوب (حدّ أدنى حرفان)."
+      }
+    }
+  },
+  "placements": {
+    "title": "التنسيبات التحريرية",
+    "subtitle": "إدارة ظهور الأخبار والمقالات في مناطق العرض حسب اللغة والنافذة الزمنية",
+    "new": "إضافة تنسيب",
+    "localeLabel": "اللغة",
+    "zone": {
+      "hero": "الرئيسية (Hero)",
+      "breaking": "عاجل",
+      "header": "رأس الصفحة",
+      "editors_pick": "اختيار المحرر",
+      "story": "قصة"
+    },
+    "summary": {
+      "total": "{{count}} تنسيب",
+      "total_plural": "{{count}} تنسيبات",
+      "active": "{{count}} نشط",
+      "active_plural": "{{count}} نشطة"
+    },
+    "list": {
+      "empty": "لا توجد تنسيبات في هذه المنطقة بعد",
+      "emptyHint": "ابدأ بإضافة مقال إلى هذه المنطقة لتظهر هنا.",
+      "position": "ترتيب",
+      "active": "نشط الآن",
+      "inactive": "خارج النافذة",
+      "moveUp": "نقل لأعلى",
+      "moveDown": "نقل لأسفل",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "missingArticle": "(مقال غير متوفر)"
+    },
+    "form": {
+      "createTitle": "إضافة تنسيب — {{zone}}",
+      "createHint": "اختر مقالاً ضمن نفس اللغة، واضبط الترتيب والنافذة الزمنية.",
+      "editTitle": "تعديل التنسيب",
+      "editHint": "نقل المقال لمنطقة/لغة أخرى يتطلب حذف التنسيب وإنشاء آخر.",
+      "saveCreate": "حفظ التنسيب",
+      "saveEdit": "حفظ التعديل",
+      "savedCreate": "تم إنشاء التنسيب.",
+      "savedEdit": "تم تحديث التنسيب.",
+      "target": "الوجهة",
+      "pickArticle": "اختر مقالاً",
+      "selected": "المقال المختار",
+      "searchArticle": "بحث في عناوين الأخبار والمقالات…",
+      "eligibilityHint": "تُعرض الأخبار والمقالات المنشورة فقط ضمن اللغة المختارة لتفادي تعارض الحارس.",
+      "loadingArticles": "جارٍ التحميل…",
+      "noArticles": "لا توجد عناصر مطابقة في هذه اللغة.",
+      "alreadyPlaced": "موجود سلفاً",
+      "lockedArticle": "المقال المرتبط",
+      "lockedArticleHint": "لتغيير المقال احذف هذا التنسيب وأنشئ آخر.",
+      "position": "الترتيب",
+      "positionAuto": "تلقائي (يُلحَق بنهاية القائمة)",
+      "positionHint": "اتركه فارغاً للترقيم التلقائي.",
+      "startsAt": "يبدأ في",
+      "endsAt": "ينتهي في",
+      "windowHint": "اتركهما فارغين لتنسيب دائم. يُستخدم ends_at عادةً لـ«عاجل».",
+      "invalidWindow": "يجب أن تكون نهاية النافذة بعد بدايتها.",
+      "invalidPosition": "الترتيب يجب أن يكون رقماً صحيحاً غير سالب.",
+      "articleRequired": "يجب اختيار مقال."
+    },
+    "confirm": {
+      "deleteTitle": "إزالة التنسيب؟",
+      "deleteText": "سيُزال «{{title}}» من هذه المنطقة. لن يُحذف المقال نفسه.",
+      "yes": "نعم، أزل"
+    }
+  },
+  "editor": {
+    "tool": {
+      "bold": "غامق",
+      "italic": "مائل",
+      "underline": "خط تحت",
+      "strike": "يتوسطه خط",
+      "inlineCode": "كود مضمَّن",
+      "h1": "عنوان 1",
+      "h2": "عنوان 2",
+      "h3": "عنوان 3",
+      "bulletList": "قائمة نقطية",
+      "orderedList": "قائمة مرقّمة",
+      "blockquote": "اقتباس",
+      "codeBlock": "كتلة كود",
+      "hr": "خط فاصل",
+      "alignRight": "محاذاة لليمين",
+      "alignCenter": "توسيط",
+      "alignJustify": "ضبط",
+      "alignLeft": "محاذاة لليسار",
+      "link": "رابط",
+      "image": "إدراج صورة",
+      "imageSaveFirst": "احفظ المقال أولاً لتتمكن من رفع الصور",
+      "embed": "إدراج تضمين",
+      "poll": "إدراج استطلاع",
+      "table": "إدراج جدول",
+      "undo": "تراجع",
+      "redo": "إعادة"
+    },
+    "link": {
+      "title": "إدراج/تعديل رابط",
+      "hint": "الروابط المسموحة: http / https / mailto",
+      "urlLabel": "الرابط",
+      "invalid": "رابط غير صالح أو غير مسموح.",
+      "allowedSchemes": "البروتوكولات المدعومة: http و https و mailto.",
+      "apply": "تطبيق",
+      "remove": "إزالة الرابط"
+    },
+    "embed": {
+      "title": "إدراج تضمين",
+      "hint": "ألصق رابطاً من مزوّد مدعوم — سيُحلَّل عبر الخادم.",
+      "urlLabel": "رابط التضمين",
+      "supported": "المزوّدون المدعومون: YouTube و Vimeo و Twitter/X و Facebook و Instagram.",
+      "insert": "إدراج",
+      "resolving": "جارٍ التحليل…",
+      "remove": "إزالة التضمين",
+      "providers": {
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "twitter": "Twitter/X",
+        "facebook": "Facebook",
+        "instagram": "Instagram"
+      }
+    },
+    "poll": {
+      "title": "إدراج استطلاع",
+      "hint": "ابحث عن استطلاع موجود واختره لتضمينه.",
+      "label": "استطلاع",
+      "searchPlaceholder": "ابحث في الاستطلاعات…",
+      "loading": "جارٍ تحميل الاستطلاعات…",
+      "empty": "لا توجد استطلاعات مطابقة.",
+      "error": "تعذّر تحميل الاستطلاعات.",
+      "remove": "إزالة الاستطلاع"
+    }
+  },
+  "common": {
+    "cancel": "إلغاء"
+  }
+}

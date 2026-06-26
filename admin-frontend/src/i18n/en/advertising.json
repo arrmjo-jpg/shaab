@@ -1,0 +1,293 @@
+{
+  "active": "Active",
+  "inactive": "Inactive",
+  "placementType": {
+    "banner": "Banner",
+    "inline": "In-article",
+    "sidebar": "Sidebar",
+    "interstitial": "Interstitial",
+    "overlay": "Overlay",
+    "preroll": "Pre-roll"
+  },
+  "selectorStrategy": {
+    "weighted": "Weighted",
+    "round_robin": "Round robin",
+    "even": "Even"
+  },
+  "campaignStatus": {
+    "draft": "Draft",
+    "scheduled": "Scheduled",
+    "active": "Active",
+    "paused": "Paused",
+    "completed": "Completed",
+    "archived": "Archived"
+  },
+  "pacingMode": {
+    "none": "None",
+    "even": "Even",
+    "asap": "ASAP"
+  },
+  "locale": {
+    "all": "All locales",
+    "ar": "Arabic",
+    "en": "English"
+  },
+  "zones": {
+    "title": "Ad Zones",
+    "subtitle": "Stable display slots consumed by the frontend via a programmatic key.",
+    "new": "New zone",
+    "error": "Failed to load ad zones.",
+    "retry": "Retry",
+    "col": {
+      "key": "Key",
+      "name": "Name",
+      "type": "Type",
+      "strategy": "Strategy",
+      "size": "Size",
+      "locale": "Locale",
+      "status": "Status",
+      "placements": "Ads"
+    },
+    "empty": {
+      "title": "No ad zones yet",
+      "description": "Create a zone to start serving ads."
+    },
+    "action": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "confirm": {
+      "deleteTitle": "Delete zone?",
+      "deleteText": "Delete the zone \"{{name}}\"? This cannot be undone.",
+      "delete": "Delete"
+    },
+    "form": {
+      "createTitle": "New ad zone",
+      "editTitle": "Edit ad zone",
+      "key": "Key",
+      "keyHint": "Auto-generated from the name — lowercase letters, numbers and underscores only. You can edit it.",
+      "name": "Name",
+      "description": "Description",
+      "placementType": "Placement type",
+      "selectorStrategy": "Selector strategy",
+      "width": "Width (px)",
+      "height": "Height (px)",
+      "locale": "Locale",
+      "isActive": "Active",
+      "isActiveHint": "Inactive zones serve no ads.",
+      "sortOrder": "Sort order",
+      "save": "Save zone",
+      "saving": "Saving…",
+      "back": "Back to zones"
+    }
+  },
+  "campaigns": {
+    "title": "Campaigns",
+    "subtitle": "Scheduling, priority and lifecycle containers that own creatives.",
+    "new": "New campaign",
+    "error": "Failed to load campaigns.",
+    "retry": "Retry",
+    "noWindow": "No window",
+    "filter": {
+      "search": "Search campaigns…",
+      "statusAll": "All statuses",
+      "pacingAll": "All pacing",
+      "sortNewest": "Newest",
+      "sortName": "Name",
+      "sortPriority": "Priority",
+      "trashedNone": "Active",
+      "trashedOnly": "Trash",
+      "reset": "Reset"
+    },
+    "col": {
+      "name": "Campaign",
+      "status": "Status",
+      "window": "Window",
+      "priority": "Priority",
+      "creatives": "Creatives",
+      "date": "Created"
+    },
+    "empty": {
+      "title": "No campaigns yet",
+      "description": "Create your first campaign.",
+      "trashTitle": "Trash is empty",
+      "trashDescription": "No deleted campaigns."
+    },
+    "action": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "restore": "Restore",
+      "forceDelete": "Delete permanently"
+    },
+    "confirm": {
+      "deleteTitle": "Delete campaign?",
+      "deleteText": "Delete \"{{name}}\"? It can be restored from trash.",
+      "delete": "Delete",
+      "forceTitle": "Permanently delete?",
+      "forceText": "Permanently delete \"{{name}}\" and all its creatives and placements? This cannot be undone.",
+      "forceYes": "Delete permanently",
+      "transitionTitle": "Change status?",
+      "transitionText": "Move \"{{name}}\" to \"{{status}}\"?",
+      "transition": "Confirm"
+    },
+    "form": {
+      "createTitle": "New campaign",
+      "editTitle": "Edit campaign",
+      "name": "Name",
+      "advertiserName": "Advertiser",
+      "priority": "Priority",
+      "priorityHint": "Higher priority runs first (reserved for future selection).",
+      "weight": "Weight",
+      "weightHint": "Relative rotation weight.",
+      "startsAt": "Starts at",
+      "endsAt": "Ends at",
+      "budgetTotal": "Total budget",
+      "budgetHint": "Reserved — no spend engine in this phase.",
+      "pacingMode": "Pacing mode",
+      "draftNote": "Saved as a draft. \"Save & Publish\" needs at least one creative linked to an ad zone; add them, then publish — after which it serves automatically per its dates.",
+      "saveDraft": "Save as draft",
+      "publish": "Save & Publish",
+      "save": "Save campaign",
+      "saving": "Saving…",
+      "back": "Back to campaigns"
+    },
+    "lifecycle": {
+      "title": "Lifecycle",
+      "current": "Current status",
+      "moveTo": "Move to",
+      "noTransitions": "No manual transitions available from this status.",
+      "windowExpiredHint": "The campaign window has ended — activation is unavailable."
+    }
+  },
+  "creativeType": { "image": "Image", "html": "HTML", "video": "Video" },
+  "deviceClass": { "desktop": "Desktop", "mobile": "Mobile", "tablet": "Tablet" },
+  "creatives": {
+    "title": "Creatives",
+    "subtitle": "The rendered unit — image or sanitized HTML — owned by a campaign.",
+    "new": "New creative",
+    "error": "Failed to load creatives.",
+    "retry": "Retry",
+    "filter": {
+      "search": "Search creatives…",
+      "campaignAll": "All campaigns",
+      "typeAll": "All types",
+      "activeAll": "Active & inactive",
+      "activeOnly": "Active only",
+      "inactiveOnly": "Inactive only",
+      "trashedNone": "Active",
+      "trashedOnly": "Trash",
+      "reset": "Reset"
+    },
+    "col": {
+      "title": "Creative",
+      "type": "Type",
+      "campaign": "Campaign",
+      "weight": "Weight",
+      "status": "Status",
+      "placements": "Placements",
+      "date": "Created"
+    },
+    "empty": {
+      "title": "No creatives yet",
+      "description": "Create your first creative.",
+      "trashTitle": "Trash is empty",
+      "trashDescription": "No deleted creatives."
+    },
+    "action": { "edit": "Edit", "delete": "Delete", "restore": "Restore", "forceDelete": "Delete permanently" },
+    "confirm": {
+      "deleteTitle": "Delete creative?",
+      "deleteText": "Delete \"{{title}}\"? It can be restored from trash.",
+      "delete": "Delete",
+      "forceTitle": "Permanently delete?",
+      "forceText": "Permanently delete \"{{title}}\" and its placements? This cannot be undone.",
+      "forceYes": "Delete permanently"
+    },
+    "form": {
+      "createTitle": "New creative",
+      "editTitle": "Edit creative",
+      "campaign": "Campaign",
+      "campaignPlaceholder": "Select a campaign",
+      "type": "Type",
+      "videoNote": "Video creatives are not enabled in this phase.",
+      "title": "Title",
+      "altText": "Alt text",
+      "landingUrl": "Landing URL",
+      "landingHint": "Clicks redirect here through a signed link (http/https only).",
+      "weight": "Weight",
+      "isActive": "Active",
+      "isActiveHint": "Inactive creatives are never served.",
+      "image": "Image",
+      "imageHint": "Pick from the media library or upload a new asset.",
+      "chooseImage": "Choose image",
+      "removeImage": "Remove",
+      "upload": "Upload new",
+      "uploading": "Uploading…",
+      "uploadFailed": "Upload failed.",
+      "html": "HTML code",
+      "htmlHint": "First-party HTML — sanitized on save (scripts, iframes and inline handlers are stripped).",
+      "preview": "Live preview",
+      "previewHint": "Rendered in a sandboxed frame — scripts never run here.",
+      "save": "Save creative",
+      "saving": "Saving…",
+      "back": "Back to creatives"
+    }
+  },
+  "placements": {
+    "title": "Placements",
+    "subtitle": "Creative ↔ zone assignments — the servable candidates.",
+    "new": "Attach creative",
+    "error": "Failed to load placements.",
+    "retry": "Retry",
+    "allDevices": "All devices",
+    "filter": {
+      "zoneAll": "All zones",
+      "creativeAll": "All creatives",
+      "activeAll": "Active & inactive",
+      "activeOnly": "Active only",
+      "inactiveOnly": "Inactive only",
+      "reset": "Reset"
+    },
+    "col": { "creative": "Creative", "zone": "Zone", "weight": "Weight", "devices": "Devices", "status": "Status" },
+    "empty": { "title": "No placements yet", "description": "Attach a creative to a zone." },
+    "action": { "edit": "Edit", "detach": "Detach" },
+    "confirm": {
+      "detachTitle": "Detach placement?",
+      "detachText": "Detach \"{{creative}}\" from \"{{zone}}\"?",
+      "detach": "Detach"
+    },
+    "attach": {
+      "title": "Attach creative to a zone",
+      "creative": "Creative",
+      "creativePlaceholder": "Select a creative",
+      "zone": "Zone",
+      "zonePlaceholder": "Select a zone",
+      "compatible": "Compatible — this creative can run in this zone.",
+      "incompatible": "Incompatible — {{zone}} accepts: {{allowed}}.",
+      "allowedTypes": "This zone accepts: {{allowed}}.",
+      "submit": "Attach"
+    },
+    "edit": { "title": "Edit placement" },
+    "weight": "Weight",
+    "weightHint": "Overrides the creative weight when set; leave empty to inherit.",
+    "isActive": "Active",
+    "devices": "Device targeting",
+    "devicesHint": "Select none to target all devices."
+  },
+  "analytics": {
+    "title": "Ad Analytics",
+    "subtitle": "Impressions, clicks and CTR across campaigns, creatives and zones.",
+    "error": "Failed to load analytics.",
+    "retry": "Retry",
+    "empty": "No data in this period.",
+    "range": { "24h": "24h", "7d": "7 days", "30d": "30 days", "custom": "Custom" },
+    "metric": { "impressions": "Impressions", "clicks": "Clicks" },
+    "kpi": { "impressions": "Impressions", "clicks": "Clicks", "ctr": "CTR" },
+    "trend": { "title": "Daily trend", "subtitle": "Confirmed impressions and clicks per day." },
+    "topCampaigns": "Top campaigns",
+    "topCreatives": "Top creatives",
+    "topZones": "Top zones",
+    "channels": "Traffic channels",
+    "channelsSubtitle": "Impressions by source.",
+    "channel": { "direct": "Direct", "internal": "Internal", "search": "Search", "social": "Social", "referral": "Referral" }
+  }
+}

@@ -1,0 +1,477 @@
+{
+  "status": {
+    "draft": "Draft",
+    "scheduled": "Scheduled",
+    "published": "Published",
+    "archived": "Archived",
+    "submitted": "Submitted",
+    "in_review": "In review",
+    "rejected": "Rejected"
+  },
+  "visibility": {
+    "public": "Public",
+    "unlisted": "Unlisted",
+    "private": "Private"
+  },
+  "source": {
+    "uploaded": "Uploaded",
+    "youtube": "YouTube",
+    "vimeo": "Vimeo",
+    "direct_mp4": "Direct MP4"
+  },
+  "processing": {
+    "ready": "Ready",
+    "processing": "Processing",
+    "queued": "Queued",
+    "failed": "Failed",
+    "none": "No media"
+  },
+  "locale": {
+    "ar": "Arabic",
+    "en": "English"
+  },
+  "dashboard": {
+    "title": "Video Library",
+    "subtitle": "Library health, processing status, and audience at a glance.",
+    "kpi": {
+      "totalVideos": "Total videos",
+      "totalViews": "Total views",
+      "published": "Published",
+      "featured": "Featured",
+      "playlists": "Playlists",
+      "categories": "Categories"
+    },
+    "processing": {
+      "title": "Processing health",
+      "subtitle": "Uploaded media transcoding status",
+      "ready": "Ready",
+      "processing": "Processing",
+      "failed": "Failed",
+      "healthy": "All uploaded media is ready",
+      "attention": "Some uploads need attention"
+    },
+    "sources": {
+      "title": "Source distribution",
+      "subtitle": "How videos enter the library",
+      "empty": "No videos yet"
+    },
+    "statusMix": {
+      "title": "Status breakdown"
+    },
+    "playlists": {
+      "title": "Playlists",
+      "total": "Total",
+      "published": "Published",
+      "featured": "Featured"
+    },
+    "categories": {
+      "title": "Categories",
+      "total": "Total",
+      "active": "Active"
+    },
+    "topVideos": {
+      "title": "Most viewed",
+      "views": "views",
+      "empty": "No published videos yet"
+    },
+    "topCategories": {
+      "title": "Top categories",
+      "count": "videos",
+      "empty": "No categories yet"
+    }
+  },
+  "videos": {
+    "title": "Videos",
+    "subtitle": "Manage the video library — sources, publishing, and scheduling.",
+    "new": "New video",
+    "featured": "Featured",
+    "error": "Could not load videos. Please retry.",
+    "retry": "Retry",
+    "stats": { "total": "All", "trashed": "Trash" },
+    "col": {
+      "title": "Title",
+      "status": "Status",
+      "visibility": "Visibility",
+      "source": "Source",
+      "media": "Media",
+      "locale": "Language",
+      "views": "Views",
+      "date": "Date",
+      "category": "Category"
+    },
+    "mediaState": {
+      "external": "Embed ready",
+      "noCategory": "Uncategorized"
+    },
+    "scheduledFor": "Scheduled for {{date}}",
+    "filter": {
+      "search": "Search by title…",
+      "statusAll": "All statuses",
+      "visibilityAll": "All visibility",
+      "sourceAll": "All sources",
+      "localeAll": "All languages",
+      "sortNewest": "Newest",
+      "sortPublished": "Recently published",
+      "sortViews": "Most viewed",
+      "sortTitle": "Title (A–Z)",
+      "sortOrder": "Manual order",
+      "trashedNone": "Active",
+      "trashedOnly": "Trash",
+      "reset": "Reset"
+    },
+    "action": {
+      "edit": "Edit",
+      "analytics": "Analytics",
+      "publish": "Publish now",
+      "schedule": "Schedule…",
+      "archive": "Archive",
+      "delete": "Delete",
+      "restore": "Restore",
+      "forceDelete": "Delete permanently"
+    },
+    "confirm": {
+      "yes": "Confirm",
+      "publishTitle": "Publish this video?",
+      "publishText": "It will become publicly visible immediately.",
+      "archiveTitle": "Archive this video?",
+      "archiveText": "It will be removed from public listings.",
+      "deleteTitle": "Delete this video?",
+      "deleteText": "“{{title}}” will move to trash and can be restored.",
+      "forceTitle": "Permanently delete?",
+      "forceText": "“{{title}}” will be deleted forever. This cannot be undone.",
+      "forceYes": "Delete forever",
+      "unpublishTitle": "Unpublish the selected videos?",
+      "featureTitle": "Feature the selected videos?",
+      "unfeatureTitle": "Remove featured from the selected videos?"
+    },
+    "schedule": {
+      "title": "Schedule publication",
+      "label": "Publish date & time",
+      "submit": "Schedule",
+      "tz": "Time is in your timezone: {{tz}}",
+      "hint": "The video goes live automatically at this time (media must be ready)."
+    },
+    "bulk": {
+      "selected": "{{count}} selected",
+      "publish": "Publish",
+      "unpublish": "Unpublish",
+      "feature": "Feature",
+      "unfeature": "Unfeature",
+      "moveCategory": "Move to category…",
+      "addPlaylist": "Add to playlist…",
+      "delete": "Delete",
+      "clear": "Clear",
+      "moveTitle": "Move {{count}} videos to a category",
+      "moveLabel": "Target category",
+      "moveNone": "— No category —",
+      "moveSubmit": "Move",
+      "playlistTitle": "Add {{count}} videos to a playlist",
+      "playlistLabel": "Target playlist",
+      "playlistSubmit": "Add",
+      "playlistEmpty": "No playlists available"
+    },
+    "empty": {
+      "title": "No videos yet",
+      "description": "Create your first video from an upload or an external source.",
+      "trashTitle": "Trash is empty",
+      "trashDescription": "Deleted videos will appear here."
+    }
+  },
+  "form": {
+    "createTitle": "New video",
+    "editTitle": "Edit video",
+    "save": "Save",
+    "saving": "Saving…",
+    "saved": "Saved.",
+    "basics": "Basics",
+    "titleLabel": "Title",
+    "descriptionLabel": "Description",
+    "excerptLabel": "Excerpt",
+    "locale": "Language",
+    "visibility": "Visibility",
+    "category": "Category",
+    "categoryNone": "— No category —",
+    "featured": "Featured",
+    "featuredHint": "Highlight this video in featured rails.",
+    "sourceSection": "Video source",
+    "aiTools": "AI assistant",
+    "publishing": "Publishing",
+    "scheduledFor": "Scheduled for {{time}}",
+    "mediaNotReadyHint": "Publishing/scheduling is unavailable until the video media is ready.",
+    "schedule": "Schedule",
+    "scheduleBtn": "Schedule",
+    "slugSection": "Slug",
+    "slugLabel": "Slug",
+    "slugPlaceholder": "auto-generated-from-title",
+    "seoSection": "Advanced SEO",
+    "seoExpand": "Expand",
+    "seoCollapse": "Collapse",
+    "seoHint": "Canonical, social, and structured-data settings. Expand to edit.",
+    "unsavedTitle": "Unsaved changes",
+    "unsavedText": "You have unsaved changes. Leave without saving?",
+    "unsavedLeave": "Leave",
+    "source": {
+      "tabUpload": "Upload",
+      "tabExternal": "External link",
+      "uploadHint": "Click to upload an MP4/WebM video file",
+      "uploading": "Uploading… {{percent}}%",
+      "urlPlaceholder": "https://youtube.com/watch?v=… or a direct .mp4 link",
+      "urlHint": "YouTube, Vimeo, or an allow-listed direct MP4 link.",
+      "resolve": "Resolve",
+      "external": "External source",
+      "replace": "Replace source",
+      "retry": "Retry processing",
+      "uploadFailed": "Upload failed. Please try again.",
+      "resolveFailed": "Could not resolve that link. Check the URL.",
+      "processingHint": "Transcoding in progress — this can take a few minutes.",
+      "failedHint": "Processing failed. Retry, or replace the source.",
+      "replaceTitle": "Replace the video source?",
+      "replaceTextUploaded": "On save, the video will use the new source. The previous uploaded file remains in the media library (not deleted here).",
+      "replaceTextExternal": "On save, the video will reference the new source. External sources are shared library references and are not removed.",
+      "replaceConfirm": "Choose new source"
+    }
+  },
+  "categories": {
+    "title": "Video categories",
+    "subtitle": "Organize the library into an editorial taxonomy (up to 3 levels).",
+    "new": "New category",
+    "empty": "No categories yet. Create your first to organize videos.",
+    "noMatches": "No categories match your filters.",
+    "col": { "name": "Name", "videos": "Videos", "status": "Active", "locale": "Lang", "order": "Order" },
+    "status": { "active": "Active", "inactive": "Inactive" },
+    "toggleStatus": "Toggle active",
+    "collapse": "Collapse",
+    "expand": "Expand",
+    "expandAll": "Expand all",
+    "collapseAll": "Collapse all",
+    "moveUp": "Move up",
+    "moveDown": "Move down",
+    "filter": { "search": "Search categories…", "localeAll": "All languages", "statusAll": "All statuses", "reset": "Reset" },
+    "action": { "edit": "Edit", "addChild": "Add sub-category", "delete": "Delete" },
+    "confirm": {
+      "deleteTitle": "Delete this category?",
+      "deleteText": "“{{name}}” will be moved to trash. Categories with children cannot be deleted.",
+      "yes": "Delete"
+    },
+    "form": {
+      "createTitle": "New category",
+      "editTitle": "Edit category",
+      "createHint": "Create an editorial category for the video library.",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Category saved.",
+      "name": "Name",
+      "slug": "Slug",
+      "locale": "Language",
+      "parent": "Parent category",
+      "parentNone": "— None (top level) —",
+      "description": "Description",
+      "active": "Active (visible in public listings)",
+      "depthHint": "Max depth is 3 levels. A category cannot be moved under itself or its descendants.",
+      "seoSection": "SEO (optional)",
+      "seoTitle": "SEO title",
+      "seoDescription": "SEO description",
+      "validation": { "nameRequired": "Name must be at least 2 characters." }
+    }
+  },
+  "playlists": {
+    "title": "Playlists",
+    "subtitle": "Curate ordered collections of videos for the front-end.",
+    "new": "New playlist",
+    "error": "Could not load playlists. Please retry.",
+    "retry": "Retry",
+    "col": { "title": "Title", "status": "Status", "visibility": "Visibility", "videos": "Videos", "locale": "Lang", "date": "Date" },
+    "filter": {
+      "search": "Search by title…",
+      "statusAll": "All statuses",
+      "localeAll": "All languages",
+      "sortNewest": "Newest",
+      "sortPublished": "Recently published",
+      "sortTitle": "Title (A–Z)",
+      "sortOrder": "Manual order",
+      "trashedNone": "Active",
+      "trashedOnly": "Trash",
+      "reset": "Reset"
+    },
+    "action": { "edit": "Edit", "delete": "Delete", "restore": "Restore", "forceDelete": "Delete permanently" },
+    "confirm": {
+      "deleteTitle": "Delete this playlist?",
+      "deleteText": "“{{title}}” will move to trash and can be restored. Member videos are not affected.",
+      "forceTitle": "Permanently delete?",
+      "forceText": "“{{title}}” will be deleted forever. Member videos are not affected.",
+      "forceYes": "Delete forever"
+    },
+    "empty": {
+      "title": "No playlists yet",
+      "description": "Create your first playlist to curate videos.",
+      "trashTitle": "Trash is empty",
+      "trashDescription": "Deleted playlists will appear here."
+    },
+    "form": {
+      "createTitle": "New playlist",
+      "editTitle": "Edit playlist",
+      "saved": "Playlist saved.",
+      "basics": "Details",
+      "titleLabel": "Title",
+      "descriptionLabel": "Description",
+      "status": "Status",
+      "featured": "Featured",
+      "featuredHint": "Highlight this playlist in featured rails.",
+      "slugHint": "Changing the slug preserves old links via automatic redirects."
+    },
+    "videos": {
+      "title": "Videos in this playlist",
+      "add": "Add videos",
+      "saveFirst": "Save the playlist first, then add videos.",
+      "empty": "No videos yet. Use “Add videos” to build the playlist.",
+      "remove": "Remove from playlist"
+    },
+    "picker": {
+      "title": "Add videos to playlist",
+      "search": "Search videos…",
+      "add": "Add {{count}} videos",
+      "empty": "No videos found.",
+      "added": "Added"
+    }
+  },
+  "entityAnalytics": {
+    "title": "Video analytics",
+    "loadingTitle": "Loading…",
+    "error": "Failed to load analytics.",
+    "retry": "Retry",
+    "forwardOnly": "Since tracking began (forward-only)",
+    "uniqueReactors": "Unique reactors",
+    "engagementRate": "Engagement rate",
+    "none": "—",
+    "yes": "Yes",
+    "no": "No",
+    "range": { "24h": "24h", "7d": "7 days", "30d": "30 days", "custom": "Custom" },
+    "trend": {
+      "title": "Activity over time",
+      "rangeTotal": "Range total: {{value}}",
+      "empty": "No data in this period"
+    },
+    "traffic": {
+      "title": "Traffic sources",
+      "subtitle": "Coarse attribution (forward-only)",
+      "empty": "No traffic tracked yet"
+    },
+    "channel": {
+      "direct": "Direct",
+      "internal": "Internal",
+      "search": "Search",
+      "social": "Social",
+      "referral": "Referral"
+    },
+    "distribution": {
+      "title": "Distribution & relations",
+      "category": "Category",
+      "featured": "Featured",
+      "playlists": "Playlists",
+      "linkedVods": "Linked recordings (VOD)"
+    },
+    "publishing": {
+      "title": "Publishing",
+      "status": "Status",
+      "visibility": "Visibility",
+      "publishedAt": "Published at",
+      "timeline": "Change history"
+    },
+    "field": {
+      "status": "Status",
+      "visibility": "Visibility",
+      "published_at": "Published at"
+    },
+    "seo": {
+      "title": "SEO & URLs",
+      "slug": "Slug",
+      "canonical": "Canonical path",
+      "redirects": "Redirects",
+      "noRedirects": "No redirects"
+    },
+    "watch": {
+      "title": "Watch metrics",
+      "deferredTitle": "Not tracked yet",
+      "deferredNote": "Requires a player beacon (starts / avg watch / completion / drop-off) — a separate telemetry phase."
+    }
+  },
+  "analytics": {
+    "title": "Analytics",
+    "subtitle": "Video library performance — real engagement, sources, and publication state.",
+    "allTime": "All figures are cumulative for the full lifetime (not bound to a period).",
+    "error": "Failed to load analytics. Please retry.",
+    "retry": "Retry",
+    "engagement": {
+      "views": "Views",
+      "likes": "Likes",
+      "favorites": "Favorites",
+      "dislikes": "Dislikes"
+    },
+    "distribution": {
+      "title": "Engagement distribution",
+      "subtitle": "Share of each reaction type (excluding views)",
+      "empty": "No engagement yet."
+    },
+    "sources": {
+      "title": "Source distribution",
+      "subtitle": "How videos enter the library",
+      "empty": "No videos yet"
+    },
+    "status": {
+      "title": "Publication status distribution"
+    },
+    "trending": {
+      "title": "Trending now",
+      "subtitle": "Weight: views×1 + likes×4 + favorites×6 − dislikes×2",
+      "score": "Score",
+      "views": "views",
+      "empty": "No public, playable videos yet."
+    },
+    "topVideos": {
+      "title": "Most viewed",
+      "views": "views",
+      "empty": "No published videos yet"
+    },
+    "topPlaylists": {
+      "title": "Largest playlists",
+      "count": "videos",
+      "empty": "No playlists yet."
+    },
+    "topCategories": {
+      "title": "Top categories",
+      "count": "videos",
+      "empty": "No categories yet"
+    }
+  },
+  "operations": {
+    "title": "Operations center",
+    "subtitle": "Processing health, the publish queue, and maintenance actions.",
+    "error": "Failed to load operations data. Please retry.",
+    "retry": "Retry",
+    "refresh": "Refresh",
+    "kpi": {
+      "processing": "Processing",
+      "failed": "Failed processing",
+      "scheduled": "Scheduled",
+      "dueNow": "Due now"
+    },
+    "attention": {
+      "title": "Needs attention",
+      "subtitle": "Uploaded videos with failed or in-progress media",
+      "empty": "All uploaded media is healthy — nothing needs attention.",
+      "col": { "title": "Video", "status": "Media status", "updated": "Last updated" },
+      "reprocess": "Reprocess",
+      "reprocessing": "Working…",
+      "confirmTitle": "Reprocess this media?",
+      "confirmText": "The transcoding (HLS) pipeline for “{{title}}” will be re-run. This may take minutes.",
+      "confirmYes": "Reprocess"
+    },
+    "queue": {
+      "title": "Publish queue",
+      "subtitle": "Scheduled videos and their due state",
+      "empty": "No scheduled videos.",
+      "overdue": "Overdue",
+      "scheduledFor": "Scheduled for {{date}}"
+    }
+  }
+}

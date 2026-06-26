@@ -1,0 +1,293 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ══════════════════════════════════════════════════════════════════════
+   AlphaCMS · frontend — Global Design System (Tailwind v4, RTL-first)
+   Tokens only. No component styles here. Premium media-platform palette.
+   ══════════════════════════════════════════════════════════════════════ */
+@theme {
+  /* ── Fonts — AlJazeera across the whole platform (next/font: --font-aljazeera) ── */
+  --font-display: var(--font-aljazeera), system-ui, sans-serif;
+  --font-heading: var(--font-aljazeera), system-ui, sans-serif;
+  --font-body: var(--font-aljazeera), system-ui, sans-serif;
+  --font-sans: var(--font-aljazeera), system-ui, sans-serif;
+
+  /* ── Color tokens ── */
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-2: #f4f5f6;
+  --color-surface-3: #ebedee;
+  --color-fg: #0b0b0c;
+  --color-muted: #6a7178;
+  --color-border: #e4e6e9;
+  --color-primary: #c8102e;
+  --color-primary-foreground: #ffffff;
+  --color-ink: #0a0a0a;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --color-info: #2563eb;
+
+  /* ── Fluid type scale ── */
+  --text-display: clamp(2.25rem, 1.55rem + 3vw, 3.75rem);
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.02em;
+  --text-h1: clamp(1.75rem, 1.3rem + 2vw, 2.6rem);
+  --text-h1--line-height: 1.14;
+  --text-h1--letter-spacing: -0.015em;
+  --text-h2: clamp(1.35rem, 1.1rem + 1.2vw, 1.9rem);
+  --text-h2--line-height: 1.2;
+  --text-h2--letter-spacing: -0.01em;
+  --text-h3: clamp(1.1rem, 1rem + 0.6vw, 1.35rem);
+  --text-h3--line-height: 1.3;
+  --text-body: 1rem;
+  --text-body--line-height: 1.75;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.6;
+  --text-caption: 0.78rem;
+  --text-caption--line-height: 1.5;
+
+  /* ── Radius ── square design: all corner radii removed (rounded-full kept for avatars/dots) ── */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+
+  /* ── Elevation (soft, premium) ── */
+  --shadow-sm: 0 1px 2px rgb(11 11 12 / 0.06);
+  --shadow-md: 0 6px 20px rgb(11 11 12 / 0.08);
+  --shadow-lg: 0 16px 40px rgb(11 11 12 / 0.12);
+  --shadow-xl: 0 28px 70px rgb(11 11 12 / 0.16);
+
+  /* ── Layout ── */
+  --container-site: 1200px;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+}
+
+/* Square design — remove EVERY corner radius across the app, EXCEPT avatars (.avatar stays round).
+   Unlayered + !important so it overrides Tailwind's rounded-* utilities. */
+[class*='rounded']:not(.avatar) {
+  border-radius: 0 !important;
+}
+
+/* Rich text editor (TipTap) content — minimal typographic hierarchy (no typography plugin). */
+.tiptap-content {
+  min-height: 16rem;
+  line-height: 1.8;
+}
+.tiptap-content:focus {
+  outline: none;
+}
+.tiptap-content > * + * {
+  margin-block-start: 0.75rem;
+}
+.tiptap-content h2 {
+  font-size: 1.375rem;
+  font-weight: 800;
+}
+.tiptap-content h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.tiptap-content ul {
+  list-style: disc;
+  padding-inline-start: 1.5rem;
+}
+.tiptap-content ol {
+  list-style: decimal;
+  padding-inline-start: 1.5rem;
+}
+.tiptap-content blockquote {
+  border-inline-start: 3px solid var(--color-border);
+  padding-inline-start: 1rem;
+  color: var(--color-muted);
+}
+.tiptap-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.tiptap-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* إزاحة القفز للمرابط أسفل الترويسة اللاصقة (صفحات المحتوى + المقالات). */
+.tiptap-content :is(h1, h2, h3) {
+  scroll-margin-top: 6rem;
+}
+.tiptap-content h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+/* جداول أنيقة مشتركة (رأس مظلّل + حدود لطيفة). */
+.tiptap-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: 0.5rem;
+  font-size: 0.95em;
+}
+.tiptap-content :is(th, td) {
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+  text-align: start;
+  vertical-align: top;
+}
+.tiptap-content thead th {
+  background: var(--color-surface-2);
+  font-weight: 700;
+}
+/* صور/فيديو المتن: تعليق متمركز + إطار (يوتيوب) متجاوب 16:9. */
+.tiptap-content figure {
+  margin-block: 1rem;
+}
+.tiptap-content figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85em;
+  color: var(--color-muted);
+  text-align: center;
+}
+.tiptap-content iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
+/* طباعة نظيفة لصفحات المحتوى/المقالات: نصّ أسود على أبيض (الكروم مخفيّ عبر print:hidden). */
+@media print {
+  body {
+    background: #fff !important;
+  }
+  article,
+  article * {
+    color: #000 !important;
+  }
+  .tiptap-content a {
+    text-decoration: underline;
+  }
+}
+
+/* ══ شريط بورصة عمّان — Marquee بـCSS خالص (لا JS، لا مكتبة خارجيّة) ══
+   نسختان متطابقتان + translateX(0 → -50%) = لوب سلس بلا فجوة (‎-50% = عرض نسخة واحدة).
+   الحركة من اليمين إلى اليسار. السرعة عبر animationDuration inline (متناسبة مع العدد). */
+@keyframes ase-ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.ase-ticker-track {
+  animation-name: ase-ticker-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse; /* من الشمال إلى اليمين (عكس مسار ‎0→-50%‎) */
+  will-change: transform;
+}
+/* توقّف عند المرور (CSS فقط) */
+.ase-ticker-viewport:hover .ase-ticker-track {
+  animation-play-state: paused;
+}
+/* احترام تفضيل تقليل الحركة — ثابت بلا اختفاء (المسار مثبَّت يسار النافذة) */
+@media (prefers-reduced-motion: reduce) {
+  .ase-ticker-track {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* ══ أيقونات الطقس المتحرّكة (SVG + CSS خالص، colorful) — بطاقة الطقس وصفحة /weather ══ */
+@keyframes wx-spin { to { transform: rotate(360deg); } }
+@keyframes wx-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
+@keyframes wx-drift { 0%, 100% { transform: translateX(-1.6px); } 50% { transform: translateX(1.6px); } }
+@keyframes wx-rain { 0% { transform: translateY(-3px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(8px); opacity: 0; } }
+@keyframes wx-flash { 0%, 90%, 100% { opacity: 0.2; } 93%, 97% { opacity: 1; } }
+@keyframes wx-snow { 0% { transform: translateY(-2px) translateX(0); opacity: 0.35; } 50% { opacity: 1; } 100% { transform: translateY(8px) translateX(2.5px); opacity: 0.2; } }
+@keyframes wx-fog { 0%, 100% { transform: translateX(-2.5px); opacity: 0.6; } 50% { transform: translateX(2.5px); opacity: 1; } }
+
+.wx-spin { animation: wx-spin 14s linear infinite; transform-box: fill-box; transform-origin: center; }
+.wx-pulse { animation: wx-pulse 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.wx-drift { animation: wx-drift 5s ease-in-out infinite; }
+.wx-rain { animation: wx-rain 1.3s linear infinite; }
+.wx-flash { animation: wx-flash 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.wx-snow { animation: wx-snow 2.4s ease-in-out infinite; }
+.wx-fog { animation: wx-fog 4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wx-spin, .wx-pulse, .wx-drift, .wx-rain, .wx-flash, .wx-snow, .wx-fog { animation: none; }
+}
+
+/* ══ حركة دخول خفيفة لمحتوى صفحة الفيديو — CSS خالص، مرئيّ افتراضاً (لا FOUC، بلا تأخير)، تحترم تقليل الحركة ══ */
+@keyframes vid-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+.vid-rise { animation: vid-rise 0.5s ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  .vid-rise { animation: none; }
+}
+
+/* ══ ثيم صفحة الريلز (مَنطقة معزولة) — يُبدَّل عبر [data-reels-theme] على <html> ══
+   داكن افتراضاً؛ اللايت يطال أسطح الصفحة (الخلفية/المسرح/القائمة)، أمّا تراكبات
+   الفيديو (نصّ/أزرار فوق الفيديو) فتبقى فاتحة على داكن للقراءة. */
+.reels-scope {
+  --rl-bg: #000000;
+  --rl-panel: #0f0f0f;
+  --rl-fg: #ffffff;
+  --rl-border: rgba(255, 255, 255, 0.1);
+  --rl-hover: rgba(255, 255, 255, 0.07);
+  --rl-muted: rgba(255, 255, 255, 0.45);
+}
+[data-reels-theme='light'] .reels-scope {
+  --rl-bg: #ffffff;
+  --rl-panel: #f3f4f6;
+  --rl-fg: #0b0b0c;
+  --rl-border: rgba(0, 0, 0, 0.12);
+  --rl-hover: rgba(0, 0, 0, 0.05);
+  --rl-muted: rgba(0, 0, 0, 0.5);
+}
+/* تبديل الشعار حسب الثيم: الداكن (شعار فاتح) افتراضاً، والفاتح (شعار داكن) في اللايت. */
+.reels-logo-light { display: none; }
+[data-reels-theme='light'] .reels-logo-dark { display: none; }
+[data-reels-theme='light'] .reels-logo-light { display: inline-block; }
+
+/* ══ تقليب صفحات قارئ الصحيفة (Two-page spread) — دوران 3D حول الكعب، GPU عبر transform،
+   60fps (transform/opacity فقط)، يحترم تقليل الحركة. ليس مكتبة flipbook — CSS خالص. ══ */
+@keyframes ep-flip-next {
+  from { opacity: 0.3; transform: perspective(2200px) rotateY(-26deg) translateZ(-50px); }
+  to { opacity: 1; transform: perspective(2200px) rotateY(0) translateZ(0); }
+}
+@keyframes ep-flip-prev {
+  from { opacity: 0.3; transform: perspective(2200px) rotateY(26deg) translateZ(-50px); }
+  to { opacity: 1; transform: perspective(2200px) rotateY(0) translateZ(0); }
+}
+.ep-flip-next { animation: ep-flip-next 0.45s ease-out both; transform-origin: center; will-change: transform, opacity; }
+.ep-flip-prev { animation: ep-flip-prev 0.45s ease-out both; transform-origin: center; will-change: transform, opacity; }
+@media (prefers-reduced-motion: reduce) {
+  .ep-flip-next, .ep-flip-prev { animation: none; }
+}
