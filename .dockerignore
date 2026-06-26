@@ -1,6 +1,8 @@
 .git
 .gitignore
-node_modules
+**/node_modules
+**/dist
+**/.next
 public-frontend
 admin-frontend
 vendor
