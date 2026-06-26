@@ -9,7 +9,18 @@ x-backend-common: &backend-common
     - media:/var/www/html/storage/app/public
 
 services:
-
+  nginx:
+    build:
+      context: ./docker/nginx
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - backend
+      - frontend
+    volumes:
+      - .:/var/www/html:ro
+    expose:
+      - "80"
   backend:
     <<: *backend-common
     build:

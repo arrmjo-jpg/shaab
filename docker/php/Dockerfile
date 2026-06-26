@@ -1,68 +1,89 @@
-# syntax=docker/dockerfile:1
-
 FROM php:8.4-fpm
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+# =========================
+# System packages
+# =========================
+RUN apt-get update && apt-get install -y \
     git \
     unzip \
+    curl \
+    zip \
     libicu-dev \
     libzip-dev \
     libpng-dev \
     libjpeg62-turbo-dev \
     libwebp-dev \
     libfreetype6-dev \
+    libonig-dev \
     ffmpeg \
     jpegoptim \
     optipng \
     pngquant \
     gifsicle \
     webp \
-    && docker-php-ext-configure gd --with-jpeg --with-webp --with-freetype \
-    && docker-php-ext-install -j"$(nproc)" \
+    supervisor \
+    nginx \
+    && docker-php-ext-configure gd \
+        --with-freetype \
+        --with-jpeg \
+        --with-webp \
+    && docker-php-ext-install \
         pdo_mysql \
-        gd \
-        intl \
-        zip \
         bcmath \
         exif \
+        gd \
+        intl \
         pcntl \
-        opcache \
-    && pecl install redis \
-    && docker-php-ext-enable redis \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+        zip \
+        opcache
 
-COPY --from=composer/composer:2-bin /composer /usr/bin/composer
+# Redis
+RUN pecl install redis \
+    && docker-php-ext-enable redis
 
-COPY docker/php/php.ini /usr/local/etc/php/conf.d/zz-alphacms.ini
+# Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
+# =========================
+# Install dependencies
+# =========================
 COPY composer.json composer.lock ./
 
 RUN composer install \
-    --no-interaction \
+    --no-dev \
     --prefer-dist \
     --optimize-autoloader \
+    --no-interaction \
     --no-scripts
 
+# =========================
+# Copy project
+# =========================
 COPY . .
 
 RUN composer dump-autoload --optimize
 
-RUN php artisan package:discover --ansi
+RUN php artisan package:discover --ansi || true
 
-RUN chown -R www-data:www-data storage bootstrap/cache
+RUN mkdir -p storage bootstrap/cache
 
+RUN chown -R www-data:www-data \
+    storage \
+    bootstrap/cache
 
-COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
+# =========================
+# Copy configs
+# =========================
+COPY docker/php/php.ini /usr/local/etc/php/conf.d/app.ini
 
-RUN chmod +x /usr/local/bin/entrypoint.sh
+COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 
-USER www-data
+COPY docker/php/entrypoint.sh /entrypoint.sh
 
-EXPOSE 9000
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["entrypoint.sh"]
+EXPOSE 80
 
-CMD ["php-fpm"]
+ENTRYPOINT ["/entrypoint.sh"]
