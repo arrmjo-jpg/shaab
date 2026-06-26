@@ -13,8 +13,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 /**
- * إشعارات داخل التطبيق (database notifications) لكلّ مستخدم مُصادَق — لا «writer» فقط.
- * موصِّل رفيع بلا منطق أعمال — الحصر بالمالك داخل كل Action عبر علاقة Notifiable.
+ * إشعارات الكاتب (database notifications). موصِّل رفيع بلا منطق أعمال — الحصر
+ * بالمالك داخل كل Action عبر علاقة Notifiable. المسارات تحت بوّابة 'writer'.
  */
 class NotificationController extends Controller
 {
