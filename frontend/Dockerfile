@@ -16,6 +16,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_OPTIONS="--max-old-space-size=2048"
 
 # Accept build args to bake them into the build if needed (like CLIENT)
 ARG CLIENT=shaabjo
@@ -26,7 +27,7 @@ ENV CLIENT=$CLIENT
 ENV API_BASE_URL=""
 ENV SITE_URL=""
 
-RUN npm run build > /tmp/build.log 2>&1 || (echo "========== FRONTEND BUILD FAILED ==========" && cat /tmp/build.log && exit 1)
+RUN npm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner
