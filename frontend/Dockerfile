@@ -26,7 +26,7 @@ ENV CLIENT=$CLIENT
 ENV API_BASE_URL=""
 ENV SITE_URL=""
 
-RUN npm run build
+RUN npm run build > /tmp/build.log 2>&1 || (echo "========== FRONTEND BUILD FAILED ==========" && cat /tmp/build.log && exit 1)
 
 # Production image, copy all the files and run next
 FROM base AS runner
