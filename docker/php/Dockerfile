@@ -22,7 +22,12 @@ WORKDIR /var/www/html
 
 # Vendor layer (cached on composer.lock). --no-scripts: artisan isn't bootable until app is copied.
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --no-interaction --no-progress --prefer-dist --optimize-autoloader --no-scripts
+RUN composer install \
+    --no-dev \
+    --no-interaction \
+    --no-progress \
+    --optimize-autoloader \
+    --no-scripts
 
 # Application code, then finalize the autoloader + package manifest.
 COPY . .
