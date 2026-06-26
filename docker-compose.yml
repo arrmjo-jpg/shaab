@@ -28,7 +28,7 @@ services:
       - traefik.enable=true
 
       # -------- Main Website --------
-      - traefik.http.routers.harer.rule=Host(`harer.store`,`www.harer.store`)
+      - traefik.http.routers.harer.rule=Host(`harer.store`) || Host(`www.harer.store`)
       - traefik.http.routers.harer.entrypoints=https
       - traefik.http.routers.harer.tls=true
       - traefik.http.routers.harer.tls.certresolver=letsencrypt
