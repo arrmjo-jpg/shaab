@@ -21,6 +21,11 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ARG CLIENT=shaabjo
 ENV CLIENT=$CLIENT
 
+# Prevent Coolify's --build-arg injection from leaking API urls into the build.
+# Next.js must NOT attempt API calls during static page generation at build time.
+ENV API_BASE_URL=""
+ENV SITE_URL=""
+
 RUN npm run build
 
 # Production image, copy all the files and run next
