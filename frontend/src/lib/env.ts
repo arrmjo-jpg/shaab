@@ -3,7 +3,7 @@ export const env = {
   /** Kept backend API base. */
   apiBaseUrl: (process.env.API_BASE_URL ?? '').replace(/\/$/, ''),
   /** Public site origin — canonical / OG / sitemap / robots base. */
-  siteUrl: (process.env.SITE_URL ?? 'http://localhost:3000').replace(/\/$/, ''),
+  siteUrl: (process.env.SITE_URL || 'http://localhost:3000').replace(/\/$/, ''),
   /** OpenWeather API key — server-only (weather widget + /weather page). Free key works on data/2.5/weather; One Call 3.0 needs a paid subscription. */
   openWeatherKey: process.env.OPENWEATHER_API_KEY ?? '',
   isProd: process.env.NODE_ENV === 'production',

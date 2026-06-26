@@ -25,7 +25,7 @@ ENV CLIENT=$CLIENT
 # Prevent Coolify's --build-arg injection from leaking API urls into the build.
 # Next.js must NOT attempt API calls during static page generation at build time.
 ENV API_BASE_URL=""
-ENV SITE_URL=""
+ENV SITE_URL="http://localhost:3000"
 
 RUN npm run build
 
