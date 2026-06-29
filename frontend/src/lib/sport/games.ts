@@ -1,4 +1,5 @@
 import 'server-only';
+import { unstable_cache } from 'next/cache';
 import { z } from 'zod';
 import { todayAmman, ymdToDmy } from './day';
 
@@ -187,9 +188,19 @@ const ARAB_COUNTRIES = new Set<string>([
   'موريتانيا', 'الصومال', 'جيبوتي', 'جزر القمر',
 ]);
 
+// النتيجة المُرشَّحة صغيرة (≤12 بطولة) بينما استجابة allscores الخامّة >2MB فلا تُخزَّن في Data Cache
+// (Next يعجز عن تخزين إدخال >2MB ⇒ تُعاد جلباً كلّ رندر ⇒ بُطء الهوم). نلفّ المُخرَج الصغير بـ
+// unstable_cache: العمل الثقيل (الجلب + الترشيح) يجري مرّة كلّ 60s عبر كلّ الرندرات لا مرّة لكلّ طلب،
+// فتبقى الهوم سريعة. مفتاح بالتاريخ/الحدّ؛ نفس وسم الإبطال الحدثيّ sport-games.
 export async function getArabMatchesByCompetition(date?: string, limit = 12): Promise<CompetitionGroup[]> {
-  const all = await getMatchesByCompetition(1, date);
-  return all.filter((g) => g.country !== null && ARAB_COUNTRIES.has(g.country)).slice(0, limit);
+  return unstable_cache(
+    async () => {
+      const all = await getMatchesByCompetition(1, date);
+      return all.filter((g) => g.country !== null && ARAB_COUNTRIES.has(g.country)).slice(0, limit);
+    },
+    ['arab-matches', date ?? 'today', String(limit)],
+    { revalidate: 60, tags: ['sport-games'] },
+  )();
 }
 
 // تجميع مباريات اليوم **بالدولة → البطولة → المباريات** (لقائمة «الدول» المنسدلة). يتبع التاريخ المختار؛ مرتّب بعدد المباريات.

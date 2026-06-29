@@ -24,30 +24,33 @@ export async function SportsSection({
   // **التصنيف بالـID الثابت** ⇒ الـslug/الاسم الحاليّان (مقاوم لإعادة التسمية). غير موجود/محذوف ⇒ يُخفى.
   const category = await getCategoryById(categoryId);
   if (!category) return null;
-  const items = await getCategoryFeed(category.slug, 5);
+
+  // قائمة المقالات وأيّام المباريات مستقلّتان ⇒ جلب متوازٍ (لا تتابع category→feed→matches) لتقليل زمن القسم.
+  // مباريات الدوريات العربية لأربعة أيّام (أمس/اليوم/غداً/بعد غد) — جلب خادميّ مسبق (مُكاش 60s عبر
+  // unstable_cache داخل getArabMatchesByCompetition)، تبدّلها تبويبات client بلا BFF. عزل فشل: [] ⇒ «لا مباريات».
+  const today = todayAmman();
+  const [items, matchDays] = await Promise.all([
+    getCategoryFeed(category.slug, 5),
+    Promise.all(
+      (
+        [
+          [-1, 'أمس'],
+          [0, 'اليوم'],
+          [1, 'غداً'],
+          [2, 'بعد غد'],
+        ] as const
+      ).map(async ([offset, label]): Promise<MatchDay> => {
+        const date = shiftYmd(today, offset);
+        return { key: date, label, groups: await getArabMatchesByCompetition(date) };
+      }),
+    ),
+  ]);
   if (items.length === 0) return null;
   const title = category.name.trim() || fallbackTitle || category.slug.replace(/-/g, ' ');
   const moreHref = items[0]?.categoryHref ?? `/category/${encodeURIComponent(category.slug)}`;
 
   const feature = items[0];
   const list = items.slice(1, 5);
-
-  // مباريات الدوريات العربية لأربعة أيّام (أمس/اليوم/غداً/بعد غد) — جلب خادميّ مسبق متوازٍ (مُكاش 60s)،
-  // تبدّلها تبويبات client في TodayMatches بلا BFF. عزل فشل: مصفوفة فارغة ⇒ حالة «لا مباريات».
-  const today = todayAmman();
-  const matchDays: MatchDay[] = await Promise.all(
-    (
-      [
-        [-1, 'أمس'],
-        [0, 'اليوم'],
-        [1, 'غداً'],
-        [2, 'بعد غد'],
-      ] as const
-    ).map(async ([offset, label]) => {
-      const date = shiftYmd(today, offset);
-      return { key: date, label, groups: await getArabMatchesByCompetition(date) };
-    }),
-  );
 
   return (
     <section className="mt-6 bg-white sm:mt-8" dir="rtl" aria-labelledby={headingId}>

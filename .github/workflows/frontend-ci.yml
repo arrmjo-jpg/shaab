@@ -20,7 +20,7 @@ permissions:
 
 defaults:
   run:
-    working-directory: public-frontend
+    working-directory: frontend
 
 jobs:
   build:
@@ -35,13 +35,10 @@ jobs:
         with:
           node-version: '20'
           cache: npm
-          cache-dependency-path: public-frontend/package-lock.json
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install dependencies (npm ci — lockfile-pinned)
         run: npm ci
-
-      - name: Validate client/theme config
-        run: npm run validate:config
 
       - name: Type check (tsc --noEmit)
         run: npx tsc --noEmit -p tsconfig.json

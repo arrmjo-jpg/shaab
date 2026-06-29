@@ -1,3 +1,7 @@
+; ⚠️ مسار نشر يدويّ (bare-metal) فقط — غير مستخدَم في نشر Docker/Coolify النشط
+;    (الطابور هناك عبر خدمتَي worker/worker-media في docker-compose.yml، مسار /var/www/html).
+;    يُحفَظ مرجعًا لنشر غير-Docker. انظر deployment/DEPLOYMENT.md.
+;
 ; systemd unit — عامل طابور AlphaCMS (Redis)
 ; انسخ إلى /etc/systemd/system/alphacms-queue.service ثم:
 ;   systemctl daemon-reload && systemctl enable --now alphacms-queue

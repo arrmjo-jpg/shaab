@@ -36,25 +36,32 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# su-exec lets the entrypoint drop from root to nextjs after fixing volume ownership
+RUN apk add --no-cache su-exec
+
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 COPY --from=builder /app/public ./public
 
-# Set the correct permission for prerender cache
-RUN mkdir .next
-RUN chown nextjs:nodejs .next
+# Pre-create the cache dir owned by nextjs so a freshly created named volume
+# (frontend-cache -> /app/.next/cache) inherits nextjs ownership on first mount.
+RUN mkdir -p .next/cache && chown -R nextjs:nodejs .next
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-USER nextjs
+# Entrypoint re-asserts cache ownership at runtime (handles a pre-existing root-owned
+# volume), then execs the server as the unprivileged nextjs user — never as root.
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 EXPOSE 3000
 
 ENV PORT=3000
 
 # server.js is created by next build from the standalone output
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["node", "server.js"]
